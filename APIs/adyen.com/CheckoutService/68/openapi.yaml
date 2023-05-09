@@ -59,7 +59,7 @@ info:
   x-providerName: adyen.com
   x-publicVersion: true
   x-serviceName: CheckoutService
-  x-timestamp: 2023-02-21T16:25:42Z
+  x-timestamp: 2023-05-03T10:31:56Z
 tags:
   - name: Modifications
   - name: Orders
@@ -3281,7 +3281,7 @@ components:
             type: klarna
           - name: Pay over time with Klarna.
             type: klarna_account
-          - name: Klarna B2B
+          - name: Buy Now, Pay Later with Billie
             type: klarna_b2b
           - name: Pay now with Klarna.
             type: klarna_paynow
@@ -5463,6 +5463,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -5470,6 +5471,7 @@ components:
           description: "**ach**"
           enum:
             - ach
+            - ach_plaid
           type: string
       required:
         - bankAccountNumber
@@ -5548,146 +5550,166 @@ components:
       properties:
         airline.agency_invoice_number:
           description: |-
-            Reference number for the invoice, issued by the agency.
-            * minLength: 1
-            * maxLength: 6
+            The reference number for the invoice, issued by the agency.
+            * Encoding: ASCII
+            * minLength: 1 character
+            * maxLength: 6 characters
           type: string
         airline.agency_plan_name:
           description: |-
-            2-letter agency plan identifier; alphabetical.
-            * minLength: 2
-            * maxLength: 2
+            The two-letter agency plan identifier.
+            * Encoding: ASCII
+            * minLength: 2 characters
+            * maxLength: 2 characters
           type: string
         airline.airline_code:
           description: |-
-            [IATA](https://www.iata.org/services/pages/codes.aspx) 3-digit accounting code (PAX); numeric. It identifies the carrier.
+            The [IATA](https://www.iata.org/services/pages/codes.aspx) 3-digit accounting code (PAX) that identifies the carrier.
             * Format: IATA 3-digit accounting code (PAX)
             * Example: KLM = 074
-            * minLength: 3
-            * maxLength: 3
+            * minLength: 3 characters
+            * maxLength: 3 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.airline_designator_code:
           description: |-
-            [IATA](https://www.iata.org/services/pages/codes.aspx) 2-letter accounting code (PAX); alphabetical. It identifies the carrier.
-            * Format: [IATA](https://www.iata.org/services/pages/codes.aspx) 2-letter airline code
+            The [IATA](https://www.iata.org/services/pages/codes.aspx) 2-letter accounting code (PAX) that identifies the carrier.
+            * Encoding: ASCII
             * Example: KLM = KL
-            * minLength: 2
-            * maxLength: 2
+            * minLength: 2 characters
+            * maxLength: 2 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.boarding_fee:
           description: |-
-            Chargeable amount for boarding the plane.
-            The transaction amount needs to be represented in minor units according to the [following table](https://docs.adyen.com/development-resources/currency-codes).
-            * minLength: 1
-            * maxLength: 18
+            The amount charged for boarding the plane, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Encoding: Numeric
+            * minLength: 1 character
+            * maxLength: 18 characters
           type: string
         airline.computerized_reservation_system:
           description: |-
             The [CRS](https://en.wikipedia.org/wiki/Computer_reservation_system) used to make the reservation and purchase the ticket.
-            * Format: alphanumeric.
-            * minLength: 4
-            * maxLength: 4
+            * Encoding: ASCII
+            * minLength: 4 characters
+            * maxLength: 4 characters
           type: string
         airline.customer_reference_number:
           description: |-
-            Reference number; alphanumeric.
-            * minLength: 0
-            * maxLength: 20
+            The alphanumeric customer reference number.
+            * Encoding: ASCII
+            * maxLength: 20 characters
+            * If you send more than 20 characters, the customer reference number is truncated
+            * Must not be all spaces
           type: string
         airline.document_type:
           description: |-
-            Optional 2-digit code; alphanumeric. It identifies the type of product of the transaction. The description of the code may appear on credit card statements.
-            * Format: 2-digit code
+            A code that identifies the type of item bought. The description of the code can appear on credit card statements.
+            * Encoding: ASCII
             * Example: Passenger ticket = 01
-            * minLength: 2
-            * maxLength: 2
+            * minLength: 2 characters
+            * maxLength: 2 characters
           type: string
         airline.flight_date:
           description: |-
-            Flight departure date. Local time `(HH:mm)` is optional.
+            The flight departure date. Local time `(HH:mm)` is optional.
             * Date format: `yyyy-MM-dd`
             * Date and time format: `yyyy-MM-dd HH:mm`
-            * minLength: 10
-            * maxLength: 16
+            * minLength: 10 characters
+            * maxLength: 16 characters
           type: string
         airline.leg.carrier_code:
           description: |-
-            [IATA](https://www.iata.org/services/pages/codes.aspx) 2-letter accounting code (PAX); alphabetical. It identifies the carrier.
-            This field is required/mandatory if the airline data includes leg details.
-            * Format: IATA 2-letter airline code
+            The [IATA](https://www.iata.org/services/pages/codes.aspx) 2-letter accounting code (PAX) that identifies the carrier.
+            This field is required if the airline data includes leg details.
             * Example: KLM = KL
-            * minLength: 2
-            * maxLength: 2
+            * minLength: 2 characters
+            * maxLength: 2 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.class_of_travel:
           description: |-
-            1-letter travel class identifier; alphabetical. There is no standard; however, the following codes are used rather consistently:
-            * F: first class
+            A one-letter travel class identifier.
+             The following are common:
+             * F: first class
             * J: business class
             * Y: economy class
             * W: premium economy
 
-            Limitations:
-            * minLength: 1
-            * maxLength: 1
+            * Encoding: ASCII
+            * minLength: 1 character
+            * maxLength: 1 character
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.date_of_travel:
           description: |-
             	
-            Date and time of travel. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)-compliant.
-            * Format: `yyyy-MM-dd HH:mm`
-            * minLength: 16
-            * maxLength: 16
+            Date and time of travel in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format `yyyy-MM-dd HH:mm`.
+            * Encoding: ASCII
+            * minLength: 16 characters
+            * maxLength: 16 characters
           type: string
         airline.leg.depart_airport:
           description: |-
-            Alphabetical identifier of the departure airport.
+            The [IATA](https://www.iata.org/services/pages/codes.aspx) three-letter airport code of the departure airport.
             This field is required if the airline data includes leg details.
-            * Format: [IATA](https://www.iata.org/services/pages/codes.aspx) 3-letter airport code.
+
+            * Encoding: ASCII
             * Example: Amsterdam = AMS
-            * minLength: 3
-            * maxLength: 3
+            * minLength: 3 characters
+            * maxLength: 3 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.depart_tax:
           description: |-
-            [Departure tax](https://en.wikipedia.org/wiki/Departure_tax). Amount charged by a country to an individual upon their leaving. The transaction amount needs to be represented in minor units according to the [following table](https://docs.adyen.com/development-resources/currency-codes).
+            The amount of [departure tax](https://en.wikipedia.org/wiki/Departure_tax) charged, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Encoding: Numeric
             * minLength: 1
             * maxLength: 12
+            * Must not be all zeros
           type: string
         airline.leg.destination_code:
           description: |-
-            Alphabetical identifier of the destination/arrival airport.
-            This field is required/mandatory if the airline data includes leg details.
-            * Format: [IATA](https://www.iata.org/services/pages/codes.aspx) 3-letter airport code.
+            The [IATA](https://www.iata.org/services/pages/codes.aspx) 3-letter airport code of the destination airport.
+            This field is required if the airline data includes leg details.
             * Example: Amsterdam = AMS
-            * minLength: 3
-            * maxLength: 3
+            * Encoding: ASCII
+            * minLength: 3 characters
+            * maxLength: 3 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.fare_base_code:
           description: |-
-            [Fare basis code](https://en.wikipedia.org/wiki/Fare_basis_code); alphanumeric.
-            * minLength: 1
-            * maxLength: 7
+            The [fare basis code](https://en.wikipedia.org/wiki/Fare_basis_code), alphanumeric.
+            * minLength: 1 character
+            * maxLength: 6 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.flight_number:
           description: |-
             The flight identifier.
-            * minLength: 1
-            * maxLength: 5
+            * minLength: 1 character
+            * maxLength: 5 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.leg.stop_over_code:
           description: |-
-            1-letter code that indicates whether the passenger is entitled to make a stopover. Only two types of characters are allowed:
-            * O: Stopover allowed
-            * X: Stopover not allowed
-
-            Limitations:
-            * minLength: 1
-            * maxLength: 1
+            A one-letter code that indicates whether the passenger is entitled to make a stopover. Can be a space, O if the passenger is entitled to make a stopover, or X if they are not.
+            * Encoding: ASCII
+            * minLength: 1 character
+            * maxLength: 1 character
           type: string
         airline.passenger.date_of_birth:
           description: |-
-            Date of birth of the passenger.
+            The passenger's date of birth.
 
             Date format: `yyyy-MM-dd`
             * minLength: 10
@@ -5695,59 +5717,73 @@ components:
           type: string
         airline.passenger.first_name:
           description: |-
-            Passenger first name/given name.
-            > This field is required/mandatory if the airline data includes passenger details or leg details.
+            The passenger's first name.
+            > This field is required if the airline data includes passenger details or leg details.
+            * Encoding: ASCII
           type: string
         airline.passenger.last_name:
           description: |-
-            Passenger last name/family name.
-            > This field is required/mandatory if the airline data includes passenger details or leg details.
+            The passenger's last name.
+            > This field is required if the airline data includes passenger details or leg details.
+            * Encoding: ASCII
           type: string
         airline.passenger.telephone_number:
           description: |-
-            Telephone number of the passenger, including country code. This is an alphanumeric field that can include the '+' and '-' signs.
-            * minLength: 3
-            * maxLength: 30
+            The passenger's telephone number, including country code. This is an alphanumeric field that can include the '+' and '-' signs.
+            * Encoding: ASCII
+            * minLength: 3 characters
+            * maxLength: 30 characters
           type: string
         airline.passenger.traveller_type:
           description: |-
-            Passenger type code (PTC). IATA PTC values are 3-letter alphabetical. Example: ADT, SRC, CNN, INS.
-
-            However, several carriers use non-standard codes that can be up to 5 alphanumeric characters.
-            * minLength: 3
-            * maxLength: 6
+            The IATA passenger type code (PTC).
+            * Encoding: ASCII
+            * minLength: 3 characters
+            * maxLength: 6 characters
           type: string
         airline.passenger_name:
           description: |-
-            Passenger name, initials, and a title.
-            * Format: last name + first name or initials + title.
-            * Example: *FLYER / MARY MS*.
-            * minLength: 1
-            * maxLength: 49
+            The passenger's name, initials, and title.
+            * Format: last name + first name or initials + title
+            * Example: *FLYER / MARY MS*
+            * minLength: 1 character
+            * maxLength: 20 characters
+            * If you send more than 20 characters, the name is truncated
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.ticket_issue_address:
           description: |-
-            Address of the place/agency that issued the ticket.
-            * minLength: 0
-            * maxLength: 16
+            The address of the organization that issued the ticket.
+            * minLength: 0 characters
+            * maxLength: 16 characters
           type: string
         airline.ticket_number:
           description: |-
             The ticket's unique identifier.
-            * minLength: 1
-            * maxLength: 150
+            * minLength: 1 character
+            * maxLength: 15 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.travel_agency_code:
           description: |-
-            IATA number, also ARC number or ARC/IATA number. Unique identifier number for travel agencies.
-            * minLength: 1
-            * maxLength: 8
+            The unique identifier from IATA or ARC for the travel agency that issues the ticket.
+            * Encoding: ASCII
+            * minLength: 1 character
+            * maxLength: 8 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         airline.travel_agency_name:
           description: |-
             The name of the travel agency.
-            * minLength: 1
-            * maxLength: 25
+
+            * Encoding: ASCII
+            * minLength: 1 character
+            * maxLength: 25 characters
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
       required:
         - airline.passenger_name
@@ -5756,7 +5792,7 @@ components:
       properties:
         carRental.checkOutDate:
           description: |-
-            Pick-up date.
+            The pick-up date.
             * Date format: `yyyyMMdd`
           type: string
         carRental.customerServiceTollFreeNumber:
@@ -5764,91 +5800,113 @@ components:
             The customer service phone number of the car rental company.
             * Format: Alphanumeric
             * maxLength: 17
+            * For US and CA numbers must be 10 characters in length
+            * Must not start with a space
+            * Must not be all zeros
+            * Must not contain any special characters such as + or -
           type: string
         carRental.daysRented:
           description: |-
             Number of days for which the car is being rented.
             * Format: Numeric
-            * maxLength: 19
+            * maxLength: 2
+            * Must not be all spaces
           type: string
         carRental.fuelCharges:
           description: |-
-            Any fuel charges associated with the rental.
+            Any fuel charges associated with the rental, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
             * Format: Numeric
             * maxLength: 12
           type: string
         carRental.insuranceCharges:
           description: |-
-            Any insurance charges associated with the rental.
+            Any insurance charges associated with the rental, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
             * Format: Numeric
             * maxLength: 12
+            * Must not be all spaces
+            * Must not be all zeros
           type: string
         carRental.locationCity:
           description: |-
-            The city from which the car is rented.
+            The city where the car is rented.
             * Format: Alphanumeric
             * maxLength: 18
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.locationCountry:
           description: |-
-            The country from which the car is rented.
+            The country where the car is rented, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.
             * Format: Alphanumeric
             * maxLength: 2
           type: string
         carRental.locationStateProvince:
           description: |-
-            The state or province from where the car is rented.
+            The state or province where the car is rented.
             * Format: Alphanumeric
-            * maxLength: 3
+            * maxLength: 2
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.noShowIndicator:
           description: |-
-            Indicates if the customer was a "no-show" (neither keeps nor cancels their booking).
-            * Y - Customer was a no show.
-            * N - Not applicable.
+            Indicates if the customer didn't pick up their rental car.
+            * Y - Customer did not pick up their car
+            * N - Not applicable
           type: string
         carRental.oneWayDropOffCharges:
-          description: Charge associated with not returning a vehicle to the original rental location.
+          description: |-
+            The charge for not returning a car to the original rental location, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * maxLength: 12
           type: string
         carRental.rate:
           description: |-
-            Daily rental rate.
+            The daily rental rate, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
             * Format: Alphanumeric
             * maxLength: 12
           type: string
         carRental.rateIndicator:
           description: |-
             Specifies whether the given rate is applied daily or weekly.
-            * D - Daily rate.
-            * W - Weekly rate.
+            * D - Daily rate
+            * W - Weekly rate
           type: string
         carRental.rentalAgreementNumber:
           description: |-
-            The rental agreement number associated with this car rental.
+            The rental agreement number for the car rental.
             * Format: Alphanumeric
             * maxLength: 9
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.rentalClassId:
           description: |-
-            Daily rental rate.
+            The classification of the rental car.
             * Format: Alphanumeric
-            * maxLength: 12
+            * maxLength: 4
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.renterName:
           description: |-
             The name of the person renting the car.
             * Format: Alphanumeric
             * maxLength: 26
+            * If you send more than 26 characters, the name is truncated
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.returnCity:
           description: |-
             The city where the car must be returned.
             * Format: Alphanumeric
             * maxLength: 18
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.returnCountry:
           description: |-
-            The country where the car must be returned.
+            The country where the car must be returned, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format.
             * Format: Alphanumeric
             * maxLength: 2
           type: string
@@ -5856,22 +5914,27 @@ components:
           description: |-
             The last date to return the car by.
             * Date format: `yyyyMMdd`
+            * maxLength: 8
           type: string
         carRental.returnLocationId:
           description: |-
-            Agency code, phone number, or address abbreviation
+            The agency code, phone number, or address abbreviation
             * Format: Alphanumeric
             * maxLength: 10
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.returnStateProvince:
           description: |-
             The state or province where the car must be returned.
             * Format: Alphanumeric
             * maxLength: 3
+            * Must not start with a space or be all spaces
+            * Must not be all zeros
           type: string
         carRental.taxExemptIndicator:
           description: |-
-            Indicates whether the goods or services were tax-exempt, or tax was not collected.
+            Indicates if the goods or services were tax-exempt, or if tax was not paid on them.
 
             Values:
             * Y - Goods or services were tax exempt
@@ -5879,13 +5942,13 @@ components:
           type: string
         travelEntertainmentAuthData.duration:
           description: |-
-            Number of nights.  This should be included in the auth message.
+            Number of days the car is rented for. This should be included in the auth message.
             * Format: Numeric
             * maxLength: 2
           type: string
         travelEntertainmentAuthData.market:
           description: |-
-            Indicates what market-specific dataset will be submitted or is being submitted. Value should be "A" for Car rental. This should be included in the auth message.
+            Indicates what market-specific dataset will be submitted or is being submitted. Value should be 'A' for car rental. This should be included in the auth message.
             * Format: Alphanumeric
             * maxLength: 1
           type: string
@@ -6013,142 +6076,186 @@ components:
       properties:
         enhancedSchemeData.customerReference:
           description: |-
-            Customer code, if supplied by a customer.
+            The customer code, if supplied by a customer.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 25 characters.
+            Max length: 25 characters
 
-            > Required for Level 2 and Level 3 data.
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         enhancedSchemeData.destinationCountryCode:
           description: |-
-            Destination country code.
+            The three-letter [ISO 3166-1 alpha-3 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) for the destination address.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 3 characters.
+            Fixed length: 3 characters
           type: string
         enhancedSchemeData.destinationPostalCode:
           description: |-
-            The postal code of a destination address.
+            The postal code of the destination address.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 10 characters.
+            Max length: 10 characters
 
-            > Required for American Express.
+            Must not start with a space
           type: string
         enhancedSchemeData.destinationStateProvinceCode:
           description: |-
             Destination state or province code.
 
-            Encoding: ASCII.Max length: 3 characters.
+            Encoding: ASCII
+
+            Max length: 3 characters
+
+            Must not start with a space
           type: string
         enhancedSchemeData.dutyAmount:
           description: |-
-            Duty amount, in minor units.
+            The duty amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
 
             For example, 2000 means USD 20.00.
 
-            Max length: 12 characters.
+            Encoding: Numeric
+
+            Max length: 12 characters
           type: string
         enhancedSchemeData.freightAmount:
           description: |-
-            Shipping amount, in minor units.
+            The shipping amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
 
             For example, 2000 means USD 20.00.
 
-            Max length: 12 characters.
+            Encoding: Numeric
+
+            Max length: 12 characters
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].commodityCode":
           description: |-
-            Item commodity code.
+            The [UNSPC commodity code](https://www.unspsc.org/) of the item.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 12 characters.
+            Max length: 12 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].description":
           description: |-
-            Item description.
+            A description of the item.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 26 characters.
+            Max length: 26 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].discountAmount":
           description: |-
-            Discount amount, in minor units.
+            The discount amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
 
             For example, 2000 means USD 20.00.
 
-            Max length: 12 characters.
+            Encoding: Numeric
+
+            Max length: 12 characters
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].productCode":
           description: |-
-            Product code.
+            The product code.
 
             Encoding: ASCII.
 
-            Max length: 12 characters.
+            Max length: 12 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].quantity":
-          description: |-
-            Quantity, specified as an integer value.
+          description: |+
+            The number of items. Must be an integer greater than zero.
 
-            Value must be greater than 0.
+            Encoding: Numeric
 
-            Max length: 12 characters.
+            Max length: 12 characters
+
+            Must not start with a space or be all spaces
+
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].totalAmount":
           description: |-
-            Total amount, in minor units.
+            The total amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
 
             For example, 2000 means USD 20.00.
 
-            Max length: 12 characters.
+            Max length: 12 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].unitOfMeasure":
           description: |-
-            Item unit of measurement.
+            The unit of measurement for an item.
 
-            Encoding: ASCII.
+            Encoding: ASCII
 
-            Max length: 3 characters.
+            Max length: 3 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
           type: string
         "enhancedSchemeData.itemDetailLine[itemNr].unitPrice":
           description: |-
-            Unit price, specified in [minor units](https://docs.adyen.com/development-resources/currency-codes).
-
-            Max length: 12 characters.
-          type: string
-        enhancedSchemeData.orderDate:
-          description: |-
-            Order date.
-            * Format: `ddMMyy`
-
-            Encoding: ASCII.
-
-            Max length: 6 characters.
-          type: string
-        enhancedSchemeData.shipFromPostalCode:
-          description: |-
-            The postal code of a "ship-from" address.
-
-            Encoding: ASCII.
-
-            Max length: 10 characters.
-          type: string
-        enhancedSchemeData.totalTaxAmount:
-          description: |-
-            Total tax amount, in minor units.
+            The unit price in [minor units](https://docs.adyen.com/development-resources/currency-codes).
 
             For example, 2000 means USD 20.00.
 
-            Max length: 12 characters.
+            Encoding: Numeric
 
-            > Required for Level 2 and Level 3 data.
+            Max length: 12 characters
+          type: string
+        enhancedSchemeData.orderDate:
+          description: |-
+            The order date.
+            * Format: `ddMMyy`
+
+            Encoding: ASCII
+
+            Max length: 6 characters
+          type: string
+        enhancedSchemeData.shipFromPostalCode:
+          description: |-
+            The postal code of the address the item is shipped from.
+
+            Encoding: ASCII
+
+            Max length: 10 characters
+
+            Must not start with a space or be all spaces
+
+            Must not be all zeros
+          type: string
+        enhancedSchemeData.totalTaxAmount:
+          description: |+
+            The total tax amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+
+            For example, 2000 means USD 20.00.
+
+            Encoding: Numeric
+
+            Max length: 12 characters
+
           type: string
       type: object
     AdditionalDataLodging:
@@ -6156,105 +6263,112 @@ components:
         lodging.checkInDate:
           description: |-
             The arrival date.
-            * Date format: `yyyyMMdd`
+            * Date format: **yyyyMmDd**. For example, for 2023 April 22, **20230422**.
           type: string
         lodging.checkOutDate:
           description: |-
             The departure date.
-            * Date format: `yyyyMMdd`
+            * Date format: **yyyyMmDd**. For example, for 2023 April 22, **20230422**.
           type: string
         lodging.customerServiceTollFreeNumber:
           description: |-
-            The toll free phone number for the hotel/lodgings.
-            * Format: Alphanumeric
-            * maxLength: 17
+            The toll-free phone number for the lodging.
+            * Format: numeric
+            * Max length: 17 characters.
+            * For US and CA numbers must be 10 characters in length
+            * Must not start with a space
+            * Must not be all zeros
+            * Must not contain any special characters such as + or -
           type: string
         lodging.fireSafetyActIndicator:
           description: |-
-            Identifies that the facility complies with the Hotel and Motel Fire Safety Act of 1990. Values can be: 'Y' or 'N'.
-            * Format: Alphabetic
-            * maxLength: 1
+            Identifies that the facility complies with the Hotel and Motel Fire Safety Act of 1990. Must be 'Y' or 'N'.
+            * Format: alphabetic
+            * Max length: 1 character
           type: string
         lodging.folioCashAdvances:
           description: |-
-            The folio cash advances.
-            * Format: Numeric
-            * maxLength: 12
+            The folio cash advances, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Format: numeric
+            * Max length: 12 characters
           type: string
         lodging.folioNumber:
           description: |-
-            Card acceptor’s internal invoice or billing ID reference number.
-            * Format: Alphanumeric
-            * maxLength: 25
+            The card acceptor’s internal invoice or billing ID reference number.
+            * Max length: 25 characters.
+            * Must not start with a space
+            * Must not be all zeros
           type: string
         lodging.foodBeverageCharges:
           description: |-
-            Any charges for food and beverages associated with the booking.
-            * Format: Numeric
-            * maxLength: 12
+            Any charges for food and beverages associated with the booking, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Format: numeric
+            * Max length: 12 characters
           type: string
         lodging.noShowIndicator:
           description: |-
-            Indicates if the customer was a "no-show" (neither keeps nor cancels their booking).
-
-            Value should be Y or N.
-            * Format: Numeric
-            * maxLength: 1
+            Indicates if the customer didn't check in for their booking.
+             Possible values: 
+            * **Y**: the customer didn't check in 
+            * **N**: the customer checked in
           type: string
         lodging.prepaidExpenses:
           description: |-
-            Prepaid expenses for the booking.
-            * Format: Numeric
-            * maxLength: 12
+            The prepaid expenses for the booking.
+            * Format: numeric
+            * Max length: 12 characters
           type: string
         lodging.propertyPhoneNumber:
           description: |-
-            Identifies specific lodging property location by its local phone number.
-            * Format: Alphanumeric
-            * maxLength: 17
+            The lodging property location's phone number.
+            * Format: numeric.
+            * Min length: 10 characters
+            * Max length: 17 characters
+            * For US and CA numbers must be 10 characters in length
+            * Must not start with a space
+            * Must not be all zeros
+            * Must not contain any special characters such as + or -
           type: string
         lodging.room1.numberOfNights:
           description: |-
-            Total number of nights the room will be rented.
-            * Format: Numeric
-            * maxLength: 4
+            The total number of nights the room is booked for.
+            * Format: numeric
+            * Must be a number between 0 and 99
+            * Max length: 2 characters
           type: string
         lodging.room1.rate:
           description: |-
-            The rate of the room.
-            * Format: Numeric
-            * maxLength: 12
-          type: string
-        lodging.room1.tax:
-          description: |-
-            The total amount of tax to be paid.
-            * Format: Numeric
-            * maxLength: 12
+            The rate for the room, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Format: numeric
+            * Max length: 12 characters
+            * Must not be a negative number
           type: string
         lodging.totalRoomTax:
           description: |-
-            Total room tax amount.
-            * Format: Numeric
-            * maxLength: 12
+            The total room tax amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Format: numeric
+            * Max length: 12 characters
+            * Must not be a negative number
           type: string
         lodging.totalTax:
           description: |-
-            Total tax amount.
-            * Format: Numeric
-            * maxLength: 12
+            The total tax amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes).
+            * Format: numeric
+            * Max length: 12 characters
+            * Must not be a negative number
           type: string
         travelEntertainmentAuthData.duration:
           description: |-
-            Number of nights. This should be included in the auth message.
-            * Format: Numeric
-            * maxLength: 2
+            The number of nights. This should be included in the auth message.
+            * Format: numeric
+            * Max length: 2 characters
           type: string
         travelEntertainmentAuthData.market:
           description: |-
-            Indicates what market-specific dataset will be submitted or is being submitted. Value should be "H" for Hotel. This should be included in the auth message.
+            Indicates what market-specific dataset will be submitted. Must be 'H' for Hotel. This should be included in the auth message.
 
-            * Format: Alphanumeric
-            * maxLength: 1
+            * Format: alphanumeric
+            * Max length: 1 character
           type: string
       type: object
     AdditionalDataOpenInvoice:
@@ -6576,50 +6690,60 @@ components:
       properties:
         enhancedSchemeData.customerReference:
           description: |-
-            Customer code, if supplied by a customer.
+            The customer code, if supplied by a customer.
             * Encoding: ASCII
             * maxLength: 25
           type: string
         enhancedSchemeData.employeeName:
           description: |-
-            Name or ID associated with the individual working in a temporary capacity.
+            The name or ID of the person working in a temporary capacity.
             * maxLength: 40
+            * Must not be all zeros
+            * Must not be all spaces
           type: string
         enhancedSchemeData.jobDescription:
           description: |-
-            Description of the job or task of the individual working in a temporary capacity.
+            The job description of the person working in a temporary capacity.
             * maxLength: 40
+            * Must not be all zeros
+            * Must not be all spaces
           type: string
         enhancedSchemeData.regularHoursRate:
           description: |-
-            Amount paid per regular hours worked, minor units.
+            The amount paid for regular hours worked, [minor units](https://docs.adyen.com/development-resources/currency-codes).
             * maxLength: 7
+            * Must not be empty
+            * Can be all zeros
           type: string
         enhancedSchemeData.regularHoursWorked:
           description: |-
-            Amount of time worked during a normal operation for the task or job.
+            The hours worked.
             * maxLength: 7
+            * Must not be empty
+            * Can be all zeros
           type: string
         enhancedSchemeData.requestName:
           description: |-
-            Name of the individual requesting temporary services.
+            The name of the person requesting temporary services.
             * maxLength: 40
+            * Must not be all zeros
+            * Must not be all spaces
           type: string
         enhancedSchemeData.tempStartDate:
           description: |-
-            Date for the beginning of the pay period.
+            The billing period start date.
             * Format: ddMMyy
             * maxLength: 6
           type: string
         enhancedSchemeData.tempWeekEnding:
           description: |-
-            Date of the end of the billing cycle.
+            The billing period end date.
             * Format: ddMMyy
             * maxLength: 6
           type: string
         enhancedSchemeData.totalTaxAmount:
           description: |-
-            Total tax amount, in minor units. For example, 2000 means USD 20.00
+            The total tax amount, in [minor units](https://docs.adyen.com/development-resources/currency-codes). For example, 2000 means USD 20.00
             * maxLength: 12
           type: string
       type: object
@@ -6704,6 +6828,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -6790,6 +6915,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -6877,6 +7003,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -6974,6 +7101,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -7090,9 +7218,6 @@ components:
           maxLength: 4
           minLength: 4
           type: string
-      required:
-        - expiryYear
-        - holderName
       type: object
     CardBrandDetails:
       properties:
@@ -7166,10 +7291,11 @@ components:
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         threeDS2SdkVersion:
-          description: Version of the 3D Secure 2 mobile SDK.
+          description: Required for mobile integrations. Version of the 3D Secure 2 mobile SDK.
           maxLength: 12
           type: string
         type:
@@ -7371,7 +7497,7 @@ components:
             .The available character sets at the moment are:
             * Processing in Japan: **ja-Kana**
             The character set **ja-Kana** supports UTF-8 based Katakana and alphanumeric and special characters.
-            Merchants should send the Katakana shopperStatement in full-width characters. 
+            Merchants can use half-width or full-width characters.
             An example request would be:
             > {
               "shopperStatement" : "ADYEN - SELLER-A",
@@ -7382,6 +7508,7 @@ components:
             We recommend merchants to always supply the field localizedShopperStatement in addition to the field shopperStatement.It is issuer dependent whether the localized shopper statement field is supported.
             In the case of non-domestic transactions (e.g. US-issued cards processed in JP) the field `shopperStatement` is used to modify the statement of the shopper.
             Adyen handles the complexity of ensuring the correct descriptors are assigned.
+            Please note, this field can be used for only Visa and Mastercard transactions.
           type: object
           x-addedInVersion: "68"
         mcc:
@@ -7428,7 +7555,7 @@ components:
           description: The recurring settings for the payment. Use this property when you want to enable [recurring payments](https://docs.adyen.com/classic-integration/recurring-payments).
         recurringProcessingModel:
           description: |
-            Defines a recurring payment type.
+            Defines a recurring payment type. Required when creating a token to store payment details or using stored payment details.
             Allowed values:
             * `Subscription` – A transaction for a fixed or variable amount, which follows a fixed schedule.
             * `CardOnFile` – With a card-on-file (CoF) transaction, card details are stored to enable one-click or omnichannel journeys, or simply to streamline the checkout process. Any subscription not following a fixed schedule is also considered a card-on-file transaction.
@@ -7608,7 +7735,7 @@ components:
           description: The merchant account identifier that orderData belongs to.
           type: string
         order:
-          $ref: "#/components/schemas/CheckoutOrder"
+          $ref: "#/components/schemas/EncryptedOrderData"
           description: The order request object that contains a pspReference that represents the order and the matching encrypted order data.
       required:
         - order
@@ -7737,18 +7864,6 @@ components:
           type: string
       required:
         - type
-      type: object
-    CheckoutOrder:
-      properties:
-        orderData:
-          description: The encrypted order data.
-          type: string
-        pspReference:
-          description: The `pspReference` that belongs to the order.
-          type: string
-      required:
-        - pspReference
-        - orderData
       type: object
     CheckoutOrderResponse:
       properties:
@@ -8113,7 +8228,7 @@ components:
           type: object
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8130,7 +8245,7 @@ components:
           description: The address where to send the invoice.
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8303,6 +8418,8 @@ components:
           description: |-
             Your reference to uniquely identify this shopper, for example user ID or account ID. Minimum length: 3 characters.
             > Your reference must not include personally identifiable information (PII), for example name or email address.
+          maxLength: 256
+          minLength: 3
           type: string
         shopperStatement:
           description: |-
@@ -8382,7 +8499,7 @@ components:
           type: object
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8399,7 +8516,7 @@ components:
           description: The address where to send the invoice.
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8579,6 +8696,8 @@ components:
           description: |-
             Your reference to uniquely identify this shopper, for example user ID or account ID. Minimum length: 3 characters.
             > Your reference must not include personally identifiable information (PII), for example name or email address.
+          maxLength: 256
+          minLength: 3
           type: string
         shopperStatement:
           description: |-
@@ -8669,8 +8788,8 @@ components:
           description: The amount that you want to capture. The `currency` must match the currency used in authorisation, the `value` must be smaller than or equal to the authorised amount.
         lineItems:
           description: |-
-            Price and product information of the captured items, required for [partial captures](https://docs.adyen.com/online-payments/capture#partial-capture).
-            > This field is required for partial captures with 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -8693,7 +8812,7 @@ components:
       properties:
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8704,14 +8823,13 @@ components:
           description: The payment amount and currency.
         applicationInfo:
           $ref: "#/components/schemas/ApplicationInfo"
-          deprecated: true
           description: Information about your application. For more details, see [Building Adyen solutions](https://docs.adyen.com/development-resources/building-adyen-solutions).
         billingAddress:
           $ref: "#/components/schemas/Address"
           description: The address where to send the invoice.
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -8839,6 +8957,8 @@ components:
           description: |-
             Your reference to uniquely identify this shopper, for example user ID or account ID. Minimum length: 3 characters.
             > Your reference must not include personally identifiable information (PII), for example name or email address.
+          maxLength: 256
+          minLength: 3
           type: string
         showRemovePaymentMethodButton:
           default: true
@@ -8885,7 +9005,7 @@ components:
         lineItems:
           description: |-
             Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
-            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -9138,6 +9258,18 @@ components:
         - telephoneNumber
       title: Voucher
       type: object
+    EncryptedOrderData:
+      properties:
+        orderData:
+          description: The encrypted order data.
+          type: string
+        pspReference:
+          description: The `pspReference` that belongs to the order.
+          type: string
+      required:
+        - pspReference
+        - orderData
+      type: object
     ExternalPlatform:
       properties:
         integrator:
@@ -9212,6 +9344,10 @@ components:
         - name
         - accountScore
       type: object
+    FraudCheckResultWrapper:
+      properties:
+        FraudCheckResult:
+          $ref: "#/components/schemas/FraudCheckResult"
     FraudResult:
       properties:
         accountScore:
@@ -9221,7 +9357,7 @@ components:
         results:
           description: The result of the individual risk checks.
           items:
-            $ref: "#/components/schemas/FraudCheckResult"
+            $ref: "#/components/schemas/FraudCheckResultWrapper"
           type: array
       required:
         - accountScore
@@ -9254,9 +9390,12 @@ components:
             Required for recurring payments. 
             Your reference to uniquely identify this shopper, for example user ID or account ID. Minimum length: 3 characters.
             > Your reference must not include personally identifiable information (PII), for example name or email address.
+          maxLength: 256
+          minLength: 3
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
         subMerchant:
           $ref: "#/components/schemas/SubMerchant"
@@ -9291,6 +9430,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9321,6 +9461,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9354,6 +9495,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9384,6 +9526,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9532,6 +9675,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9875,6 +10019,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9908,6 +10053,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         subtype:
@@ -9944,6 +10090,7 @@ components:
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -9982,6 +10129,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -10070,8 +10218,8 @@ components:
           description: The captured amount.
         lineItems:
           description: |-
-            Price and product information of the captured items, required for [partial captures](https://docs.adyen.com/online-payments/capture#partial-capture).
-            > This field is required for partial captures with 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -10205,13 +10353,11 @@ components:
             - upi_qr
             - paytm
             - molpay_ebanking_VN
-            - openbanking_UK
             - paybybank
             - ebanking_FI
             - molpay_ebanking_MY
             - molpay_ebanking_direct_MY
             - swish
-            - twint
             - walley
             - walley_b2b
             - pix
@@ -10261,7 +10407,6 @@ components:
             - maybank2u_mae
             - duitnow
             - promptpay
-            - twint_pos
             - alipay_hk
             - alipay_hk_web
             - alipay_hk_wap
@@ -10374,6 +10519,11 @@ components:
             Shopper account information for 3D Secure 2.
             > For 3D Secure 2 transactions, we recommend that you include this object to increase the chances of achieving a frictionless flow.
           x-addedInVersion: "40"
+        additionalAmount:
+          $ref: "#/components/schemas/Amount"
+          description: |-
+            If you want a [BIN or card verification](https://docs.adyen.com/payment-methods/cards/bin-data-and-card-verification) request to use a non-zero value, assign this value to `additionalAmount` (while the amount must be still set to 0 to trigger BIN or card verification).
+            Required to be in the same currency as the `amount`. 
         additionalData:
           additionalProperties:
             type: string
@@ -10437,7 +10587,7 @@ components:
             - Web
           type: string
         checkoutAttemptId:
-          description: Checkout attempt ID that corresponds to the Id generated for tracking user payment journey.
+          description: Checkout attempt ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "68"
         company:
@@ -10445,9 +10595,12 @@ components:
           description: Information regarding the company.
           x-addedInVersion: "32"
         conversionId:
-          description: Conversion ID that corresponds to the Id generated for tracking user payment journey.
+          deprecated: true
+          description: Conversion ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "49"
+          x-deprecatedInVersion: "68"
+          x-deprecatedMessage: Use `checkoutAttemptId` instead
         countryCode:
           description: |-
             The shopper country.
@@ -10522,8 +10675,8 @@ components:
           x-addedInVersion: "4"
         lineItems:
           description: |-
-            Price and product information about the purchased items, to be included on the invoice sent to the shopper.
-            > This field is required for 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -10537,7 +10690,7 @@ components:
             .The available character sets at the moment are:
             * Processing in Japan: **ja-Kana**
             The character set **ja-Kana** supports UTF-8 based Katakana and alphanumeric and special characters.
-            Merchants should send the Katakana shopperStatement in full-width characters. 
+            Merchants can use half-width or full-width characters.
             An example request would be:
             > {
               "shopperStatement" : "ADYEN - SELLER-A",
@@ -10548,6 +10701,7 @@ components:
             We recommend merchants to always supply the field localizedShopperStatement in addition to the field shopperStatement.It is issuer dependent whether the localized shopper statement field is supported.
             In the case of non-domestic transactions (e.g. US-issued cards processed in JP) the field `shopperStatement` is used to modify the statement of the shopper.
             Adyen handles the complexity of ensuring the correct descriptors are assigned.
+            Please note, this field can be used for only Visa and Mastercard transactions.
           type: object
           x-addedInVersion: "68"
         mandate:
@@ -10588,7 +10742,7 @@ components:
           $ref: "#/components/schemas/ThreeDSecureData"
           description: Authentication data produced by an MPI (Mastercard SecureCode, Visa Secure, or Cartes Bancaires).
         order:
-          $ref: "#/components/schemas/CheckoutOrder"
+          $ref: "#/components/schemas/EncryptedOrderData"
           description: The order information required for partial payments.
         orderReference:
           description: When you are doing multiple partial (gift card) payments, this is the `pspReference` of the first payment. We use this to link the multiple payments to each other. As your own reference for linking multiple payments, use the `merchantOrderReference`instead.
@@ -10598,7 +10752,7 @@ components:
             Required for the 3D Secure 2 `channel` **Web** integration.
 
             Set this parameter to the origin URL of the page that you are loading the 3D Secure Component from.
-          maxLength: 8000
+          maxLength: 80
           type: string
           x-addedInVersion: "40"
         paymentMethod:
@@ -10655,7 +10809,7 @@ components:
           type: string
         recurringProcessingModel:
           description: |
-            Defines a recurring payment type.
+            Defines a recurring payment type. Required when creating a token to store payment details or using stored payment details.
             Allowed values:
             * `Subscription` – A transaction for a fixed or variable amount, which follows a fixed schedule.
             * `CardOnFile` – With a card-on-file (CoF) transaction, card details are stored to enable one-click or omnichannel journeys, or simply to streamline the checkout process. Any subscription not following a fixed schedule is also considered a card-on-file transaction.
@@ -10797,7 +10951,7 @@ components:
       properties:
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -10808,14 +10962,13 @@ components:
           description: The payment amount and currency.
         applicationInfo:
           $ref: "#/components/schemas/ApplicationInfo"
-          deprecated: true
           description: Information about your application. For more details, see [Building Adyen solutions](https://docs.adyen.com/development-resources/building-adyen-solutions).
         billingAddress:
           $ref: "#/components/schemas/Address"
           description: The address where to send the invoice.
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -10948,6 +11101,8 @@ components:
           description: |-
             Your reference to uniquely identify this shopper, for example user ID or account ID. Minimum length: 3 characters.
             > Your reference must not include personally identifiable information (PII), for example name or email address.
+          maxLength: 256
+          minLength: 3
           type: string
         showRemovePaymentMethodButton:
           default: true
@@ -11135,7 +11290,7 @@ components:
           type: object
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -11147,7 +11302,7 @@ components:
           description: The amount information for the transaction (in [minor units](https://docs.adyen.com/development-resources/currency-codes)). For [BIN or card verification](https://docs.adyen.com/payment-methods/cards/bin-data-and-card-verification) requests, set amount to 0 (zero).
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type` from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -11172,7 +11327,7 @@ components:
           description: The merchant account identifier, with which you want to process the transaction.
           type: string
         order:
-          $ref: "#/components/schemas/CheckoutOrder"
+          $ref: "#/components/schemas/EncryptedOrderData"
           description: The order information required for partial payments.
           x-addedInVersion: "64"
         shopperLocale:
@@ -11221,7 +11376,7 @@ components:
         lineItems:
           description: |-
             Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
-            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -11271,6 +11426,11 @@ components:
             Shopper account information for 3D Secure 2.
             > For 3D Secure 2 transactions, we recommend that you include this object to increase the chances of achieving a frictionless flow.
           x-addedInVersion: "40"
+        additionalAmount:
+          $ref: "#/components/schemas/Amount"
+          description: |-
+            If you want a [BIN or card verification](https://docs.adyen.com/payment-methods/cards/bin-data-and-card-verification) request to use a non-zero value, assign this value to `additionalAmount` (while the amount must be still set to 0 to trigger BIN or card verification).
+            Required to be in the same currency as the `amount`. 
         additionalData:
           additionalProperties:
             type: string
@@ -11334,7 +11494,7 @@ components:
             - Web
           type: string
         checkoutAttemptId:
-          description: Checkout attempt ID that corresponds to the Id generated for tracking user payment journey.
+          description: Checkout attempt ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "68"
         company:
@@ -11342,9 +11502,12 @@ components:
           description: Information regarding the company.
           x-addedInVersion: "32"
         conversionId:
-          description: Conversion ID that corresponds to the Id generated for tracking user payment journey.
+          deprecated: true
+          description: Conversion ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "49"
+          x-deprecatedInVersion: "68"
+          x-deprecatedMessage: Use `checkoutAttemptId` instead
         countryCode:
           description: |-
             The shopper country.
@@ -11410,8 +11573,8 @@ components:
           x-addedInVersion: "4"
         lineItems:
           description: |-
-            Price and product information about the purchased items, to be included on the invoice sent to the shopper.
-            > This field is required for 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -11425,7 +11588,7 @@ components:
             .The available character sets at the moment are:
             * Processing in Japan: **ja-Kana**
             The character set **ja-Kana** supports UTF-8 based Katakana and alphanumeric and special characters.
-            Merchants should send the Katakana shopperStatement in full-width characters. 
+            Merchants can use half-width or full-width characters.
             An example request would be:
             > {
               "shopperStatement" : "ADYEN - SELLER-A",
@@ -11436,6 +11599,7 @@ components:
             We recommend merchants to always supply the field localizedShopperStatement in addition to the field shopperStatement.It is issuer dependent whether the localized shopper statement field is supported.
             In the case of non-domestic transactions (e.g. US-issued cards processed in JP) the field `shopperStatement` is used to modify the statement of the shopper.
             Adyen handles the complexity of ensuring the correct descriptors are assigned.
+            Please note, this field can be used for only Visa and Mastercard transactions.
           type: object
           x-addedInVersion: "68"
         mandate:
@@ -11476,7 +11640,7 @@ components:
           $ref: "#/components/schemas/ThreeDSecureData"
           description: Authentication data produced by an MPI (Mastercard SecureCode, Visa Secure, or Cartes Bancaires).
         order:
-          $ref: "#/components/schemas/CheckoutOrder"
+          $ref: "#/components/schemas/EncryptedOrderData"
           description: The order information required for partial payments.
         orderReference:
           description: When you are doing multiple partial (gift card) payments, this is the `pspReference` of the first payment. We use this to link the multiple payments to each other. As your own reference for linking multiple payments, use the `merchantOrderReference`instead.
@@ -11486,7 +11650,7 @@ components:
             Required for the 3D Secure 2 `channel` **Web** integration.
 
             Set this parameter to the origin URL of the page that you are loading the 3D Secure Component from.
-          maxLength: 8000
+          maxLength: 80
           type: string
           x-addedInVersion: "40"
         paymentMethod:
@@ -11543,7 +11707,7 @@ components:
           type: string
         recurringProcessingModel:
           description: |
-            Defines a recurring payment type.
+            Defines a recurring payment type. Required when creating a token to store payment details or using stored payment details.
             Allowed values:
             * `Subscription` – A transaction for a fixed or variable amount, which follows a fixed schedule.
             * `CardOnFile` – With a card-on-file (CoF) transaction, card details are stored to enable one-click or omnichannel journeys, or simply to streamline the checkout process. Any subscription not following a fixed schedule is also considered a card-on-file transaction.
@@ -11817,6 +11981,11 @@ components:
       type: object
     PaymentSetupRequest:
       properties:
+        additionalAmount:
+          $ref: "#/components/schemas/Amount"
+          description: |-
+            If you want a [BIN or card verification](https://docs.adyen.com/payment-methods/cards/bin-data-and-card-verification) request to use a non-zero value, assign this value to `additionalAmount` (while the amount must be still set to 0 to trigger BIN or card verification).
+            Required to be in the same currency as the `amount`. 
         additionalData:
           additionalProperties:
             type: string
@@ -11843,7 +12012,7 @@ components:
           type: object
         allowedPaymentMethods:
           description: |-
-            List of payment methods to be presented to the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be presented to the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"allowedPaymentMethods":["ideal","giropay"]`
           items:
@@ -11867,7 +12036,7 @@ components:
           x-addedInVersion: "4"
         blockedPaymentMethods:
           description: |-
-            List of payment methods to be hidden from the shopper. To refer to payment methods, use their `paymentMethod.type`from [Payment methods overview](https://docs.adyen.com/payment-methods).
+            List of payment methods to be hidden from the shopper. To refer to payment methods, use their [payment method type](https://docs.adyen.com/payment-methods/payment-method-types).
 
             Example: `"blockedPaymentMethods":["ideal","giropay"]`
           items:
@@ -11893,7 +12062,7 @@ components:
             - Web
           type: string
         checkoutAttemptId:
-          description: Checkout attempt ID that corresponds to the Id generated for tracking user payment journey.
+          description: Checkout attempt ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "68"
         company:
@@ -11904,9 +12073,12 @@ components:
           $ref: "#/components/schemas/Configuration"
           description: Specify configurations to enable additional features.
         conversionId:
-          description: Conversion ID that corresponds to the Id generated for tracking user payment journey.
+          deprecated: true
+          description: Conversion ID that corresponds to the Id generated by the client SDK for tracking user payment journey.
           type: string
           x-addedInVersion: "49"
+          x-deprecatedInVersion: "68"
+          x-deprecatedMessage: Use `checkoutAttemptId` instead
         countryCode:
           description: |-
             The shopper country.
@@ -11967,8 +12139,8 @@ components:
           x-addedInVersion: "4"
         lineItems:
           description: |-
-            Price and product information about the purchased items, to be included on the invoice sent to the shopper.
-            > This field is required for 3x 4x Oney, Affirm, Afterpay, Clearpay, Klarna, Ratepay, Zip and Atome.
+            Price and product information of the refunded items, required for [partial refunds](https://docs.adyen.com/online-payments/refund#refund-a-payment).
+            > This field is required for partial refunds with 3x 4x Oney, Affirm, Afterpay, Atome, Clearpay, Klarna, Ratepay, Walley, and Zip.
           items:
             $ref: "#/components/schemas/LineItem"
           type: array
@@ -11982,7 +12154,7 @@ components:
             .The available character sets at the moment are:
             * Processing in Japan: **ja-Kana**
             The character set **ja-Kana** supports UTF-8 based Katakana and alphanumeric and special characters.
-            Merchants should send the Katakana shopperStatement in full-width characters. 
+            Merchants can use half-width or full-width characters.
             An example request would be:
             > {
               "shopperStatement" : "ADYEN - SELLER-A",
@@ -11993,6 +12165,7 @@ components:
             We recommend merchants to always supply the field localizedShopperStatement in addition to the field shopperStatement.It is issuer dependent whether the localized shopper statement field is supported.
             In the case of non-domestic transactions (e.g. US-issued cards processed in JP) the field `shopperStatement` is used to modify the statement of the shopper.
             Adyen handles the complexity of ensuring the correct descriptors are assigned.
+            Please note, this field can be used for only Visa and Mastercard transactions.
           type: object
           x-addedInVersion: "68"
         mandate:
@@ -12293,6 +12466,9 @@ components:
             - deductFromOneBalanceAccount
           type: string
           x-addedInVersion: "68"
+        costAllocationAccount:
+          type: string
+          x-addedInVersion: "68"
         targetAccount:
           type: string
           x-addedInVersion: "68"
@@ -12321,6 +12497,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -13028,6 +13205,7 @@ components:
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -13061,6 +13239,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -13323,6 +13502,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -13333,6 +13513,7 @@ components:
             - bcmc_mobile_app
             - momo_wallet
             - momo_wallet_app
+            - twint
             - paymaya_wallet
             - grabpay_SG
             - grabpay_MY
@@ -13344,6 +13525,7 @@ components:
             - gcash
             - kakaopay
             - truemoney
+            - twint_pos
           type: string
       title: Stored Payment Method
       type: object
@@ -13974,6 +14156,7 @@ components:
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -14008,6 +14191,7 @@ components:
           type: string
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -14035,6 +14219,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         telephoneNumber:
@@ -14128,6 +14313,7 @@ components:
           x-deprecatedMessage: Use `storedPaymentMethodId` instead.
         storedPaymentMethodId:
           description: This is the `recurringDetailReference` returned in the response when you created the token.
+          maxLength: 64
           type: string
           x-addedInVersion: "49"
         type:
@@ -14151,6 +14337,7 @@ x-groups:
   - Payments
   - Payment links
   - Modifications
+  - Recurring
   - Orders
-  - Classic Checkout SDK
   - Utility
+  - Classic Checkout SDK

@@ -750,6 +750,46 @@ components:
             type: string
           type: array
       type: object
+    Assessment:
+      description: Assessment provides all information that is related to a single vulnerability for this product.
+      properties:
+        cve:
+          description: Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the vulnerability.
+          type: string
+        impacts:
+          description: Contains information about the impact of this vulnerability, this will change with time.
+          items:
+            type: string
+          type: array
+        justification:
+          $ref: "#/components/schemas/Justification"
+          description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+        longDescription:
+          description: A detailed description of this Vex.
+          type: string
+        relatedUris:
+          description: Holds a list of references associated with this vulnerability item and assessment. These uris have additional information about the vulnerability and the assessment itself. E.g. Link to a document which details how this assessment concluded the state of this vulnerability.
+          items:
+            $ref: "#/components/schemas/RelatedUrl"
+          type: array
+        remediations:
+          description: Specifies details on how to handle (and presumably, fix) a vulnerability.
+          items:
+            $ref: "#/components/schemas/Remediation"
+          type: array
+        shortDescription:
+          description: A one sentence description of this Vex.
+          type: string
+        state:
+          description: Provides the state of this Vulnerability assessment.
+          enum:
+            - STATE_UNSPECIFIED
+            - AFFECTED
+            - NOT_AFFECTED
+            - FIXED
+            - UNDER_INVESTIGATION
+          type: string
+      type: object
     AttestationNote:
       description: Note kind that represents a logical attestation "role" or "authority". For example, an organization might have one `Authority` for "QA" and one for "build". This note is intended to act strictly as a grouping mechanism for the attached occurrences (Attestations). This grouping mechanism also provides a security boundary, since IAM ACLs gate the ability for a principle to attach an occurrence to a given note. It also provides a single point of lookup to find all attached attestation occurrences, even if they don't all live in the same project.
       properties:
@@ -996,6 +1036,7 @@ components:
             - ATTACK_COMPLEXITY_UNSPECIFIED
             - ATTACK_COMPLEXITY_LOW
             - ATTACK_COMPLEXITY_HIGH
+            - ATTACK_COMPLEXITY_MEDIUM
           type: string
         attackVector:
           description: Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
@@ -1019,6 +1060,8 @@ components:
             - IMPACT_HIGH
             - IMPACT_LOW
             - IMPACT_NONE
+            - IMPACT_PARTIAL
+            - IMPACT_COMPLETE
           type: string
         baseScore:
           description: The base score is a function of the base metric scores.
@@ -1030,6 +1073,8 @@ components:
             - IMPACT_HIGH
             - IMPACT_LOW
             - IMPACT_NONE
+            - IMPACT_PARTIAL
+            - IMPACT_COMPLETE
           type: string
         exploitabilityScore:
           format: float
@@ -1043,6 +1088,8 @@ components:
             - IMPACT_HIGH
             - IMPACT_LOW
             - IMPACT_NONE
+            - IMPACT_PARTIAL
+            - IMPACT_COMPLETE
           type: string
         privilegesRequired:
           enum:
@@ -1308,6 +1355,11 @@ components:
           items:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact"
           type: array
+        npmPackages:
+          description: A list of npm packages to be uploaded to Artifact Registry upon successful completion of all build steps. Npm packages in the specified paths will be uploaded to the specified Artifact Registry repository using the builder service account's credentials. If any packages fail to be pushed, the build is marked FAILURE.
+          items:
+            $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage"
+          type: array
         objects:
           $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects"
           description: A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.
@@ -1350,6 +1402,16 @@ components:
           type: string
         version:
           description: Maven `version` value used when uploading the artifact to Artifact Registry.
+          type: string
+      type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage:
+      description: Npm package to upload to Artifact Registry upon successful completion of all build steps.
+      properties:
+        packagePath:
+          description: Path to the package.json. e.g. workspace/path/to/package
+          type: string
+        repository:
+          description: Artifact Registry repository, in the form "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY" Npm package in the workspace specified by path will be zipped and uploaded to Artifact Registry with this location as a prefix.
           type: string
       type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage:
@@ -1609,6 +1671,7 @@ components:
               - NONE
               - SHA256
               - MD5
+              - SHA512
             type: string
           type: array
         substitutionOption:
@@ -1756,6 +1819,19 @@ components:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1Hash"
           type: array
       type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource:
+      description: Location of the source in any accessible Git repository.
+      properties:
+        dir:
+          description: Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
+          type: string
+        revision:
+          description: The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make sure that the string you provide for `revision` is parsable by the command. For information on string values accepted by `git fetch`, see https://git-scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https://git-scm.com/docs/git-fetch.
+          type: string
+        url:
+          description: Location of the Git repo to build. This will be used as a `git remote`, see https://git-scm.com/docs/git-remote.
+          type: string
+      type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1Hash:
       description: Container message for hash values.
       properties:
@@ -1765,6 +1841,7 @@ components:
             - NONE
             - SHA256
             - MD5
+            - SHA512
           type: string
         value:
           description: The hash value.
@@ -1844,6 +1921,11 @@ components:
           items:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact"
           type: array
+        npmPackages:
+          description: Npm packages uploaded to Artifact Registry at the end of the build.
+          items:
+            $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage"
+          type: array
         numArtifacts:
           description: Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are uploaded to Cloud Storage.
           format: int64
@@ -1894,6 +1976,9 @@ components:
     ContaineranalysisGoogleDevtoolsCloudbuildV1Source:
       description: Location of the source in a supported storage service.
       properties:
+        gitSource:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource"
+          description: If provided, get the source from this Git repository.
         repoSource:
           $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource"
           description: If provided, get the source from this location in a Cloud Source Repository.
@@ -1975,6 +2060,20 @@ components:
           readOnly: true
         uri:
           description: URI of the uploaded artifact.
+          type: string
+      type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage:
+      description: An npm package uploaded to Artifact Registry using the NpmPackage directive.
+      properties:
+        fileHashes:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes"
+          description: Hash types and values of the npm package.
+        pushTiming:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan"
+          description: Output only. Stores timing information for pushing the specified artifact.
+          readOnly: true
+        uri:
+          description: URI of the uploaded npm package.
           type: string
       type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage:
@@ -2141,6 +2240,7 @@ components:
             - UPGRADE
             - COMPLIANCE
             - DSSE_ATTESTATION
+            - VULNERABILITY_ASSESSMENT
           type: string
       type: object
     DiscoveryOccurrence:
@@ -2525,6 +2625,23 @@ components:
             $ref: "#/components/schemas/Subject"
           type: array
       type: object
+    Justification:
+      description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+      properties:
+        details:
+          description: Additional details on why this justification was chosen.
+          type: string
+        justificationType:
+          description: The justification type for this vulnerability.
+          enum:
+            - JUSTIFICATION_TYPE_UNSPECIFIED
+            - COMPONENT_NOT_PRESENT
+            - VULNERABLE_CODE_NOT_PRESENT
+            - VULNERABLE_CODE_NOT_IN_EXECUTE_PATH
+            - VULNERABLE_CODE_CANNOT_BE_CONTROLLED_BY_ADVERSARY
+            - INLINE_MITIGATIONS_ALREADY_EXIST
+          type: string
+      type: object
     Jwt:
       properties:
         compactJwt:
@@ -2698,6 +2815,7 @@ components:
             - UPGRADE
             - COMPLIANCE
             - DSSE_ATTESTATION
+            - VULNERABILITY_ASSESSMENT
           type: string
         longDescription:
           description: A detailed description of this note.
@@ -2731,6 +2849,9 @@ components:
         vulnerability:
           $ref: "#/components/schemas/VulnerabilityNote"
           description: A note describing a package vulnerability.
+        vulnerabilityAssessment:
+          $ref: "#/components/schemas/VulnerabilityAssessmentNote"
+          description: A note describing a vulnerability assessment.
       type: object
     Occurrence:
       description: An instance of an analysis type that has been found on a resource.
@@ -2777,6 +2898,7 @@ components:
             - UPGRADE
             - COMPLIANCE
             - DSSE_ATTESTATION
+            - VULNERABILITY_ASSESSMENT
           type: string
         name:
           description: Output only. The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
@@ -2946,6 +3068,19 @@ components:
           format: int32
           type: integer
       type: object
+    Product:
+      description: Product contains information about a product and how to uniquely identify it.
+      properties:
+        genericUri:
+          description: "Contains a URI which is vendor-specific. Example: The artifact repository URL of an image."
+          type: string
+        id:
+          description: Token that identifies a product so that it can be referred to from other parts in the document. There is no predefined format as long as it uniquely identifies a group in the context of the current document.
+          type: string
+        name:
+          description: Name of the product.
+          type: string
+      type: object
     ProjectRepoId:
       description: Selects a repo using a Google Cloud Platform project ID (e.g., winged-cargo-31) and a repo name within that project.
       properties:
@@ -2954,6 +3089,19 @@ components:
           type: string
         repoName:
           description: The name of the repo. Leave empty for the default repo.
+          type: string
+      type: object
+    Publisher:
+      description: Publisher contains information about the publisher of this Note.
+      properties:
+        issuingAuthority:
+          description: Provides information about the authority of the issuing party to release the document, in particular, the party's constituency and responsibilities or other obligations.
+          type: string
+        name:
+          description: "Name of the publisher. Examples: 'Google', 'Google Cloud Platform'."
+          type: string
+        publisherNamespace:
+          description: "The context or namespace. Contains a URL which is under control of the issuing party and can be used as a globally unique identifier for that issuing party. Example: https://csaf.io"
           type: string
       type: object
     Recipe:
@@ -2993,6 +3141,26 @@ components:
         url:
           description: Specific URL associated with the resource.
           type: string
+      type: object
+    Remediation:
+      description: Specifies details on how to handle (and presumably, fix) a vulnerability.
+      properties:
+        details:
+          description: Contains a comprehensive human-readable discussion of the remediation.
+          type: string
+        remediationType:
+          description: The type of remediation that can be applied.
+          enum:
+            - REMEDIATION_TYPE_UNSPECIFIED
+            - MITIGATION
+            - NO_FIX_PLANNED
+            - NONE_AVAILABLE
+            - VENDOR_FIX
+            - WORKAROUND
+          type: string
+        remediationUri:
+          $ref: "#/components/schemas/RelatedUrl"
+          description: Contains the URL where to obtain the remediation.
       type: object
     RepoId:
       description: A unique identifier for a Cloud Repo.
@@ -3297,6 +3465,43 @@ components:
           description: The iteration of the package build from the above version.
           type: string
       type: object
+    VexAssessment:
+      description: VexAssessment provides all publisher provided Vex information that is related to this vulnerability.
+      properties:
+        cve:
+          description: Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the vulnerability.
+          type: string
+        impacts:
+          description: Contains information about the impact of this vulnerability, this will change with time.
+          items:
+            type: string
+          type: array
+        justification:
+          $ref: "#/components/schemas/Justification"
+          description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+        noteName:
+          description: "The VulnerabilityAssessment note from which this VexAssessment was generated. This will be of the form: `projects/[PROJECT_ID]/notes/[NOTE_ID]`."
+          type: string
+        relatedUris:
+          description: Holds a list of references associated with this vulnerability item and assessment.
+          items:
+            $ref: "#/components/schemas/RelatedUrl"
+          type: array
+        remediations:
+          description: Specifies details on how to handle (and presumably, fix) a vulnerability.
+          items:
+            $ref: "#/components/schemas/Remediation"
+          type: array
+        state:
+          description: Provides the state of this Vulnerability assessment.
+          enum:
+            - STATE_UNSPECIFIED
+            - AFFECTED
+            - NOT_AFFECTED
+            - FIXED
+            - UNDER_INVESTIGATION
+          type: string
+      type: object
     Volume:
       description: "Volume describes a Docker container volume which is mounted into build steps in order to persist files across build step execution. Next ID: 3"
       properties:
@@ -3305,6 +3510,31 @@ components:
           type: string
         path:
           description: Path at which to mount the volume. Paths must be absolute and cannot conflict with other volume paths on the same build step or with certain reserved volume paths.
+          type: string
+      type: object
+    VulnerabilityAssessmentNote:
+      description: A single VulnerabilityAssessmentNote represents one particular product's vulnerability assessment for one CVE.
+      properties:
+        assessment:
+          $ref: "#/components/schemas/Assessment"
+          description: Represents a vulnerability assessment for the product.
+        languageCode:
+          description: Identifies the language used by this document, corresponding to IETF BCP 47 / RFC 5646.
+          type: string
+        longDescription:
+          description: A detailed description of this Vex.
+          type: string
+        product:
+          $ref: "#/components/schemas/Product"
+          description: The product affected by this vex.
+        publisher:
+          $ref: "#/components/schemas/Publisher"
+          description: Publisher details of this Note.
+        shortDescription:
+          description: A one sentence description of this Vex.
+          type: string
+        title:
+          description: The title of the note. E.g. `Vex-Debian-11.4`
           type: string
       type: object
     VulnerabilityNote:
@@ -3414,6 +3644,8 @@ components:
         type:
           description: The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
           type: string
+        vexAssessment:
+          $ref: "#/components/schemas/VexAssessment"
       type: object
     VulnerabilityOccurrencesSummary:
       description: A summary of how many vulnerability occurrences there are per resource and severity type.

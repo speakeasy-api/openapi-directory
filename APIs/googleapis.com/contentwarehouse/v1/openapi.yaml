@@ -2002,6 +2002,35 @@ components:
         customerId:
           $ref: "#/components/schemas/AppsDynamiteCustomerId"
       type: object
+    AppsDynamiteSharedSegmentedMembershipCount:
+      description: "Contains info on membership count for member types: HUMAN_USER, APP_USER & ROSTER_MEMBER different states: INVITED, JOINED"
+      properties:
+        memberType:
+          enum:
+            - MEMBER_TYPE_UNSPECIFIED
+            - HUMAN_USER
+            - ROSTER_MEMBER
+          type: string
+        membershipCount:
+          description: count of members with given type and state
+          format: int32
+          type: integer
+        membershipState:
+          enum:
+            - MEMBER_UNKNOWN
+            - MEMBER_INVITED
+            - MEMBER_JOINED
+            - MEMBER_NOT_A_MEMBER
+            - MEMBER_FAILED
+          type: string
+      type: object
+    AppsDynamiteSharedSegmentedMembershipCounts:
+      properties:
+        value:
+          items:
+            $ref: "#/components/schemas/AppsDynamiteSharedSegmentedMembershipCount"
+          type: array
+      type: object
     AppsPeopleActivityBackendDestinationStream:
       description: "A DestinationStream is a /namespace/id[0]/id[1]/.../id[n] that represents a collection of Activities. Example destinations: -The Profile Stream on http://plus.google.com/+JohnDoe/posts -A Square Stream on http://plus.google.com/squares/123 -A \"comment Stream\" (Fountain) on http://www.youtube.com/watch?id=123 It's possible for a single Activity to show in each of these destinations - and it might behave/look slightly differently for each one. Destinations can have their own business logic associated with them at both write-time and read-time server-side (these are documented below). Each DestinationStream is indexed and can be retrieved using the GetDestinationStreamRequest. For the repeated ID space indexing happens at all levels, e.g. if you have: /square/123/abc /square/123/efd /square/456 You can fetch /square/123/abc directly or /square/123 (which includes all Activities in both /square/123/abc and /square/123/efd), or even /square which retrieves all Activities in the Square namespace (visible for that user). On the storage layer, we represent DestinationStream as Channel (http://cs/#google3/social/common/channel/channel.proto), since the storage does not have the concept of a Stream. Both terms are used interchangeably within the service layer, but client of Social Infrastructure should use the term DestinationStream. Next ID: 3"
       properties:
@@ -2493,6 +2522,10 @@ components:
             - LEGAL_CONTRACTS_EXTERNAL_AFFINITY
             - CONTACTS_TO_STAR_AFFINITY
             - DECS_AFFINITY
+            - GSOX_MOCHI_AFFINITY
+            - MEET_AFFINITY
+            - PMW_TI_AFFINITY
+            - DRIVE_SEARCH_FILTER_PERSON_ONLY
           type: string
         containerId:
           description: The ID of the container
@@ -3525,7 +3558,7 @@ components:
           type: string
       type: object
     AppsPeopleOzExternalMergedpeopleapiInAppReachability:
-      description: This is deprecated in PEOPLE_API/SHARPEN, and should only be used for PROFILES. Which apps the person has indicated they are reachable at for the requester. See go/d13y and com.google.focus.proto.InAppReachability.
+      description: This is deprecated in PEOPLE_API/SHARPEN, and should only be used for PROFILES. Clients should use InAppNotificationTarget field instead. Which apps the person has indicated they are reachable at for the requester. See go/d13y and com.google.focus.proto.InAppReachability.
       properties:
         appType:
           enum:
@@ -6185,6 +6218,64 @@ components:
               - WIFI_ADD_NETWORK_QR_CODE
               - WIFI_CALLING
               - WIFI_HOTSPOT
+              - ACCESSIBILITY_SELECT_TO_SPEAK
+              - CRISIS_ALERTS
+              - REGULATORY_LABELS
+              - SEND_FEEDBACK
+              - OS_BUILD_NUMBER
+              - ACCESSIBILITY_SHORTCUTS
+              - ACCESSIBILITY_MENU
+              - ACCESSIBILITY_SOUND_AMPLIFIER
+              - ACCESSIBILITY_LIVE_TRANSCRIBE
+              - ACCESSIBILITY_SOUND_NOTIFICATIONS
+              - ACCESSIBILITY_TALKBACK
+              - ACCESSIBILITY_TIMEOUT
+              - CAMERA_SETTINGS
+              - BATTERY_SAVER_TOGGLE
+              - COVID_NOTIFICATIONS
+              - APP_LOCATION
+              - LOCATION_SERVICES
+              - PRIVATE_DNS
+              - UNRESTRICTED_DATA
+              - PREFERRED_NETWORK
+              - NETWORK_PREFERENCES
+              - PASSWORDS_AND_ACCOUNTS
+              - PRIVACY_DASHBOARD
+              - MORE_SECURITY
+              - APP_PINNING
+              - CONFIRM_SIM_DELETION
+              - ENCRYPT_PHONE
+              - FACE_UNLOCK
+              - INSTALL_UNKNOWN_APPS
+              - NOW_PLAYING
+              - STAY_AWAKE
+              - ASSISTANT_VOICE
+              - RESET_BLUETOOTH_WIFI
+              - DEFAULT_PHONE_APP
+              - GOOGLE_ACCOUNT
+              - ACCESSIBILITY_CAPTION_SIZE_AND_STYLE
+              - ACCESSIBILITY_CAPTION_STYLE
+              - ACCESSIBILITY_CAPTION_TEXT
+              - ACCESSIBILITY_CAPTION_PREFERENCES
+              - ACCESSIBILITY_COLOR_AND_MOTION
+              - ACCESSIBILITY_BOLD_TEXT
+              - LIVE_CAPTION
+              - POWER_BUTTON_ENDS_CALL
+              - TOUCH_AND_HOLD_DELAY
+              - ACCESSIBILITY_VOICE_ACCESS
+              - SMS_PERMISSIONS
+              - SPECIAL_APP_ACCESS
+              - DARK_THEME_SCHEDULE
+              - LOCK_SCREEN_TEXT
+              - NIGHT_LIGHT_SCHEDULE
+              - AUTOFILL
+              - USAGE_AND_DIAGNOSTICS
+              - SENSITIVE_NOTIFICATIONS
+              - ENCRYPTION_AND_CREDENTIALS
+              - SPACIAL_AUDIO
+              - RESET_OPTIONS
+              - QUICK_TAP
+              - TIPS_AND_SUPPORT
               - ABOUT_PHONE
               - ACCOUNTS
               - APPLICATION
@@ -7965,6 +8056,9 @@ components:
       properties:
         fallbackToTetheredDeviceAppCapabilities:
           description: If true, APP_ID queries initiated by this device should fall back to execution on the tethered device if it's available and if the primary device cannot perform the action (e.g. due to the app not being installed).
+          type: boolean
+        preferTargetingPrimaryDevice:
+          description: For chat_message.SEND targeting, when either the primary or secondary (tethered) device is capable of handling the chat_message.SEND action, prefer targeting it to the primary device.
           type: boolean
         supportedRecipientTypes:
           description: Should only be checked if nonempty.
@@ -10160,6 +10254,9 @@ components:
         androidPackageName:
           description: Unique package name that identifies an Android app of the provider.
           type: string
+        castAppId:
+          description: Unique cast app id that identifies a Cast app of the provider.
+          type: string
         versionCode:
           description: Version code of the application.
           format: int32
@@ -10190,7 +10287,7 @@ components:
           description: Each onboarded provider has a unique provider key. KG provider keys are string identifiers used to identify a provider in some Media backends since mids, names, etc can change.
           type: string
         mid:
-          description: The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all entities contained in it's graph.
+          description: The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all entities contained in its graph.
           type: string
         providerVariant:
           $ref: "#/components/schemas/AssistantContextProviderVariant"
@@ -10216,11 +10313,8 @@ components:
           $ref: "#/components/schemas/AssistantContextMediaProviderId"
           description: DEPRECATED. Fields in MediaProviderId have been pulled out into separate fields in ProviderId and ProviderMetadata. TODO(b/243953766) Deprecate this field.
         mid:
-          description: The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all entities contained in it's graph.
+          description: The MID of the provider. A MID is a unique identifier issued by Knowledge Graph for all entities contained in its graph.
           type: string
-        naturalProviderId:
-          $ref: "#/components/schemas/AssistantContextProviderIdNaturalProviderId"
-          description: Natural Provider Id returned from Provider Corpus. Note that feature teams should almost always use provider_corpus_id which is the canonical representation for provider. Surface-specific identiers should only be used in final surface rendering.
         providerCorpusId:
           description: ID issued by the Provider Corpus to uniquely identify a provider entity e.g. an Android app, a Cast app or a Cloud provider. In practice, a single partner can have multiple providers entities. For more detail, see go/se-storage-provider-id. This is the preferred/ standardized ID to use for ProviderId that all use-cases should eventually migrate to.
           format: int64
@@ -10228,26 +10322,6 @@ components:
         providerVariant:
           $ref: "#/components/schemas/AssistantContextProviderVariant"
           description: Provider variant corresponding to the current provider. It's used together with mid to uniquely identify provider.
-      type: object
-    AssistantContextProviderIdNaturalProviderId:
-      description: Represents how to naturally identify a provider. A copy of google3/assistant/serviceengine/proto/serving/natural_provider_id.proto.
-      properties:
-        providerType:
-          description: ProviderType is an enum to represent the category of where this id is from.
-          enum:
-            - UNKNOWN
-            - CLOUD_PROJECT
-            - APP_ACTIONS
-            - WEBSITE
-            - NARRATIVE_NEWS
-            - IOS_BUNDLE
-            - CAST_APP
-            - ZEROTH_PARTY
-            - ANDROID_SYSTEM_API
-          type: string
-        value:
-          description: String of provider_id_value is the actual value of the id.
-          type: string
       type: object
     AssistantContextProviderVariant:
       description: "Note: As of May 2021, multiple providers use the same mids (e.g. YouTube Main, YouTube Go, and YouTube Music all have the same mids). However, quite often we end up using surface specific identifiers (e.g. Android package names, iOS bundle identifiers, etc.) to differentiate amongst them. This field allows us to move away from surface specific identifiers towards a surface-agnostic enum representing the same information."
@@ -10364,6 +10438,9 @@ components:
         url:
           description: The URL for this endpoint, it must start with https.
           type: string
+      type: object
+    AssistantDevicesPlatformProtoCoreDismissAssistantCapability:
+      properties: {}
       type: object
     AssistantDevicesPlatformProtoDeviceActionCapability:
       description: "This capability represents device action needed capability. Next ID: 10"
@@ -10574,6 +10651,9 @@ components:
     AssistantDevicesPlatformProtoMediaResumeCapability:
       properties: {}
       type: object
+    AssistantDevicesPlatformProtoMediaShowControlsCapability:
+      properties: {}
+      type: object
     AssistantDevicesPlatformProtoMediaStopCapability:
       properties: {}
       type: object
@@ -10589,6 +10669,9 @@ components:
       properties:
         name:
           type: string
+      type: object
+    AssistantDevicesPlatformProtoProviderFulfillCapability:
+      properties: {}
       type: object
     AssistantDevicesPlatformProtoProviderOpenCapability:
       properties:
@@ -10631,7 +10714,7 @@ components:
       properties: {}
       type: object
     AssistantDevicesPlatformProtoSupportedDeviceOps:
-      description: This message will specify supports for fields in |assistant.embedded.v1.DeviceOp|, for a device model package. See go/easi-client-op2 for more info.
+      description: "This message will specify supports for fields in |assistant.embedded.v1.DeviceOp|, for a device model package. See go/easi-client-op2 for more info. Next ID: 16"
       properties:
         callCall:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoCallCallCapability"
@@ -10639,6 +10722,9 @@ components:
         clientReconnect:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoClientReconnectCapability"
           description: "|client_reconnect| indicates support for client.RECONNECT using assistant.embedded.v1.DeviceOp. There is an alternative API/capability for client.RECONNECT specified in RoutineCapability.supports_reconnect. Client should choose between this and RoutineCapability but not both."
+        coreDismissAssistant:
+          $ref: "#/components/schemas/AssistantDevicesPlatformProtoCoreDismissAssistantCapability"
+          description: "[core_dismiss_assistant] specifies the support for core.DISMISS_ASSISTANT client_op and the corresponding core_dismiss_assistant field in assistant.embedded.v1.DeviceOp."
         deviceModifySetting:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoDeviceModifySettingCapability"
           description: "|device_modify_setting| specifies the support for device.MODIFY_SETTING client_op, and the corresponding device_modify_setting field in assistant.embedded.v1.DeviceOp."
@@ -10655,8 +10741,13 @@ components:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoMediaPreviousCapability"
         mediaResume:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoMediaResumeCapability"
+        mediaShowControls:
+          $ref: "#/components/schemas/AssistantDevicesPlatformProtoMediaShowControlsCapability"
         mediaStop:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoMediaStopCapability"
+        providerFulfill:
+          $ref: "#/components/schemas/AssistantDevicesPlatformProtoProviderFulfillCapability"
+          description: "|provider_fulfill| specifies the support for provider.FULFILL client_op, and the corresponding provider_fulfill field in assistant.embedded.v1.DeviceOp."
         providerOpen:
           $ref: "#/components/schemas/AssistantDevicesPlatformProtoProviderOpenCapability"
           description: "|provider_open| specifies the support for provider.OPEN client_op, and the corresponding provider_open field in assistant.embedded.v1.DeviceOp."
@@ -10852,7 +10943,7 @@ components:
           description: ID for the device. PRR specific feature.
       type: object
     AssistantGroundingRankerGroundingProviderFeatures:
-      description: "Next ID: 5"
+      description: "Next ID: 6"
       properties:
         contactGroundingProviderFeatures:
           $ref: "#/components/schemas/AssistantGroundingRankerContactGroundingProviderFeatures"
@@ -10860,8 +10951,18 @@ components:
           $ref: "#/components/schemas/AssistantGroundingRankerDeviceGroundingProviderFeatures"
         mediaGroundingProviderFeatures:
           $ref: "#/components/schemas/AssistantGroundingRankerMediaGroundingProviderFeatures"
+        podcastGroundingProviderFeatures:
+          $ref: "#/components/schemas/AssistantGroundingRankerPodcastGroundingProviderFeatures"
         providerGroundingProviderFeatures:
           $ref: "#/components/schemas/AssistantGroundingRankerProviderGroundingProviderFeatures"
+      type: object
+    AssistantGroundingRankerLaaFeature:
+      properties:
+        name:
+          type: string
+        value:
+          format: float
+          type: number
       type: object
     AssistantGroundingRankerLaaFeatures:
       properties:
@@ -10871,6 +10972,10 @@ components:
           $ref: "#/components/schemas/AssistantGroundingRankerLaaFeaturesCommunicationEndpoint"
         contact:
           $ref: "#/components/schemas/AssistantGroundingRankerLaaFeaturesContact"
+        features:
+          items:
+            $ref: "#/components/schemas/AssistantGroundingRankerLaaFeature"
+          type: array
         provider:
           $ref: "#/components/schemas/AssistantGroundingRankerLaaFeaturesProvider"
       type: object
@@ -10897,7 +11002,7 @@ components:
           $ref: "#/components/schemas/AssistantGroundingRankerAssistantInteractionFeatures"
       type: object
     AssistantGroundingRankerMediaGroundingProviderFeatures:
-      description: "Features to be passed from Media GP to HGR. Next ID: 9"
+      description: "Features to be passed from Media GP to HGR. Next ID: 14"
       properties:
         albumReleaseType:
           description: Release type for an album container.
@@ -10907,11 +11012,22 @@ components:
             - SINGLE
             - EXTENDED_PLAY
           type: string
+        ambiguityClassifier:
+          description: Temporary ambiguity classifier signal.
+          enum:
+            - UNKNOWN
+            - SONG_ALBUM_AMBIGUOUS
+            - NOT_AMBIGUOUS
+            - SINGLE_MEDIA_ITEM
+          type: string
         hasTypeSemanticEdge:
           description: True if the argument's type was explicitly mentioned in the query.
           type: boolean
         isCastVideo:
           description: Whether the candidate is YouTube CAST_VIDEO candidate. CAST_VIDEO is a deeplink platform. This signal will be used to promote YouTube Music screenful candidates with CAST_VIDEO platform for free users because free users cannot get exact entities in screenless response and can get exact entities with ads in screenful response.
+          type: boolean
+        isMediaSearchQuerySubsetOfEntityNameAndArtist:
+          description: True if the media search query is included in the entity name and artists.
           type: boolean
         isSeedRadio:
           description: True if the media deeplink has tag SEED_RADIO.
@@ -10919,12 +11035,59 @@ components:
         isSeedRadioRequest:
           description: True if the user requests seed radio.
           type: boolean
+        mediaContentType:
+          description: MediaAquaAction::media_content_type from interpretation. It can be used for cross-content type ranking, for example, if a candidate's content type does not match this content type from interpretation, this candidate will be slightly demoted. Also, we might avoid fetching some signals when the content type is generic music, since some content types do not need ranking.
+          enum:
+            - MEDIA_CONTENT_TYPE_UNSPECIFIED
+            - MUSIC_TRACK
+            - MUSIC_ARTIST
+            - MUSIC_ALBUM
+            - PUBLIC_PLAYLIST
+            - PERSONAL_PLAYLIST
+            - MUSIC_PERSONALIZED_MIX
+            - MUSIC_GENRE_MIX
+            - MUSIC_SEED_RADIO
+            - MUSIC_STATION
+            - RADIO_STATION
+            - RADIO_NETWORK
+            - PODCAST_SERIES
+            - PODCAST_GENERIC
+            - PODCAST_GENRE
+            - PODCAST_TOPIC
+            - PODCAST_RESUME
+            - PODCAST_EPISODE
+            - VIDEO
+            - MUSIC_VIDEO
+            - VIDEO_RECOMMENDED_PLAYLIST
+            - MUSIC_VIDEO_PERSONALIZED_PLAYLIST
+            - TV_SHOW
+            - TV_SHOW_SEASON
+            - TV_SHOW_EPISODE
+            - MOVIE
+            - YOUTUBE_CHANNEL
+            - TV_CHANNEL
+            - SPORTS_TEAM_GAME
+            - AUDIO_BOOK
+            - AUDIO_STORY
+            - YOUTUBE_VIDEO_PLAYLIST
+            - TV_ARTIST
+            - NEWS
+            - VIDEO_GAME
+            - DIRECTOR
+            - ACTOR
+            - MOVIE_SERIES
+            - APP
+          type: string
         mscRate:
           description: "MSC(Media Short Click) rate. MSC rate = total number of MSC events / total number of MSC candidates The event is considered as MSC candidate if the event is a media seeking query(excluding follow-ons) and the media result is successfully fulfilled. The event is MSC event if any of the following is in the following queries within 30 secs: FOLLOWED_BY_DUPLICATE FOLLOWED_BY_ADD_OR_DELETE_MANUAL_REFINEMENT FOLLOWED_BY_SAME_VERTICAL (MEDIA) FOLLOWED_BY_STOP More details: go/media-ranking, go/billboard-navboost, go/magma-music-actions-efrac"
           format: float
           type: number
         scubedPSaiMusic:
-          description: Scubed predicted SAI value (pSAI) for music populated by a regression model that incorporates a BERT model signal as well as other Scubed signals.
+          description: Scubed predicted SAI value (pSAI - SCUBED_MUSIC_ACTIONS) for music populated by a regression model that incorporates a BERT model signal as well as other Scubed signals.
+          format: double
+          type: number
+        scubedPSaiTvm:
+          description: Scubed predicted SAI value (pSAI - SCUBED_TVM_ACTIONS) for music populated by a regression model that incorporates a BERT model signal as well as other Scubed signals.
           format: double
           type: number
         type:
@@ -10958,10 +11121,31 @@ components:
             - PODCAST_SERIES
             - PODCAST_EPISODE
           type: string
+        youtubeConfidenceScore:
+          format: double
+          type: number
+      type: object
+    AssistantGroundingRankerPodcastGroundingProviderFeatures:
+      description: "Features to be extracted from Podcast GP for ranking in HGR. Next ID: 4"
+      properties:
+        isExclusive:
+          description: Whether the podcast is exclusive to a provider a not.
+          type: boolean
+        scubedNg3ModelScore:
+          description: The relevance score from Scubed.
+          format: float
+          type: number
+        scubedTstarScore:
+          description: Tstar score is a signal that indicates the quality of the entity.
+          format: double
+          type: number
       type: object
     AssistantGroundingRankerProviderGroundingProviderFeatures:
-      description: "Features to be extracted from Provider GP for ranking in HGR. Next ID: 4"
+      description: "Features to be extracted from Provider GP for ranking in HGR. Next ID: 5"
       properties:
+        isInAppProvider:
+          description: Indicates that fulfillment on this provider will happen within the provider app.
+          type: boolean
         providerClusterId:
           description: Cluster IDs for the provider. This field is repeated because some providers can be associated with multiple clusters. PRR specific feature.
           items:
@@ -11110,14 +11294,14 @@ components:
             $ref: "#/components/schemas/AssistantLogsCommunicationFuzzyNgramMatchLog"
           type: array
         gaiaId:
-          description: Contact owner's gaia id from cs/symbol::symbol:quality_qrewrite.PersonalContactData.shared_contact_owner_gaia_id. Only populated for is_shared = true and non sign-out mode and user is not the owner of the contact(shared contact from other user).
+          description: Contact owner's gaia id from cs/symbol::symbol:quality_qrewrite.PersonalContactData.shared_contact_owner_gaia_id. Only populated for is_shared = true and non sign-out mode and user is not the owner of the contact(shared contact from other user). This field is not being logged in P2.
           format: int64
           type: string
         isContactFromSecondaryAccount:
           description: Boolean value indicating whether selected contact is from different account than the logged in account.
           type: boolean
         isShared:
-          description: "If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that have been marked as shared. - User is calling shared contacts from some other user's contact list."
+          description: "If this is a shared contact. This is true in 2 cases: - User is calling their own contacts that have been marked as shared. - User is calling shared contacts from some other user's contact list. This field is not being logged in P2."
           type: boolean
         isTransliteratedMatch:
           description: Indicate the contact matches the transliterated query.
@@ -11698,6 +11882,7 @@ components:
             - ERROR_DEVICE_PROPERTIES
             - ERROR_HOME_GRAPH
             - ERROR_CAPABILITIES_ACROSS_DEVICES
+            - ERROR_SURFACE_IDENTITIES_ACROSS_DEVICES
           type: string
       type: object
     AssistantLogsLowConfidenceTargetDeviceLog:
@@ -12040,7 +12225,7 @@ components:
           type: string
       type: object
     AssistantPrefulfillmentRankerPrefulfillmentSignals:
-      description: "Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 47"
+      description: "Signals to be used by the Prefulfillment Ranker. Derived from the ParsingSignals and GroundingSignals carried by the FunctionCall. LINT.IfChange Next ID: 51"
       properties:
         bindingSetAuis:
           description: Assistant User Interaction Score for binding set.
@@ -12092,6 +12277,10 @@ components:
           description: Assistant User Interaction Score which is aggregated using intent name from exp laelaps.
           format: double
           type: number
+        intentNamePauis:
+          description: Intent level Pauis User Interaction Score.
+          format: float
+          type: number
         isFeasible:
           description: "Feasibility of fulfilling the binding set. Eg: For PlayMedia, this is equivalent to playability. More details: go/hgr-feasibility-feature."
           type: boolean
@@ -12106,6 +12295,9 @@ components:
           type: boolean
         isPodcastIntent:
           description: Whether the intent is a podcast intent.
+          type: boolean
+        isVideoIntent:
+          description: Whether the intent is a media object video intent.
           type: boolean
         kscorerRank:
           description: The rank order of the interpretation as determined by kscorer. The kscorer-determined dominant interpretation, if any, gets a rank of 0. The remaining N interpretations get a rank of 1 through N.
@@ -12157,6 +12349,22 @@ components:
           description: A ID corresponding to which bucket a given parsing score belongs in.
           format: int32
           type: integer
+        phase:
+          description: Query understanding phase the intent was produced in.
+          enum:
+            - QU_PHASE_UNSPECIFIED
+            - QU_PHASE_REQUEST
+            - QU_PHASE_QREWRITE
+            - QU_PHASE_QBT
+            - QU_PHASE_PROBE_QUERY
+            - QU_PHASE_MULTI_ACCOUNT
+            - QU_PHASE_CQBT
+            - QU_PHASE_QBT_RESOLUTION
+            - QU_PHASE_HIGH_PRECISION
+            - QU_PHASE_COMBINED_RBT_RESOLUTION
+            - QU_PHASE_ANALYZER_INPUT
+            - QU_PHASE_NAGE
+          type: string
         pq2tVsAssistantIbstCosine:
           description: Cosine similarity between predicted query-to-term model and assistant intent-type-based salient terms. This is intended to be only used for ACE ranking and only populated for assistant traffic.
           format: double
@@ -12181,6 +12389,11 @@ components:
             - RANKER_NAME_GROUNDING_RANKER_MEDIA_EXP
             - RANKER_NAME_GROUNDING_RANKER_COMMS_EXP
             - RANKER_NAME_CONSOLIDATED_PFR_HGR
+            - RANKER_NAME_CONSOLIDATED_PFR_HGR_V2
+            - RANKER_NAME_GROUNDING_RANKER_COMMS_EXP_CALIBRATED
+            - RANKER_NAME_CONSOLIDATED_PFR_HGR_V2_COMMS_CALIBRATED
+            - RANKER_NAME_EXPERIMENTAL_PFR_SAGE_NEW_DOMAINS
+            - RANKER_NAME_BUCKETED_PARSING_SCORE_FOR_SMARTHOME
           type: string
         searchDispatch:
           description: The determination made by the SearchDispatchingConfig as to whether and how this interpretation should be dispatched to Search.
@@ -12192,6 +12405,12 @@ components:
             - EMIT_ONLY
             - COUNTERFACTUAL_LOG_ONLY
             - CAPACITY_ACCOUNTING
+          type: string
+        subIntentType:
+          description: 'sub_intent_type differentiates between intents that share the top level intent name. For eg: for TV_FALLBACK_SEARCH_INTENT, the top level intent name must be "Find_media" and the media_object argument within it must be of type "Media_unspecified".'
+          enum:
+            - SUB_INTENT_TYPE_UNKNOWN
+            - SUB_INTENT_TYPE_TV_FALLBACK_SEARCH_INTENT
           type: string
         topHypothesisConfidence:
           description: "Average of per-word confidence for top speech recognition hypothesis. The value is from RecognizerHypothesisLog: http://google3/logs/proto/speech/service/recognizer_log.proto?l=848&rcl=281400256"
@@ -13238,6 +13457,8 @@ components:
           $ref: "#/components/schemas/ClassifierPornQueryClassifierOutput"
         medical:
           $ref: "#/components/schemas/ClassifierPornQueryClassifierOutput"
+        minor:
+          $ref: "#/components/schemas/ClassifierPornQueryClassifierOutput"
         offensive:
           $ref: "#/components/schemas/ClassifierPornQueryClassifierOutput"
         porn:
@@ -13276,7 +13497,7 @@ components:
           type: integer
       type: object
     ClassifierPornSiteData:
-      description: "Next ID: 52"
+      description: "Next ID: 53"
       properties:
         avgPedoPageScore:
           description: The average pedo page score for the site.
@@ -13307,6 +13528,10 @@ components:
           items:
             $ref: "#/components/schemas/ClassifierPornSiteDataVersionedScore"
           type: array
+        violenceScore:
+          description: The cubic mean aggregation of violence page scores in the site.
+          format: float
+          type: number
         violenceStats:
           $ref: "#/components/schemas/ClassifierPornSiteViolenceStats"
       type: object
@@ -13347,6 +13572,216 @@ components:
         videoViolenceScore:
           format: float
           type: number
+      type: object
+    CloudAiPlatformTenantresourceCloudSqlInstanceConfig:
+      description: The identity to configure a CloudSQL instance provisioned via SLM Terraform.
+      properties:
+        cloudSqlInstanceConnectionName:
+          description: Output only. The CloudSQL instance connection name.
+          type: string
+        cloudSqlInstanceName:
+          description: Input/Output [Optional]. The CloudSQL instance name within SLM instance. If not set, a random UUIC will be generated as instance name.
+          type: string
+        kmsKeyReference:
+          description: Input [Optional]. The KMS key name or the KMS grant name used for CMEK encryption. Only set this field when provisioning new CloudSQL instances. For existing CloudSQL instances, this field will be ignored because CMEK re-encryption is not supported.
+          type: string
+        mdbRolesForCorpAccess:
+          description: Input [Optional]. MDB roles for corp access to CloudSQL instance.
+          items:
+            type: string
+          type: array
+        slmInstanceName:
+          description: Output only. The SLM instance's full resource name.
+          type: string
+        slmInstanceTemplate:
+          description: Input [Required]. The SLM instance template to provision CloudSQL.
+          type: string
+        slmInstanceType:
+          description: Input [Required]. The SLM instance type to provision CloudSQL.
+          type: string
+      type: object
+    CloudAiPlatformTenantresourceGcsBucketConfig:
+      description: The identity to configure a GCS bucket.
+      properties:
+        admins:
+          items:
+            type: string
+          type: array
+        bucketName:
+          description: Input/Output [Optional]. The name of a GCS bucket with max length of 63 chars. If not set, a random UUID will be generated as bucket name.
+          type: string
+        entityName:
+          description: Input/Output [Optional]. Only needed for per-entity tenant GCP resources. During Deprovision API, the on-demand deletion will only cover the tenant GCP resources with the specified entity name.
+          type: string
+        kmsKeyReference:
+          description: Input/Output [Optional]. The KMS key name or the KMS grant name used for CMEK encryption. Only set this field when provisioning new GCS bucket. For existing GCS bucket, this field will be ignored because CMEK re-encryption is not supported.
+          type: string
+        ttlDays:
+          description: Input/Output [Optional]. Only needed when the content in bucket need to be garbage collected within some amount of days.
+          format: int32
+          type: integer
+        viewers:
+          description: Input/Output [Required]. IAM roles (viewer/admin) put on the bucket.
+          items:
+            type: string
+          type: array
+      type: object
+    CloudAiPlatformTenantresourceIamPolicyBinding:
+      description: The dynamic IAM bindings to be granted after tenant projects are created.
+      properties:
+        members:
+          description: "Input/Output [Required]. The member service accounts with the roles above. Note: placeholders are same as the resource above."
+          items:
+            type: string
+          type: array
+        resource:
+          description: "Input/Output [Required]. The resource name that will be accessed by members, which also depends on resource_type. Note: placeholders are supported in resource names. For example, ${tpn} will be used when the tenant project number is not ready."
+          type: string
+        resourceType:
+          description: Input/Output [Required]. Specifies the type of resource that will be accessed by members.
+          enum:
+            - RESOURCE_TYPE_UNSPECIFIED
+            - PROJECT
+            - SERVICE_ACCOUNT
+            - GCS_BUCKET
+            - SERVICE_CONSUMER
+            - AR_REPO
+          type: string
+        role:
+          description: Input/Output [Required]. The role for members below.
+          type: string
+      type: object
+    CloudAiPlatformTenantresourceInfraSpannerConfig:
+      description: "The configuration for a spanner database provisioning. Next ID: 8"
+      properties:
+        createDatabaseOptions:
+          $ref: "#/components/schemas/CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions"
+          description: "Input [Optional]. The options to create a spanner database. Note: give the right options to ensure the right KMS key access audit logging and AxT logging in expected logging category."
+        kmsKeyReference:
+          description: Input [Optional]. The KMS key name or the KMS grant name used for CMEK encryption. Only set this field when provisioning new Infra Spanner databases. For existing Infra Spanner databases, this field will be ignored because CMEK re-encryption is not supported. For example, projects//locations//keyRings//cryptoKeys/
+          type: string
+        sdlBundlePath:
+          description: Input [Required]. The file path to the spanner SDL bundle.
+          type: string
+        spannerBorgServiceAccount:
+          description: Input [Optional]. The spanner borg service account for delegating the kms key to. For example, spanner-infra-cmek-nonprod@system.gserviceaccount.com, for the nonprod universe.
+          type: string
+        spannerLocalNamePrefix:
+          type: string
+        spannerNamespace:
+          type: string
+        spannerUniverse:
+          description: "Input [Required]. Every database in Spanner can be identified by the following path name: /span//:"
+          type: string
+      type: object
+    CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions:
+      description: The options to create a spanner database. KMS key access audit logging and AxT logging will be associated with the given resource name, resource type and service name. Please ensure to give right options to enable correct audit logging and AxT logging.
+      properties:
+        cmekCloudResourceName:
+          description: The cloud resource name for the CMEK encryption. For example, projects//locations/
+          type: string
+        cmekCloudResourceType:
+          description: The cloud resource type for the CMEK encryption. For example, contentwarehouse.googleapis.com/Location
+          type: string
+        cmekServiceName:
+          description: The service name for the CMEK encryption. For example, contentwarehouse.googleapis.com
+          type: string
+      type: object
+    CloudAiPlatformTenantresourceServiceAccountIdentity:
+      description: The identity to configure a service account.
+      properties:
+        serviceAccountEmail:
+          description: Output only. The service account email that has been created.
+          type: string
+        tag:
+          description: "Input/Output [Optional]. The tag that configures the service account, as defined in google3/configs/production/cdpush/acl-zanzibar-cloud-prod/activation_grants/activation_grants.gcl. Note: The default P4 service account has the empty tag."
+          type: string
+      type: object
+    CloudAiPlatformTenantresourceTenantProjectConfig:
+      description: The identity to configure a tenant project.
+      properties:
+        billingConfig:
+          $ref: "#/components/schemas/GoogleApiServiceconsumermanagementV1BillingConfig"
+          description: Input/Output [Required]. The billing account properties to create the tenant project.
+        folder:
+          description: "Input/Output [Required]. The folder that holds tenant projects and folder-level permissions will be automatically granted to all tenant projects under the folder. Note: the valid folder format is `folders/{folder_number}`."
+          type: string
+        policyBindings:
+          description: Input/Output [Required]. The policy bindings that are applied to the tenant project during creation. At least one binding must have the role `roles/owner` with either `user` or `group` type.
+          items:
+            $ref: "#/components/schemas/GoogleApiServiceconsumermanagementV1PolicyBinding"
+          type: array
+        services:
+          description: Input/Output [Required]. The API services that are enabled on the tenant project during creation.
+          items:
+            type: string
+          type: array
+      type: object
+    CloudAiPlatformTenantresourceTenantProjectResource:
+      description: "The tenant project and tenant resources. Next ID: 10"
+      properties:
+        cloudSqlInstances:
+          description: The CloudSQL instances that are provisioned under the tenant project.
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceCloudSqlInstanceConfig"
+          type: array
+        gcsBuckets:
+          description: The GCS buckets that are provisioned under the tenant project.
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceGcsBucketConfig"
+          type: array
+        iamPolicyBindings:
+          description: "The dynamic IAM bindings that are granted under the tenant project. Note: this should only add new bindings to the project if they don't exist and the existing bindings won't be affected."
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceIamPolicyBinding"
+          type: array
+        infraSpannerConfigs:
+          description: "The Infra Spanner databases that are provisioned under the tenant project. Note: this is an experimental feature."
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceInfraSpannerConfig"
+          type: array
+        tag:
+          description: "Input/Output [Required]. The tag that uniquely identifies a tenant project within a tenancy unit. Note: for the same tenant project tag, all tenant manager operations should be idempotent."
+          type: string
+        tenantProjectConfig:
+          $ref: "#/components/schemas/CloudAiPlatformTenantresourceTenantProjectConfig"
+          description: The configurations of a tenant project.
+        tenantProjectId:
+          description: Output only. The tenant project ID that has been created.
+          type: string
+        tenantProjectNumber:
+          description: Output only. The tenant project number that has been created.
+          format: int64
+          type: string
+        tenantServiceAccounts:
+          description: The service account identities (or enabled API service's P4SA) that are expclicitly created under the tenant project (before JIT provisioning during enabled API services).
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceTenantServiceAccountIdentity"
+          type: array
+      type: object
+    CloudAiPlatformTenantresourceTenantResource:
+      description: A collection of tenant resources.
+      properties:
+        p4ServiceAccounts:
+          description: A list of P4 service accounts (go/p4sa) to provision or deprovision.
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceServiceAccountIdentity"
+          type: array
+        tenantProjectResources:
+          description: A list of tenant projects and tenant resources to provision or deprovision.
+          items:
+            $ref: "#/components/schemas/CloudAiPlatformTenantresourceTenantProjectResource"
+          type: array
+      type: object
+    CloudAiPlatformTenantresourceTenantServiceAccountIdentity:
+      description: The identity of service accounts that have been explicitly created under tenant projects.
+      properties:
+        serviceAccountEmail:
+          description: Output only. The email address of the generated service account.
+          type: string
+        serviceName:
+          description: Input/Output [Required]. The service that the service account belongs to. (e.g. cloudbuild.googleapis.com for GCB service accounts)
+          type: string
       type: object
     CommerceDatastoreDeepTag:
       description: The basic message that contains a single decision output of go/deeptagger.
@@ -15320,6 +15755,23 @@ components:
             - NO_SITE_INFO
           type: string
       type: object
+    DrishtiCompressedFeature:
+      description: Protocol buffer for storing compressed feature.
+      properties:
+        featureName:
+          enum:
+            - UNKNOWN
+            - STARBURST_V4
+            - RESNETISH_V3
+          type: string
+        inRangeBitstream:
+          description: in_range_bitstream is the string produced by range coder, while out_of_range_bitstream corresponds to the overflow stream, which is used whenever a quantized value is out of range. See https://cs.corp.google.com/piper///depot/google3/research/vision/piedpiper/brain/python/layers/entropy_models.py?l=225&cl=234825412
+          format: byte
+          type: string
+        outOfRangeBitstream:
+          format: byte
+          type: string
+      type: object
     DrishtiDenseFeatureData:
       properties:
         extra:
@@ -15360,6 +15812,8 @@ components:
     DrishtiFeatureSetDataFeatureSetElement:
       description: A FeatureSetElement stores the features coming from a single group.
       properties:
+        compressed:
+          $ref: "#/components/schemas/DrishtiCompressedFeature"
         dense:
           $ref: "#/components/schemas/DrishtiDenseFeatureData"
         indexed:
@@ -18027,6 +18481,7 @@ components:
             - PROVIDER_GOOGLE_GT_ALF
             - PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE
             - PROVIDER_GOOGLE_LOCAL_SERVICES_ADS
+            - PROVIDER_GOOGLE_GT_LANE_AUTOMATION
             - PROVIDER_GOOGLE_LOCALSEARCH
             - PROVIDER_GOOGLE_TRANSIT
             - PROVIDER_GOOGLE_GEOWIKI
@@ -19410,6 +19865,8 @@ components:
             - SEGMENT_ELEVATION
             - SEGMENT_ENDPOINT
             - SEGMENT_GRADE_LEVEL_LIST
+            - SEGMENT_INTERNAL_DISALLOWED_CONNECTIONS
+            - SEGMENT_INTERNAL_DISALLOWED_PRIMARY_CONNECTION
             - SEGMENT_INTERNAL_TRAVEL_ALLOWANCE
             - SEGMENT_INTERPOLATION_OFFSET_METERS
             - SEGMENT_IS_MAX_PERMITTED_SPEED_DERIVED
@@ -20469,11 +20926,36 @@ components:
     GeostoreInternalSegmentProto:
       description: Internal-only proto used to express additional information about segments. This is intended for communicating extra information between editing clients and the repository, and should not be used by or visible to clients. WARNING - if you add new fields to InternalSegmentProto, make sure that geostore/tools/internal/mr-mergesegments_test.cc is aware of them.
       properties:
+        disallowedConnections:
+          description: RESERVED
+          items:
+            $ref: "#/components/schemas/GeostoreInternalSegmentProtoLaneConnectionReference"
+          type: array
+        disallowedPrimaryConnection:
+          description: RESERVED
+          items:
+            $ref: "#/components/schemas/GeostoreInternalSegmentProtoLaneConnectionReference"
+          type: array
         travelAllowance:
           description: The set of restrictions that apply to this segment; these are actually *POSITIVE* restrictions, i.e. they are known to be allowed.
           items:
             $ref: "#/components/schemas/GeostoreRestrictionProto"
           type: array
+      type: object
+    GeostoreInternalSegmentProtoLaneConnectionReference:
+      description: Specifies a single outgoing lane connection.
+      properties:
+        fromLaneNumber:
+          description: The lane number on this segment.
+          format: int32
+          type: integer
+        segment:
+          $ref: "#/components/schemas/GeostoreFeatureIdProto"
+          description: This reference to the other segment is weak, since strong would blow up bounds of all segments.
+        toLaneNumber:
+          description: This is the lane number on the target segment.
+          format: int32
+          type: integer
       type: object
     GeostoreInternalSourceSummaryProto:
       properties:
@@ -20671,6 +21153,7 @@ components:
             - PROVIDER_GOOGLE_GT_ALF
             - PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE
             - PROVIDER_GOOGLE_LOCAL_SERVICES_ADS
+            - PROVIDER_GOOGLE_GT_LANE_AUTOMATION
             - PROVIDER_GOOGLE_LOCALSEARCH
             - PROVIDER_GOOGLE_TRANSIT
             - PROVIDER_GOOGLE_GEOWIKI
@@ -21840,6 +22323,7 @@ components:
             - PROVIDER_GOOGLE_GT_ALF
             - PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE
             - PROVIDER_GOOGLE_LOCAL_SERVICES_ADS
+            - PROVIDER_GOOGLE_GT_LANE_AUTOMATION
             - PROVIDER_GOOGLE_LOCALSEARCH
             - PROVIDER_GOOGLE_TRANSIT
             - PROVIDER_GOOGLE_GEOWIKI
@@ -23192,6 +23676,7 @@ components:
             - PROVIDER_GOOGLE_GT_ALF
             - PROVIDER_GOOGLE_GT_OPERATOR_PROVENANCE
             - PROVIDER_GOOGLE_LOCAL_SERVICES_ADS
+            - PROVIDER_GOOGLE_GT_LANE_AUTOMATION
             - PROVIDER_GOOGLE_LOCALSEARCH
             - PROVIDER_GOOGLE_TRANSIT
             - PROVIDER_GOOGLE_GEOWIKI
@@ -24388,7 +24873,7 @@ components:
           description: Specifies whether the max_permitted_speed_kph was derived from a heuristic as opposed to coming from an authoritative source.
           type: boolean
         lane:
-          description: Detailed information about each lane in this direction, if available. Lanes are numbered from inside of the road outward, i.e. the lane next to the center line is lane 0. Note that lanes that are valid for travel in both directions appear in both segments of a segment pair (left turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be usable by cars, such as bike lanes. Also, some lanes may not exist along the entire segment, e.g. left- or right-turn lanes that appear just before the intersection.
+          description: Detailed information about each lane in this direction, if available. Lanes are numbered from inside of the road outward, i.e. the lane next to the center line has lane_number 0. Note that lanes that are valid for travel in both directions appear in both segments of a segment pair (left turn lanes, one-lane roads, some passing lanes, reversing lanes). Some lanes may not be usable by cars, such as bike lanes. Also, some lanes may not exist along the entire segment, e.g. left- or right-turn lanes that appear just before the intersection.
           items:
             $ref: "#/components/schemas/GeostoreLaneProto"
           type: array
@@ -24478,7 +24963,7 @@ components:
           $ref: "#/components/schemas/GeostoreFeatureIdProto"
           description: The other segment of this segment pair (see above). The segment that is referenced by the sibling field refers to this feature back via the same sibling field. Both segment and sibling should have the same properties such as geometry, country code, elevation, level relation, priority etc. Since routes are required to have segment and sibling at the same time, the set of routes on a segment is same to that of the sibling.
         slope:
-          description: RESERVED
+          description: Each slope instance is tied to a point along the segment polyline (unrelated to the vertices in the segment's polyline) and represents the slope of the segment between that point and the point tied to the next slope istance, or the end of the segment if it's the last slope instance. A segment should have at least one slope.
           items:
             $ref: "#/components/schemas/GeostoreSlopeProto"
           type: array
@@ -26367,6 +26852,25 @@ components:
           $ref: "#/components/schemas/GoodocWord"
           description: In order to compile, this recursive message needs to be optional, even though it's within an optional group.
       type: object
+    GoogleApiServiceconsumermanagementV1BillingConfig:
+      description: Describes the billing configuration for a new tenant project.
+      properties:
+        billingAccount:
+          description: Name of the billing account. For example `billingAccounts/012345-567890-ABCDEF`.
+          type: string
+      type: object
+    GoogleApiServiceconsumermanagementV1PolicyBinding:
+      description: Translates to IAM Policy bindings (without auditing at this level)
+      properties:
+        members:
+          description: Uses the same format as in IAM policy. `member` must include both a prefix and ID. For example, `user:{emailId}`, `serviceAccount:{emailId}`, `group:{emailId}`.
+          items:
+            type: string
+          type: array
+        role:
+          description: Role. (https://cloud.google.com/iam/docs/understanding-roles) For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+          type: string
+      type: object
     GoogleAssistantAccessoryV1AudioOutConfig:
       description: Specifies the desired format for the server to use when it returns `audio_out` messages.
       properties:
@@ -26413,7 +26917,7 @@ components:
           description: "*Required* Identifier for the device which sent the request."
       type: object
     GoogleAssistantAccessoryV1DeviceState:
-      description: "Information about the state of the device. This contains any state that Assistant may need to know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 9"
+      description: "Information about the state of the device. This contains any state that Assistant may need to know about in order to fulfill requests, for example which timers and alarms are set. Next ID: 10"
       properties:
         alarmState:
           $ref: "#/components/schemas/GoogleAssistantEmbeddedV1Alarms"
@@ -27004,6 +27508,11 @@ components:
         displayUri:
           description: Uri to display the document, for example, in the UI.
           type: string
+        dispositionTime:
+          description: Output only. If linked to a Collection with RetentionPolicy, the date when the document becomes mutable.
+          format: google-datetime
+          readOnly: true
+          type: string
         documentSchemaName:
           description: "The Document schema name. Format: projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}."
           type: string
@@ -27508,6 +28017,19 @@ components:
           description: When merging repeated fields, the default behavior is to append entries from the source repeated field to the destination repeated field. If you instead want to keep only the entries from the source repeated field, set this flag to true. If you want to replace a repeated field within a message field on the destination message, you must set both replace_repeated_fields and replace_message_fields to true, otherwise the repeated fields will be appended.
           type: boolean
       type: object
+    GoogleCloudContentwarehouseV1ProcessorInfo:
+      description: The DocAI processor information.
+      properties:
+        documentType:
+          description: The processor will process the documents with this document type.
+          type: string
+        processorName:
+          description: The processor resource name. Format is `projects/{project}/locations/{location}/processors/{processor}`, or `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+          type: string
+        schemaName:
+          description: "The Document schema resource name. All documents processed by this processor will use this schema. Format: projects/{project_number}/locations/{location}/documentSchemas/{document_schema_id}."
+          type: string
+      type: object
     GoogleCloudContentwarehouseV1Property:
       description: Property of a document.
       properties:
@@ -27792,6 +28314,9 @@ components:
     GoogleCloudContentwarehouseV1RunPipelineMetadata:
       description: Metadata message of RunPipeline method.
       properties:
+        exportToCdwPipelineMetadata:
+          $ref: "#/components/schemas/GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata"
+          description: The pipeline metadata for Export-to-CDW pipeline.
         failedFileCount:
           description: Number of files that have failed at some point in the pipeline.
           format: int32
@@ -27799,6 +28324,14 @@ components:
         gcsIngestPipelineMetadata:
           $ref: "#/components/schemas/GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata"
           description: The pipeline metadata for GcsIngest pipeline.
+        individualDocumentStatuses:
+          description: The list of response details of each document.
+          items:
+            $ref: "#/components/schemas/GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus"
+          type: array
+        processWithDocAiPipelineMetadata:
+          $ref: "#/components/schemas/GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata"
+          description: The pipeline metadata for Process-with-DocAi pipeline.
         totalFileCount:
           description: Number of files that were processed by the pipeline.
           format: int32
@@ -27807,12 +28340,49 @@ components:
           $ref: "#/components/schemas/GoogleCloudContentwarehouseV1UserInfo"
           description: User unique identification and groups information.
       type: object
+    GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata:
+      description: The metadata message for Export-to-CDW pipeline.
+      properties:
+        docAiDataset:
+          description: The output CDW dataset resource name.
+          type: string
+        documents:
+          description: The input list of all the resource names of the documents to be exported.
+          items:
+            type: string
+          type: array
+        outputPath:
+          description: The output Cloud Storage folder in this pipeline.
+          type: string
+      type: object
     GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata:
       description: The metadata message for GcsIngest pipeline.
       properties:
         inputPath:
           description: "The input Cloud Storage folder in this pipeline. Format: `gs:///`."
           type: string
+      type: object
+    GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus:
+      description: The status of processing a document.
+      properties:
+        documentId:
+          description: Document identifier of an existing document.
+          type: string
+        status:
+          $ref: "#/components/schemas/GoogleRpcStatus"
+          description: The status processing the document.
+      type: object
+    GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata:
+      description: The metadata message for Process-with-DocAi pipeline.
+      properties:
+        documents:
+          description: The input list of all the resource names of the documents to be processed.
+          items:
+            type: string
+          type: array
+        processorInfo:
+          $ref: "#/components/schemas/GoogleCloudContentwarehouseV1ProcessorInfo"
+          description: The DocAI processor to process the documents with.
       type: object
     GoogleCloudContentwarehouseV1SearchDocumentsRequest:
       description: Request message for DocumentService.SearchDocuments.
@@ -28212,7 +28782,7 @@ components:
             $ref: "#/components/schemas/GoogleCloudDocumentaiV1DocumentStyle"
           type: array
         uri:
-          description: Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. See [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris) for more info.
+          description: Optional. Currently supports Google Cloud Storage URI of the form `gs://bucket_name/object_name`. Object versioning is not supported. For more information, refer to [Google Cloud Storage Request URIs](https://cloud.google.com/storage/docs/reference-uris).
           type: string
       type: object
     GoogleCloudDocumentaiV1DocumentEntity:
@@ -28697,6 +29267,9 @@ components:
         provenance:
           $ref: "#/components/schemas/GoogleCloudDocumentaiV1DocumentProvenance"
           description: The history of this annotation.
+        styleInfo:
+          $ref: "#/components/schemas/GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo"
+          description: Text style attributes.
       type: object
     GoogleCloudDocumentaiV1DocumentPageTokenDetectedBreak:
       description: Detected break at the end of a Token.
@@ -28709,6 +29282,59 @@ components:
             - WIDE_SPACE
             - HYPHEN
           type: string
+      type: object
+    GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo:
+      description: Font and other text style attributes.
+      properties:
+        backgroundColor:
+          $ref: "#/components/schemas/GoogleTypeColor"
+          description: Color of the background.
+        bold:
+          description: Whether the text is bold (equivalent to font_weight is at least `700`).
+          type: boolean
+        fontSize:
+          description: Font size in points (`1` point is `¹⁄₇₂` inches).
+          format: int32
+          type: integer
+        fontType:
+          description: Name or style of the font.
+          type: string
+        fontWeight:
+          description: TrueType weight on a scale `100` (thin) to `1000` (ultra-heavy). Normal is `400`, bold is `700`.
+          format: int32
+          type: integer
+        handwritten:
+          description: Whether the text is handwritten.
+          type: boolean
+        italic:
+          description: Whether the text is italic.
+          type: boolean
+        letterSpacing:
+          description: Letter spacing in points.
+          format: double
+          type: number
+        pixelFontSize:
+          description: Font size in pixels, equal to _unrounded font_size_ * _resolution_ ÷ `72.0`.
+          format: double
+          type: number
+        smallcaps:
+          description: Whether the text is in small caps.
+          type: boolean
+        strikeout:
+          description: Whether the text is strikethrough.
+          type: boolean
+        subscript:
+          description: Whether the text is a subscript.
+          type: boolean
+        superscript:
+          description: Whether the text is a superscript.
+          type: boolean
+        textColor:
+          $ref: "#/components/schemas/GoogleTypeColor"
+          description: Color of the text.
+        underlined:
+          description: Whether the text is underlined.
+          type: boolean
       type: object
     GoogleCloudDocumentaiV1DocumentPageVisualElement:
       description: Detected non-text visual elements e.g. checkbox, signature etc. on the page.
@@ -28999,7 +29625,7 @@ components:
       description: Represents the information about user's working hours during one day. Note that a period on Monday from 18:00 - 00:00 is represented as a triplet (1, 1080, 1440).
       properties:
         dayOfWeek:
-          description: Day of week, 0 for Sunday, 1 for Monday, ...
+          description: Day of week, 1 for Monday, ..., 7 for Sunday.
           format: int32
           type: integer
         periodEndMinutes:
@@ -36317,16 +36943,6 @@ components:
         remodelings:
           $ref: "#/components/schemas/NlpMeaningMeaningRemodelings"
           description: Contains data about current schema remodelings at this ValueType level. For more information see go/meaning-remodeling-framework.
-        stbrDomain:
-          description: This field is deprecated. It is not removed completely since this proto was saved with this field in proto text files used by the Grammy tool.
-          items:
-            enum:
-              - UNKNOWN
-              - DEFAULT
-              - SPORTS
-              - FINANCE
-            type: string
-          type: array
       type: object
     KnowledgeAnswersIntentModifiers:
       description: "Modifiers decorate a Meaning Expression (i.e. intent FunctionCall) with signals that depend on the source language's grammar and syntax. See go/intent-modifiers for details. NOTE: Modifiers don't necessarily impact go/intent-resolution semantics. LINT.IfChange"
@@ -36584,7 +37200,7 @@ components:
           type: integer
       type: object
     KnowledgeAnswersIntentQueryArgumentSignals:
-      description: 'A message representing the signals associated with an argument. NEXT ID TO USE: 57 For //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange", fields under Argument.signals in the serving proto are stored directly under Argument on the logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/semantic_logging_converters/semantic_logging_request_argument_converter.cc?l=58&rcl=322925428. LINT.IfChange'
+      description: 'A message representing the signals associated with an argument. NEXT ID TO USE: 58 For //depot/google3/logs/proto/knowledge/interpretation/intent_query.proto in the "ThenChange", fields under Argument.signals in the serving proto are stored directly under Argument on the logging side. For example, see http://google3/nlp/semantic_parsing/data_management/logs/web_logs/semantic_logging_converters/semantic_logging_request_argument_converter.cc?l=58&rcl=322925428. LINT.IfChange'
       properties:
         addedByCloseAnswers:
           description: Whether this argument was added by CloseAnswers in Postref. This bit is used to mark the corresponding interpretation/intent query as such by setting is_close_interpretation bit.
@@ -36628,7 +37244,7 @@ components:
             type: string
           type: array
         deprecatedSupportingMid:
-          description: A list of mids that "support" this argument in voting, i.e, results that support these mids will be treated as if they support the argument. This field has been deprecated in favor of related_entity. b/27363861
+          description: A list of mids that "support" this argument in voting, i.e., results that support these mids will be treated as if they support the argument. This field has been deprecated in favor of related_entity. b/27363861
           items:
             type: string
           type: array
@@ -36746,6 +37362,8 @@ components:
         resolvedFromPronoun:
           description: "Whether this argument was resolved from a pronoun mention in the query. Eg: [how old was obama when *he* became president]"
           type: boolean
+        responseMeaningSignals:
+          $ref: "#/components/schemas/KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals"
         resultSupport:
           description: The list of result supports for this Argument.
           items:
@@ -37132,7 +37750,7 @@ components:
           type: array
       type: object
     KnowledgeAnswersIntentQueryGroundingSignals:
-      description: "Grounding-related signals to be propagated down stream. Next ID: 12"
+      description: "Grounding-related signals to be propagated down stream. Next ID: 14"
       properties:
         addedByGrounding:
           description: True if the argument was added during grounding. This signal is intended to be used with ArgumentSignals. Note that the added argument's value must be a FunctionCall that only contains resolutions, i.e. grounding cannot add/modify/delete any ungrounded values.
@@ -37172,6 +37790,16 @@ components:
             - PROD_INTENT_FACTORY
             - PORTMON_FULFILLMENT
           type: string
+        provenance:
+          enum:
+            - UNKNOWN_PROVENANCE
+            - FIELD_CANDIDATE
+          type: string
+        sentiment:
+          enum:
+            - UNKNOWN_SENTIMENT
+            - REJECT
+          type: string
         usesGroundingBox:
           description: If true, then GroundingBox and PGRP are used in AnswersRewriter to process the intent. Other post-processing steps, including IGDP, are adjusted accordingly. Note this will be removed once GroundingBox is fully launched and all prod traffic goes through it. Before that happens, each IG that needs to go through GB and PGRP (post GB ranking pruning) will need to explicitly set this field to true. See http://go/gb-impl and http://go/gb-post-ranker-pruner for details.
           type: boolean
@@ -37199,6 +37827,8 @@ components:
             - ROOM
             - STRUCTURE
             - ZONE
+            - TRAIT_ATTRIBUTE_VALUE
+            - TRAIT_SEMANTIC_VALUE
             - REMINDER
             - RECIPE
             - PERSON
@@ -37213,6 +37843,7 @@ components:
             - BROADCAST
             - MESSAGE_CONTENT
             - INLINE_INVENTORY
+            - MEDIA_PLAYBACK
           type: string
       type: object
     KnowledgeAnswersIntentQueryImpliedEntity:
@@ -37441,13 +38072,36 @@ components:
           format: uint64
           type: string
       type: object
+    KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals:
+      properties:
+        answersValueGender:
+          enum:
+            - UNKNOWN
+            - FEMALE
+            - MALE
+          type: string
+        numAnswers:
+          format: uint64
+          type: string
+      type: object
     KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals:
       description: SRM signal data. Properties here should be nonsemantic. Semantic properties should be modeled directly in the SRM.
       properties:
+        answersHeaderSignals:
+          $ref: "#/components/schemas/KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals"
+          description: Signals that are used to generate answers header.
         propertyValue:
           items:
             $ref: "#/components/schemas/FreebasePropertyValue"
           type: array
+        responseMeaningApplication:
+          description: The intended application this response meaning is used for. It is intended for downstream dispatching.
+          enum:
+            - DEFAULT
+            - HEADER
+            - VOICE_ANSWERS
+            - DISPLAY_ANSWERS
+          type: string
       type: object
     KnowledgeAnswersIntentQuerySaftSignals:
       description: Signals derived from overlapping saft annotations.
@@ -38258,17 +38912,6 @@ components:
           $ref: "#/components/schemas/NlpMeaningMeaningRemodelings"
           description: Contains data about current schema remodelings at this ValueType level. For more information see go/meaning-remodeling-framework.
       type: object
-    KnowledgeAnswersTypeTrait:
-      description: "A TypeTrait configures a value that has a property with any of the given trait_id. In practice this means: - any entity that has a metadata ID defined in the KP type_schema, - any intent that has a slot with the given ID. When comparing trait_id to metadata IDs or slot IDs, we lowercase and normalize for comparison."
-      properties:
-        remodelings:
-          $ref: "#/components/schemas/NlpMeaningMeaningRemodelings"
-          description: Contains data about current schema remodelings at this ValueType level. For more information see go/meaning-remodeling-framework.
-        traitId:
-          items:
-            type: string
-          type: array
-      type: object
     KnowledgeAnswersUnionType:
       properties:
         slotNames:
@@ -38319,12 +38962,6 @@ components:
           $ref: "#/components/schemas/KnowledgeAnswersOpaqueType"
         plexityRequirement:
           $ref: "#/components/schemas/KnowledgeAnswersPlexityRequirement"
-        pluralityType:
-          enum:
-            - ALL
-            - PLURAL_ONLY
-            - SINGULAR_ONLY
-          type: string
         polarQuestionType:
           $ref: "#/components/schemas/KnowledgeAnswersPolarQuestionType"
         semanticType:
@@ -38337,9 +38974,6 @@ components:
           $ref: "#/components/schemas/KnowledgeAnswersTimeZoneType"
         trackingNumberType:
           $ref: "#/components/schemas/KnowledgeAnswersTrackingNumberType"
-        withTrait:
-          $ref: "#/components/schemas/KnowledgeAnswersTypeTrait"
-          description: 'Extra trait information for compound value types. Note: currently the semantics of having both the data type (e.g. "entity_type") and "with_trait" is an OR operation. Eg. HorizontalDateRestrict has a SetToModify slot that accepts some collections like /collection/films. And also intent queries with_trait date, start_date, etc.'
       type: object
     KnowledgeGraphDateTimeProto:
       description: /////////// DATE //////////
@@ -47773,6 +48407,8 @@ components:
             - MY_ACCOUNT
             - NUDGEIT_CAMPAIGN_MANAGER
             - DECS
+            - GSOX_MOCHI
+            - PMW_TI
             - DEPRECATED_QUICKSTART_FLUME
             - DUO_CLIENT
             - ALBERT
@@ -48017,7 +48653,7 @@ components:
           type: string
       type: object
     PerDocData:
-      description: "=========================================================================== # Make sure you read the comments in the bottom before you add any new field. NB: As noted in the comments, this protocol buffer is used in both indexing and serving. In mustang serving implementations we only decode perdocdata during the search phase, and so this protocol should only contain data used during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for protocols used during search and/or docinfo. Next available tag deprecated, use this (and look for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \\ indexer/perdocdata/perdocdata.proto Next tag: 220"
+      description: "=========================================================================== # Make sure you read the comments in the bottom before you add any new field. NB: As noted in the comments, this protocol buffer is used in both indexing and serving. In mustang serving implementations we only decode perdocdata during the search phase, and so this protocol should only contain data used during search. See mustang/repos_www/attachments.proto:{MustangBasicInfo,MustangContentInfo} for protocols used during search and/or docinfo. Next available tag deprecated, use this (and look for commented out fields): blaze-bin/net/proto_compiler/protocol-compiler --freetags \\ indexer/perdocdata/perdocdata.proto Next tag: 221"
       properties:
         BlogData:
           $ref: "#/components/schemas/BlogPerDocData"
@@ -50712,6 +51348,7 @@ components:
             - REMINDER_NOTIFICATION_ENABLE_FIRST_NOTICE
             - REMINDER_NOTIFICATION_ENABLE_NOTICE
             - REMINDER_ONE_OFF_DUP_NOTIFICATION_POST_MIGRATION
+            - REMINDER_NOTIFICATION_FORCED_MIGRATED
             - CROSS_SURFACE
             - CROSS_SURFACE_MOVIE_SHOWTIMES
             - CROSS_SURFACE_EVENTS
@@ -50885,10 +51522,10 @@ components:
             - REENGAGEMENT_NOTIFICATION
             - BLUE_GINGER_RESPONSE
             - BLUE_GINGER_SURVEY
-            - SMARTHOME_DOORBELL
             - SMARTHOME_ALARM
             - SMARTHOME_ASYNCHRONOUS
             - SMARTHOME_BROADCAST
+            - SMARTHOME_DOORBELL
             - SMARTHOME_FOLLOW_UP
             - SMARTHOME_PHONES
             - COMMUNICATION_MISSED_CALL
@@ -50902,6 +51539,7 @@ components:
             - ASSISTANT_SURVEY
             - ASSISTANT_SURVEY_IMPORTANCE_MIN
             - ASSISTANT_SURVEY_PRIORITY_LOW
+            - ASSISTANT_SURVEY_ATV_AMATI
             - WHEREABOUTS_CHECKIN
             - TRAVEL_ASSISTANT_FLIGHT_CHECKIN
             - DIALER_AUTH
@@ -51009,6 +51647,7 @@ components:
             - GEO_TTL_RESERVED_SOCIAL_EVENT
             - GEO_TTL_FLIGHT_PASSENGER_DEPARTURE
             - GEO_TTL_FLIGHT_PASSENGER_DEPARTURE_RIDESHARE
+            - GEO_TTL_TRANSPORTATION_ROUTE_RESERVATION
             - GEO_AAP_GROCERY_STORE
             - GEO_AAP_BEAUTY_WELLNESS
             - GEO_AAP_RESTAURANT
@@ -51086,6 +51725,7 @@ components:
             - PERSONAL_RESULTS_OPTIN
             - HEADPHONE_PERSONAL_RESULTS_OPTIN
             - DISCOVERY_SPARKS
+            - SPOKEN_NOTIFICATIONS_OOBE_OPTIN
             - UNIT_TESTING
           type: string
         attachment:
@@ -51440,6 +52080,7 @@ components:
             - OFFER
             - IAP_SKU_DEALS
             - FEATURED_PRODUCTS
+            - PLAY_PASS
           type: string
         eventUrl:
           description: ios
@@ -52124,7 +52765,7 @@ components:
           type: string
       type: object
     QualityFringeFringeQueryPriorPerDocData:
-      description: "PerDocData for fringe-query-prior (built into the shards for eventual consumption at Fringe classification time). Not stored in DocJoins. NEXT ID: 11"
+      description: "PerDocData for fringe-query-prior (built into the shards for eventual consumption at Fringe classification time). Not stored in DocJoins. NEXT ID: 12"
       properties:
         encodedCalibratedFringeSitePriorScore:
           format: uint32
@@ -52165,6 +52806,12 @@ components:
           description: A score in [0, 1] representing the similarity of this doc to known fringe-vulnerable 'seeds'. See go/fringe-proximity for more information. Encoded for compactness and to restrict visibility.
           format: uint32
           type: integer
+        sensitiveEntitiesIndices:
+          description: Indices on the repository_webref::WebrefEntities::entity field of entities that represent a person or a group of people (aka sensitive entities).
+          items:
+            format: int32
+            type: integer
+          type: array
       type: object
     QualityGenieComplexQueriesComplexQueriesOutputRewrite:
       properties:
@@ -52598,6 +53245,7 @@ components:
             - SITE_CHUNK_SOURCE_COOKBOOK
             - SITE_CHUNK_SOURCE_CRAWLED_SELLER_DATA
             - SITE_CHUNK_SOURCE_FALLBACK
+            - SITE_CHUNK_SOURCE_UV_CHUNK
           type: string
       type: object
     QualityNsrNsrData:
@@ -52722,6 +53370,7 @@ components:
             - SITE_CHUNK_SOURCE_COOKBOOK
             - SITE_CHUNK_SOURCE_CRAWLED_SELLER_DATA
             - SITE_CHUNK_SOURCE_FALLBACK
+            - SITE_CHUNK_SOURCE_UV_CHUNK
           type: string
         siteLinkIn:
           description: Average value of the site_link_in for pages in the sitechunk.
@@ -52755,11 +53404,6 @@ components:
           type: number
         url:
           type: string
-        versionedAsrData:
-          description: Versioned map of ASR (authenticity) values.
-          items:
-            $ref: "#/components/schemas/QualityNsrVersionedFloatSignal"
-          type: array
         versionedData:
           description: Versioned map of NSR values for experimenting with the next release.
           items:
@@ -52998,13 +53642,13 @@ components:
               - CRIME
               - SHOPPING_TOPN
               - AUTHENTICITY
-              - TANGRAM_INFORMATION_OTHER
-              - TANGRAM_NEWS_PUBLISHER
-              - TANGRAM_ENCYCLOPEDIA
-              - TANGRAM_MERCHANT
-              - TANGRAM_GOVERNMENT
-              - TANGRAM_UGC
-              - TANGRAM_RESEARCH_INSTITUTE
+              - INFORMATION_SOURCE_OTHER
+              - INFORMATION_SOURCE_NEWS_PUBLISHER
+              - INFORMATION_SOURCE_ENCYCLOPEDIA
+              - INFORMATION_SOURCE_MERCHANT
+              - INFORMATION_SOURCE_GOVERNMENT
+              - INFORMATION_SOURCE_UGC
+              - INFORMATION_SOURCE_RESEARCH_INSTITUTE
               - RESERVED_FOR_NEW_ENUM_135
               - RESERVED_FOR_NEW_ENUM_136
               - RESERVED_FOR_NEW_ENUM_137
@@ -53169,13 +53813,13 @@ components:
               - CRIME
               - SHOPPING_TOPN
               - AUTHENTICITY
-              - TANGRAM_INFORMATION_OTHER
-              - TANGRAM_NEWS_PUBLISHER
-              - TANGRAM_ENCYCLOPEDIA
-              - TANGRAM_MERCHANT
-              - TANGRAM_GOVERNMENT
-              - TANGRAM_UGC
-              - TANGRAM_RESEARCH_INSTITUTE
+              - INFORMATION_SOURCE_OTHER
+              - INFORMATION_SOURCE_NEWS_PUBLISHER
+              - INFORMATION_SOURCE_ENCYCLOPEDIA
+              - INFORMATION_SOURCE_MERCHANT
+              - INFORMATION_SOURCE_GOVERNMENT
+              - INFORMATION_SOURCE_UGC
+              - INFORMATION_SOURCE_RESEARCH_INSTITUTE
               - RESERVED_FOR_NEW_ENUM_135
               - RESERVED_FOR_NEW_ENUM_136
               - RESERVED_FOR_NEW_ENUM_137
@@ -53343,13 +53987,13 @@ components:
               - CRIME
               - SHOPPING_TOPN
               - AUTHENTICITY
-              - TANGRAM_INFORMATION_OTHER
-              - TANGRAM_NEWS_PUBLISHER
-              - TANGRAM_ENCYCLOPEDIA
-              - TANGRAM_MERCHANT
-              - TANGRAM_GOVERNMENT
-              - TANGRAM_UGC
-              - TANGRAM_RESEARCH_INSTITUTE
+              - INFORMATION_SOURCE_OTHER
+              - INFORMATION_SOURCE_NEWS_PUBLISHER
+              - INFORMATION_SOURCE_ENCYCLOPEDIA
+              - INFORMATION_SOURCE_MERCHANT
+              - INFORMATION_SOURCE_GOVERNMENT
+              - INFORMATION_SOURCE_UGC
+              - INFORMATION_SOURCE_RESEARCH_INSTITUTE
               - RESERVED_FOR_NEW_ENUM_135
               - RESERVED_FOR_NEW_ENUM_136
               - RESERVED_FOR_NEW_ENUM_137
@@ -53752,7 +54396,6 @@ components:
             - NUM_LANGUAGES
           type: string
         docRelevance:
-          description: Represents how relavant this title candidate is to the document. Ranged in [0, 1], and this signal is basically calculated as Cosine-similarity between salient term vector and pQ2T model of title candidate sentence.
           format: float
           type: number
         dupTokens:
@@ -53897,7 +54540,7 @@ components:
           format: float
           type: number
         queryRelevance:
-          description: Represents how relavant this title candidate is to the query. Ranged in [0, 1], and this signal is basically calculated as Cosine-similarity between QBST term vector and pQ2T model of title candidate sentence.
+          description: Deprecated experimental features.
           format: float
           type: number
         sourceGeometry:
@@ -54744,9 +55387,9 @@ components:
             - V5
             - V5_1
             - V5_2
+            - V5_3
             - V1_BODYONLY
             - V2_BODYONLY
-            - RENAME_ME_TO_ADD_NEW_ENUM_16
             - RENAME_ME_TO_ADD_NEW_ENUM_17
             - RENAME_ME_TO_ADD_NEW_ENUM_18
             - RENAME_ME_TO_ADD_NEW_ENUM_19
@@ -54756,6 +55399,7 @@ components:
             - RENAME_ME_TO_ADD_NEW_ENUM_23
             - RENAME_ME_TO_ADD_NEW_ENUM_24
             - RENAME_ME_TO_ADD_NEW_ENUM_25
+            - RENAME_ME_TO_ADD_NEW_ENUM_26
           type: string
       type: object
     QualitySalientTermsSignalData:
@@ -56425,6 +57069,7 @@ components:
             - TITLE
             - ANY
             - IMAGE_QUERY
+            - PASSAGE_QUERY
             - CONTEXT_ENTITY
             - RESULT_ENTITY
             - CONTEXT_QUERY
@@ -57294,9 +57939,6 @@ components:
           items:
             $ref: "#/components/schemas/RepositoryWebrefPreprocessingNameVariantSignals"
           type: array
-        entity:
-          $ref: "#/components/schemas/RepositoryWebrefEntityJoin"
-          description: Sparse metadata about the entity, usage should be moved back to individual fields, this avoids having cyclic dependencies.
         extendedScoreRatio:
           description: Stores region specific score ratios for the entity when it is significantly different from the language version above.
           items:
@@ -57620,6 +58262,7 @@ components:
             - TITLE
             - ANY
             - IMAGE_QUERY
+            - PASSAGE_QUERY
             - CONTEXT_ENTITY
             - RESULT_ENTITY
             - CONTEXT_QUERY
@@ -58368,7 +59011,7 @@ components:
           type: string
         nameMetadata:
           $ref: "#/components/schemas/RepositoryWebrefConceptNameMetadata"
-          description: Metadata attatched to the name.
+          description: Metadata attached to the name.
         nonLocationalScore:
           description: Whether the mention is a non-locational reference to a geographical entity. Ranges from 0 (locational) to 1 (non-locational).
           format: float
@@ -59178,6 +59821,7 @@ components:
               - URL
               - TITLE
               - IMAGE_QUERY
+              - PASSAGE_QUERY
               - CONTEXT_ENTITY
               - CONTEXT_QUERY
               - SPORE_GRAPH
@@ -59313,6 +59957,7 @@ components:
             - URL
             - TITLE
             - IMAGE_QUERY
+            - PASSAGE_QUERY
             - CONTEXT_ENTITY
             - CONTEXT_QUERY
             - SPORE_GRAPH
@@ -59341,6 +59986,7 @@ components:
             - URL
             - TITLE
             - IMAGE_QUERY
+            - PASSAGE_QUERY
             - CONTEXT_ENTITY
             - CONTEXT_QUERY
             - SPORE_GRAPH
@@ -60073,10 +60719,6 @@ components:
         oysterId:
           $ref: "#/components/schemas/GeostoreFeatureIdProto"
           description: Oyster Feature ID of the location.
-        singleTopicnessE2:
-          description: "This field is populated for at most one entity. If it is populated, it indicates how confident we are to claim that the page is only about this entity (either it's an official web presence of the entity, or something like a wikipedia page about the entity). For space reasons this is represented as a fixed-point integer with two decimal points precision. Convert it to the interval [0,1] using the following formula: float single_topicness = single_topicness_e2 / 100.f"
-          format: int32
-          type: integer
       type: object
     RepositoryWebrefWebrefDocumentInfo:
       description: "All information that applies globally to the document. Next available tag: 11"
@@ -60156,7 +60798,7 @@ components:
           description: Information about the collections of this entity.
         entityJoin:
           $ref: "#/components/schemas/RepositoryWebrefEntityJoin"
-          description: Metadata and raw signals used by the annotator.
+          description: Metadata and raw signals used by the annotator. Intended for internal use. Steer clear of adding new dependencies on fields in this proto, especially external dependencies. If you are a Refx client and would like to consume entity metadata, consider querying TopicServer instead.
         id:
           $ref: "#/components/schemas/RepositoryWebrefWebrefEntityId"
           description: An identifier (usually a MID) for the entity. Consider using GetWebrefEntityMid() in the adjacent webref-entities-util.h to read this.
@@ -60269,20 +60911,6 @@ components:
           items:
             format: int32
             type: integer
-          type: array
-        undermergedMembers:
-          description: "[Experimental code. Do not use ] Entities that webref identified as being the same concept (undermerged)."
-          items:
-            $ref: "#/components/schemas/RepositoryWebrefWebrefMustangAttachmentUndermergedMembers"
-          type: array
-      type: object
-    RepositoryWebrefWebrefMustangAttachmentUndermergedMembers:
-      properties:
-        encodedMid:
-          description: Experimental code, do not use.
-          items:
-            format: uint64
-            type: string
           type: array
       type: object
     RepositoryWebrefWebrefOutlinkInfo:
@@ -61101,7 +61729,7 @@ components:
           type: string
       type: object
     ResearchScienceSearchReconciledMetadata:
-      description: "A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 70"
+      description: "A proto for storing inferred and reconciled metadata for Science Search. Next available tag: 71"
       properties:
         alternateName:
           description: Alternate names and acronyms for the dataset.
@@ -61110,6 +61738,10 @@ components:
           type: array
         authorList:
           description: A string representation of the authors of the dataset, collected from author and creator in raw metadata. The exact format (e.g., comma-separated, etc.) is up to the extender that populates this field. The assumption is that this string may appear in the UI "as is".
+          type: string
+        basicFieldsHash:
+          description: A hash of the fields copied by BasicMetadataExtender and the importers. See cs/research/science_search/backend/extender/basic_metadata_extender.h for the list of fields.
+          format: uint64
           type: string
         catalog:
           $ref: "#/components/schemas/ResearchScienceSearchCatalog"
@@ -63431,6 +64063,7 @@ components:
             - INFERRED_IMAGE_TYPE_CRAWZALL
             - INFERRED_IMAGE_TYPE_OPEN_GRAPH
             - INFERRED_IMAGE_TYPE_NEARDUP_STARBURST_V5
+            - INFERRED_IMAGE_TYPE_ANCHOR_IMAGE
           type: string
         neardupInfo:
           description: This field will only be populated if the inferred image is a neardup of an inferred image. It stores the type and source of the images it is a neardup of.
@@ -63460,6 +64093,7 @@ components:
             - INFERRED_IMAGE_TYPE_CRAWZALL
             - INFERRED_IMAGE_TYPE_OPEN_GRAPH
             - INFERRED_IMAGE_TYPE_NEARDUP_STARBURST_V5
+            - INFERRED_IMAGE_TYPE_ANCHOR_IMAGE
           type: string
       type: object
     ShoppingWebentityShoppingAnnotationProductRating:
@@ -63585,10 +64219,6 @@ components:
           description: The ratio of the area of the largest Flash to the render area.
           format: double
           type: number
-        mobileFriendlyScore:
-          description: Mobile friendliness score in the range of [0, 100]. See go/modena-ranking.
-          format: int32
-          type: integer
         violatesMobileInterstitialPolicy:
           description: Indicates if the page is violating mobile interstitial policy and should be demoted. See go/interstitials-ranking-dd for details.
           type: boolean
@@ -63951,6 +64581,20 @@ components:
           description: Title is an optional field that provides a short string that describes the link or its destination. User interfaces often use title as a tooltip or for accessibility purposes. However, they are of course free to present this data in any form. This field is plain text.
           type: string
       type: object
+    SocialCommonSearchLinkData:
+      description: SearchLink metadata, for SEARCH_LINK segments. For a search link, the "text" field should contain the display text. This is currently not indexed.
+      properties:
+        kgEntityConfidence:
+          description: For lightweight scoring in serving time.
+          format: float
+          type: number
+        mid:
+          description: MID of the KG entity being linked.
+          type: string
+        queryBroadnessScore:
+          format: float
+          type: number
+      type: object
     SocialCommonSegment:
       properties:
         formatting:
@@ -63962,6 +64606,9 @@ components:
         linkData:
           $ref: "#/components/schemas/SocialCommonLinkData"
           description: "Type-specific metadata. At most one of these should be populated, and the one that is populated should correspond to the type of the Segment. For LINK type:"
+        searchLinkData:
+          $ref: "#/components/schemas/SocialCommonSearchLinkData"
+          description: "For SEARCH_LINK type:"
         text:
           description: Text content of the Segment. As a general rule, this field should contain the actual text that should be rendered in the UI. Thus, for a hashtag, it should be "#Foo", and for a link, it should be the display text. Clients that do not understand a particular segment type may use this text, along with the Formatting info below, as a fallback for display. The field is not required -- if all relevant information is carried in other metadata fields and there is no need for a fallback, or it is not practical for a fallback to be provided for any other reason, the field may be left blank. A standard example would be a user reference being transmitted between server layers, where a gaia-ID representation may be sufficient and there is no need for a textual fallback. In such a case, it would be valid and useful - though not required - for servers to compute and populate a fallback on the serving path.
           type: string
@@ -63974,6 +64621,7 @@ components:
             - USER_MENTION
             - ALL_USER_MENTION
             - HASHTAG
+            - SEARCH_LINK
           type: string
         userMentionData:
           $ref: "#/components/schemas/SocialCommonUserMentionData"
@@ -64929,13 +65577,15 @@ components:
             - GOOGLE_GROUP
             - BOT
           type: string
+        isMembershipVisibleToCaller:
+          description: "Whether caller has visibility into the direct members of the roster. NEXT TAG: 11"
+          type: boolean
         memberCount:
-          description: Number of members (direct or indirect) in a Google Group. Only an estimate for large groups (currently > 1K direct / indirect members).
+          description: "DEPRECATED: use segmented_membership_counts instead. Number of members (direct or indirect) in a Google Group. Only an estimate for large groups (currently > 1K direct / indirect members)."
           format: int64
           type: string
         organizationInfo:
           $ref: "#/components/schemas/AppsDynamiteSharedOrganizationInfo"
-          description: "NEXT TAG: 9"
         presence:
           enum:
             - UNDEFINED_PRESENCE
@@ -64944,6 +65594,9 @@ components:
             - UNKNOWN
             - SHARING_DISABLED
           type: string
+        segmentedMembershipCounts:
+          $ref: "#/components/schemas/AppsDynamiteSharedSegmentedMembershipCounts"
+          description: Represents the direct membership counts of a Google Group. May contain counts based on member type and membership state.
       type: object
     SocialGraphWireProtoPeopleapiExtensionPaisaExtendedData:
       description: "Next tag number: 3"
@@ -65380,6 +66033,7 @@ components:
             - CONTRACTUAL_YOUVIEW_DATA
             - CONTRACTUAL_YOUTUBE_ALC_DATA
             - CREATOR_PRESENCE_DATA
+            - YOUTUBE_PODCASTS_DATA
             - TECHNICAL_UNRECONCILED_MEDIA_ACTION
             - CONTRACTUAL_AUDIBLE_DATA
             - CONTRACTUAL_SEARCH_NETFLIX_DATA
@@ -65510,6 +66164,7 @@ components:
             - ISOLATION_PKG_YOUTUBE_PUBLIC_AND_PRIVATE_PLAYLISTS
             - ISOLATION_S3_CREATOR_PRESENCE
             - ISOLATION_S12Y_RECIPE_INGREDIENT_INSIGHTS
+            - ISOLATION_SCOUTS_SOCIETAL_CONTEXT_ENTITIES
             - UMP_TESTING_ONLY
             - INTENTJOINS_NB_SIGNALS
             - ADS_INTEGRITY_ANNOTATION
@@ -65525,6 +66180,7 @@ components:
             - RIGHTS_MANAGEMENT_100
             - RIGHTS_MANAGEMENT_101
             - RIGHTS_MANAGEMENT_102
+            - RIGHTS_MANAGEMENT_INSIDER_RISK
             - DICTIONARY_DATA_OXFORD
             - DICTIONARY_DATA_LE_ROBERT
             - ENTITY_TEXT_FEATURES
@@ -66081,8 +66737,8 @@ components:
       properties:
         adwordsCid:
           description: Populated using airlines_company_ids.csv for AdWords company map
-          format: int32
-          type: integer
+          format: int64
+          type: string
         alliance:
           description: STAR_ALLIANCE
           enum:
@@ -67044,7 +67700,7 @@ components:
           type: string
       type: object
     TrawlerHostBucketData:
-      description: "============================ Next Tag: 21 ============================ Data about the scheduling host bucket a URL was in (if the client wants to use this, e.g. for more intelligent scheduling, etc)."
+      description: "============================ Next Tag: 22 ============================ Data about the scheduling host bucket a URL was in (if the client wants to use this, e.g. for more intelligent scheduling, etc)."
       properties:
         ClientTrafficFraction:
           description: How much existing traffic
@@ -67114,6 +67770,14 @@ components:
           description: "# of urls currently in the queue"
           format: int32
           type: integer
+        PartnerTotalCapacityQps:
+          description: Total qps for this partner dedicated hostload, for non partner it will be -1.0.
+          format: float
+          type: number
+        PartnerTotalUsedQps:
+          description: Currently used qps for this partner dedicated hostlaod, for non partner it will be -1.0.
+          format: float
+          type: number
         RequestType:
           description: The type of the request (low latency vs. high throughput)
           enum:
@@ -67512,7 +68176,7 @@ components:
       description: Wire-format for a Status object
       properties:
         canonicalCode:
-          description: The canonical error code (see codes.proto) that most closely corresponds to this status. May be missing.
+          description: The canonical error code (see codes.proto) that most closely corresponds to this status. This may be missing, and in the common case of the generic space, it definitely will be.
           format: int32
           type: integer
         code:
@@ -67653,6 +68317,7 @@ components:
               - GEARHEAD_WORK_PROFILE_DETECTED_AND_COMPATIBLE
               - GEARHEAD_WORK_PROFILE_QUERYING_ALLOWED
               - PLAY_ADS_REENGAGEMENT_COUNTERFACTUAL
+              - PLAY_ADS_THIRD_LIST_VIEW_ADS_COUNTERFACTUAL
               - GEARHEAD_TOOLTIP_ASSISTANT_LAUNCHER_OPEN
               - GEARHEAD_MULTIPLE_CALLABLE_PHONE_ACCOUNTS_DETECTED
               - GEARHEAD_USER_HAS_SELECTED_OUTGOING_PHONE_ACCOUNT
@@ -67684,6 +68349,7 @@ components:
               - EDITORS_CHOICE_CLUSTER_SERP_EVENT_LEVEL
               - BESTK_CLUSTER_SERP_EVENT_LEVEL
               - LIVEOPS_CLUSTER_SERP_EVENT_LEVEL
+              - LIVEOPS_CLUSTER_SERP_TRIGGERING_EVENT_LEVEL
               - QUICKPICKS_CLUSTER_SERP_EVENT_LEVEL
               - INLINE_DETAILS_AQUALITY_CHECK_PASS
               - INLINE_DETAILS_AQUALITY_CHECK_FAIL
@@ -67727,6 +68393,8 @@ components:
               - SECOND_PASS_POLARIS_RERANKING_EVENT_LEVEL
               - SECOND_PASS_POLARIS_WITH_RANKING_CHANGE_EVENT_LEVEL
               - GEARHEAD_TOOLTIP_COOLWALK_DASHBOARD_UNAVAILABLE
+              - TIMESLICED_SAFE_SELF_UPDATE
+              - NORMAL_SELF_UPDATE
               - SECOND_PASS_BROAD_INTENT_QUERY_EVENT_LEVEL
               - SECOND_PASS_REWEIGHTING_TRIGGERED_EVENT_LEVEL
               - GEARHEAD_TOOLTIP_COOLWALK_RAIL_WIDGET
@@ -67737,6 +68405,50 @@ components:
               - SECOND_PASS_QUALITY_REWEIGTHING_MDP_EVENT_LEVEL
               - PLAY_STORE_IAP_SALES_MINI_DETAILS_PAGE_EVENT_LEVEL
               - UNACK_IN_APP_SUBSCRIPTION_WARNING_DETAIL_PAGE_EVENT_LEVEL
+              - PACKAGE_NAME_SEARCH_EVENT_LEVEL
+              - ZERO_COPY_NOT_SUFFICIENT_EVENT_LEVEL
+              - ZERO_COPY_ALLOWS_INSTALL_EVENT_LEVEL
+              - ZERO_COPY_NOT_REQUIRED_EVENT_LEVEL
+              - SHOULD_SEE_ICON_XSELL_CLUSTER_LOW_Q_DP_EVENT_LEVEL
+              - SHOULD_SEE_SCREENSHOT_XSELL_CLUSTER_LOW_Q_DP_EVENT_LEVEL
+              - SHOULD_SEE_RICH_LIST_XSELL_CLUSTER_LOW_Q_DP_EVENT_LEVEL
+              - DEVICE_TIER_HIGH_EVENT_LEVEL
+              - DEVICE_TIER_MED_EVENT_LEVEL
+              - DEVICE_TIER_LOW_EVENT_LEVEL
+              - QUERY_TYPE_UNKNOWN_EVENT_LEVEL
+              - QUERY_TYPE_CATEGORICAL_EVENT_LEVEL
+              - QUERY_TYPE_NAVIGATIONAL_EVENT_LEVEL
+              - QUERY_TYPE_MULTI_NAVIGATIONAL_EVENT_LEVEL
+              - QUERY_TYPE_NAVIGATIONAL_EXT_EVENT_LEVEL
+              - MR_HIGH_QUALITY_ZERO_EVENT_LEVEL
+              - MR_HIGH_QUALITY_ONE_OR_TWO_EVENT_LEVEL
+              - MR_HIGH_QUALITY_TRHEE_OR_MORE_EVENT_LEVEL
+              - MR_HIGH_QUALITY_TOP_EVENT_LEVEL
+              - MR_HIGH_RELEVANCE_ZERO_EVENT_LEVEL
+              - MR_HIGH_RELEVANCE_ONE_OR_TWO_EVENT_LEVEL
+              - MR_HIGH_RELEVANCE_TRHEE_OR_MORE_EVENT_LEVEL
+              - MR_HIGH_RELEVANCE_TOP_EVENT_LEVEL
+              - SR_HIGH_QUALITY_ZERO_EVENT_LEVEL
+              - SR_HIGH_QUALITY_ONE_OR_TWO_EVENT_LEVEL
+              - SR_HIGH_QUALITY_TRHEE_OR_MORE_EVENT_LEVEL
+              - SR_HIGH_QUALITY_TOP_EVENT_LEVEL
+              - SR_HIGH_RELEVANCE_ZERO_EVENT_LEVEL
+              - SR_HIGH_RELEVANCE_ONE_OR_TWO_EVENT_LEVEL
+              - SR_HIGH_RELEVANCE_TRHEE_OR_MORE_EVENT_LEVEL
+              - SR_HIGH_RELEVANCE_TOP_EVENT_LEVEL
+              - RAM_0GB_TO_1GB_EVENT_LEVEL
+              - RAM_1GB_TO_2GB_EVENT_LEVEL
+              - RAM_2GB_TO_3GB_EVENT_LEVEL
+              - RAM_3GB_TO_4GB_EVENT_LEVEL
+              - RAM_4GB_TO_6GB_EVENT_LEVEL
+              - RAM_6GB_AND_MORE_EVENT_LEVEL
+              - LOW_STORAGE_AT_INSTALL_PREPROCESSING_EVENT_LEVEL
+              - DSA_P13N_OPTED_IN_AT_EVENT_LEVEL
+              - DSA_P13N_OPTED_OUT_AT_EVENT_LEVEL
+              - USER_P13N_SETTING_UNSPECIFIED_AT_EVENT_LEVEL
+              - USER_P13N_SETTING_ON_AT_EVENT_LEVEL
+              - USER_P13N_SETTING_OFF_AT_EVENT_LEVEL
+              - BATTLESTAR_GAME_IN_MDP_EVENT_LEVEL
               - EVENT_LEVEL_TEST_CODE_LIMIT
               - ENTERTAINMENT_CLUSTER_TRIGGERING_AT_SESSION_LEVEL
               - BEST_SELLER_CART_TAG_AT_SESSION_LEVEL
@@ -67900,11 +68612,15 @@ components:
               - IN_APP_OFFER_APP_2_AT_SESSION_LEVEL
               - IN_APP_OFFER_APP_3_AT_SESSION_LEVEL
               - IN_APP_OFFER_APP_4_AT_SESSION_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_APP_GAMELOFT_AT_SESSION_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_APP_EVONY_AT_SESSION_LEVEL
               - IN_APP_OFFER_ELIGIBLE_AT_SESSION_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_1_AT_SESSION_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_2_AT_SESSION_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_3_AT_SESSION_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_4_AT_SESSION_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_ELIGIBLE_APP_GAMELOFT_AT_SESSION_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_ELIGIBLE_APP_EVONY_AT_SESSION_LEVEL
               - IN_APP_OFFER_SAVED_AT_SESSION_LEVEL
               - IN_APP_OFFER_SAVED_APP_1_AT_SESSION_LEVEL
               - IN_APP_OFFER_SAVED_APP_2_AT_SESSION_LEVEL
@@ -68035,6 +68751,7 @@ components:
               - EDITORS_CHOICE_CLUSTER_SERP_SESSION_LEVEL
               - BESTK_CLUSTER_SERP_SESSION_LEVEL
               - LIVEOPS_CLUSTER_SERP_SESSION_LEVEL
+              - LIVEOPS_CLUSTER_SERP_TRIGGERING_SESSION_LEVEL
               - QUICKPICKS_CLUSTER_SERP_SESSION_LEVEL
               - WIDE_MEDIA_CLUSTER_INVALID_VIDEO_ASSET_SESSION_LEVEL
               - ALTERNATE_DEVICE_PRESENT_SESSION_LEVEL
@@ -68245,6 +68962,68 @@ components:
               - SECOND_PASS_QUALITY_REWEIGTHING_MDP_SESSION_LEVEL
               - UNACK_IN_APP_SUBSCRIPTION_WARNING_DETAIL_PAGE_SESSION_LEVEL
               - ELIGIBLE_FOR_FORM_FACTOR_FILTER_ON_TOP_CHARTS
+              - PACKAGE_NAME_SEARCH_SESSION_LEVEL
+              - SUBSCRIPTION_PENDING_ACKNOWLEDGEMENT_EMAIL_SESSION_LEVEL
+              - SUBSCRIPTION_PENDING_ACKNOWLEDGEMENT_NOTIFICATION_SESSION_LEVEL
+              - ZERO_COPY_NOT_SUFFICIENT_SESSION_LEVEL
+              - ZERO_COPY_ALLOWS_INSTALL_SESSION_LEVEL
+              - ZERO_COPY_NOT_REQUIRED_SESSION_LEVEL
+              - BOOKS_SEARCH_SERIES_EXPANSION_SESSION_LEVEL
+              - SHOULD_SEE_ICON_XSELL_CLUSTER_LOW_Q_DP_SESSION_LEVEL
+              - SHOULD_SEE_SCREENSHOT_XSELL_CLUSTER_LOW_Q_DP_SESSION_LEVEL
+              - SHOULD_SEE_RICH_LIST_XSELL_CLUSTER_LOW_Q_DP_SESSION_LEVEL
+              - DEVICE_TIER_HIGH_SESSION_LEVEL
+              - DEVICE_TIER_MED_SESSION_LEVEL
+              - DEVICE_TIER_LOW_SESSION_LEVEL
+              - QUERY_TYPE_UNKNOWN_SESSION_LEVEL
+              - QUERY_TYPE_CATEGORICAL_SESSION_LEVEL
+              - QUERY_TYPE_NAVIGATIONAL_SESSION_LEVEL
+              - QUERY_TYPE_MULTI_NAVIGATIONAL_SESSION_LEVEL
+              - QUERY_TYPE_NAVIGATIONAL_EXT_SESSION_LEVEL
+              - MR_HIGH_QUALITY_ZERO_SESSION_LEVEL
+              - MR_HIGH_QUALITY_ONE_OR_TWO_SESSION_LEVEL
+              - MR_HIGH_QUALITY_TRHEE_OR_MORE_SESSION_LEVEL
+              - MR_HIGH_QUALITY_TOP_SESSION_LEVEL
+              - MR_HIGH_RELEVANCE_ZERO_SESSION_LEVEL
+              - MR_HIGH_RELEVANCE_ONE_OR_TWO_SESSION_LEVEL
+              - MR_HIGH_RELEVANCE_TRHEE_OR_MORE_SESSION_LEVEL
+              - MR_HIGH_RELEVANCE_TOP_SESSION_LEVEL
+              - SR_HIGH_QUALITY_ZERO_SESSION_LEVEL
+              - SR_HIGH_QUALITY_ONE_OR_TWO_SESSION_LEVEL
+              - SR_HIGH_QUALITY_TRHEE_OR_MORE_SESSION_LEVEL
+              - SR_HIGH_QUALITY_TOP_SESSION_LEVEL
+              - SR_HIGH_RELEVANCE_ZERO_SESSION_LEVEL
+              - SR_HIGH_RELEVANCE_ONE_OR_TWO_SESSION_LEVEL
+              - SR_HIGH_RELEVANCE_TRHEE_OR_MORE_SESSION_LEVEL
+              - SR_HIGH_RELEVANCE_TOP_SESSION_LEVEL
+              - RAM_0GB_TO_1GB_SESSION_LEVEL
+              - RAM_1GB_TO_2GB_SESSION_LEVEL
+              - RAM_2GB_TO_3GB_SESSION_LEVEL
+              - RAM_3GB_TO_4GB_SESSION_LEVEL
+              - RAM_4GB_TO_6GB_SESSION_LEVEL
+              - RAM_6GB_AND_MORE_SESSION_LEVEL
+              - FOP_ORDERING_RECOMMENDATION_ELIGIBLE_SESSION_LEVEL
+              - FOP_ORDERING_NO_RECOMMENDATION_SESSION_LEVEL
+              - FOP_ORDERING_RECOMMENDATION_ACTUALLY_USED_SESSION_LEVEL
+              - FOP_ORDERING_RECOMMENDATION_SAME_FOP_SESSION_LEVEL
+              - DMA_PRE_CONSENT_PROMPT_SHOWN_SESSION_LEVEL
+              - DMA_PRE_CONSENT_DECISION_MADE_SESSION_LEVEL
+              - DMA_PRE_CONSENT_FLOW_DISMISSED_SESSION_LEVEL
+              - BOOKS_LOYALTY_PROMO_BANNER_UNENROLLED_SESSION_LEVEL
+              - BOOKS_LOYALTY_PROMO_BANNER_MULTIPLIER_SESSION_LEVEL
+              - BOOKS_LOYALTY_PROMO_BANNER_BOOSTER_SESSION_LEVEL
+              - BOOKS_LOYALTY_PROMO_BANNER_WEEKLY_PRIZE_SESSION_LEVEL
+              - MDP_WITH_LIVE_OPS_EVER_INSTALLED_USERS_SESSION_LEVEL
+              - MDP_WITH_LIVE_OPS_NEVER_INSTALLED_USERS_SESSION_LEVEL
+              - LOW_STORAGE_AT_INSTALL_PREPROCESSING_SESSION_LEVEL
+              - DSA_P13N_OPTED_IN_AT_SESSION_LEVEL
+              - DSA_P13N_OPTED_OUT_AT_SESSION_LEVEL
+              - LANGUAGE_SWITCHER_SERVED_SESSION_LEVEL
+              - HAS_INSUFFICIENT_STORED_VALUE_BALANCE_BEFORE_RENEWAL_SESSION_LEVEL
+              - USER_P13N_SETTING_UNSPECIFIED_AT_SESSION_LEVEL
+              - USER_P13N_SETTING_ON_AT_SESSION_LEVEL
+              - USER_P13N_SETTING_OFF_AT_SESSION_LEVEL
+              - BATTLESTAR_GAME_IN_MDP_SESSION_LEVEL
               - SESSION_LEVEL_TEST_CODE_LIMIT
               - CART_ABANDONMENT_USER_LEVEL
               - IN_APP_PRODUCTS_IN_DETAILS_PAGE_USER_LEVEL
@@ -68307,11 +69086,15 @@ components:
               - IN_APP_OFFER_APP_2_AT_USER_LEVEL
               - IN_APP_OFFER_APP_3_AT_USER_LEVEL
               - IN_APP_OFFER_APP_4_AT_USER_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_APP_GAMELOFT_AT_USER_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_APP_EVONY_AT_USER_LEVEL
               - IN_APP_OFFER_ELIGIBLE_AT_USER_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_1_AT_USER_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_2_AT_USER_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_3_AT_USER_LEVEL
               - IN_APP_OFFER_ELIGIBLE_APP_4_AT_USER_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_ELIGIBLE_APP_GAMELOFT_AT_USER_LEVEL
+              - IN_APP_OFFER_BATTLESTAR_ELIGIBLE_APP_EVONY_AT_USER_LEVEL
               - IN_APP_OFFER_SAVED_AT_USER_LEVEL
               - IN_APP_OFFER_SAVED_APP_1_AT_USER_LEVEL
               - IN_APP_OFFER_SAVED_APP_2_AT_USER_LEVEL
@@ -68377,6 +69160,7 @@ components:
               - GE_IS_SCHEDULED_COFFEE_CARD
               - GE_IS_SCHEDULED_QUEST
               - GE_IS_SCHEDULED_LOYALTY_MULTIPLIER
+              - GE_IS_USER_OPT_IN_P13N
               - IAP_SKU_DEALS_LIVE_OP_DEALS_HOME_USER_LEVEL
               - IAP_SKU_DEALS_LIVE_OP_GAMES_HOME_USER_LEVEL
               - FEATURING_AHC_OR_FHR_TRIGGERED_USER_LEVEL
@@ -68390,8 +69174,10 @@ components:
               - GROWTH_CORPUS_WIDE_STAMP_CARD_PURCHASE_FLOW_SERVER_USER_LEVEL
               - GROWTH_CORPUS_WIDE_STAMP_CARD_GAMES_HOME_USER_LEVEL
               - LOYALTY_PURCHASE_QUEST_GAMES_HOME_USER_LEVEL
+              - LOYALTY_CORPUS_WIDE_STAMP_CARD_GAMES_HOME_CLIENT_USER_LEVEL
               - GROWTH_CORPUS_WIDE_STAMP_CARD_GAMES_HOME_SERVER_USER_LEVEL
               - LOYALTY_PURCHASE_QUEST_GAMES_HOME_SERVER_USER_LEVEL
+              - LOYALTY_CORPUS_WIDE_STAMP_CARD_GAMES_HOME_SERVER_USER_LEVEL
               - SUBS_HIGH_CHURN_FOP_OPTIONS_AVAILABLE_USER_LEVEL
               - SUBS_HIGH_CHURN_FOP_OPTIONS_AVAILABLE_USER_LEVEL_V2
               - SUBS_HIGH_CHURN_FOP_OPTIONS_AVAILABLE_WITH_EXISTING_FOP_USER_LEVEL
@@ -68406,6 +69192,8 @@ components:
               - FOP_STEERING_PROMOTION_CART_APPLY_PROMOTION_USER_LEVEL_V2
               - FOP_STEERING_PROMOTION_USER_LEVEL
               - FOP_STEERING_PROMOTION_EXCLUDE_CUJ4_USER_LEVEL
+              - SUBSCRIPTION_PENDING_ACKNOWLEDGEMENT_EMAIL_USER_LEVEL
+              - SUBSCRIPTION_PENDING_ACKNOWLEDGEMENT_NOTIFICATION_USER_LEVEL
               - LOYALTY_STAMP_CARD_IN_PURCHASE_FLOW_USER_LEVEL
               - HAS_MONETIZATION_BEHAVIOR_USER_LEVEL
               - HAS_MONETIZATION_BEHAVIOR_LAST_180D_USER_LEVEL
@@ -68481,6 +69269,23 @@ components:
               - NOTIFICATION_PREDICTED_REV_GAIN_FILTERING_USER_LEVEL
               - NOTIFICATION_PUBLICITY_GAIN_DISABLED_USER_LEVEL
               - UNACK_IN_APP_SUBSCRIPTION_WARNING_DETAIL_PAGE_USER_LEVEL
+              - PURCHASE_READINESS_ADD_FOP_USER_LEVEL
+              - PURCHASE_READINESS_ADD_AUTH_USER_LEVEL
+              - PURCHASE_READINESS_ADD_FOP_AUTH_USER_LEVEL
+              - MERCH_CONTENT_EXP_ACTIVE_PUBG_USER_LEVEL
+              - MERCH_CONTENT_EXP_ACTIVE_GENSHIN_USER_LEVEL
+              - MERCH_CONTENT_EXP_ACTIVE_ROBLOX_USER_LEVEL
+              - MERCH_CONTENT_EXP_ACTIVE_POKEMON_GO_USER_LEVEL
+              - DMA_PRE_CONSENT_PROMPT_SHOWN_USER_LEVEL
+              - DMA_PRE_CONSENT_DECISION_MADE_USER_LEVEL
+              - DMA_PRE_CONSENT_FLOW_DISMISSED_USER_LEVEL
+              - DSA_P13N_OPTED_IN_AT_USER_LEVEL
+              - DSA_P13N_OPTED_OUT_AT_USER_LEVEL
+              - LIVEOPS_INSTALL_NOTIFICATION_USER_LEVEL
+              - USER_P13N_SETTING_UNSPECIFIED_AT_USER_LEVEL
+              - USER_P13N_SETTING_ON_AT_USER_LEVEL
+              - USER_P13N_SETTING_OFF_AT_USER_LEVEL
+              - LIVEOPS_CLUSTER_SERP_TRIGGERING_USER_LEVEL
               - USER_LEVEL_TEST_CODE_LIMIT
             type: string
           type: array
@@ -69878,6 +70683,7 @@ components:
             - PRODUCT_ANCHOR
             - ANCHOR
             - RANKEMBED_GENERATED_NAVBOOST_ANCHOR
+            - GENERATED_ORACLE_ANCHOR
           type: string
       type: object
     VideoContentSearchMultimodalTopicTrainingFeatures:
@@ -71902,6 +72708,18 @@ components:
           format: int32
           type: integer
       type: object
+    VideoGoogleVideoClipInfo:
+      description: YT app video information. (go/yt-create-vsi-data)
+      properties:
+        appVersion:
+          description: YT app version (ie. YT Create app version).
+          type: string
+        assetLoggingId:
+          description: List of YT media asset logging ids.
+          items:
+            type: string
+          type: array
+      type: object
     VideoLegosLegosAnnotationsSet:
       properties:
         featureSetName:
@@ -71988,6 +72806,7 @@ components:
         mediaClipInfoOverview:
           $ref: "#/components/schemas/VideoMediaOverviewMediaClipInfoOverview"
         orientation:
+          description: The orientation is annotated based on the final displayed resolution of the video file. A video will be labelled PORTRAIT whenever the height is greater than the width. The orientation is only labelled UNKNOWN in the case that the video stream had some transformation that was not a rotation in the video stream.
           enum:
             - ORIENTATION_UNKNOWN
             - ORIENTATION_PORTRAIT
@@ -72008,6 +72827,7 @@ components:
             - PROJECTION_PARTIALLY_SPHERICAL
           type: string
         resolution:
+          description: "The resolution for a video takes into account the displayed video size, and takes into account the orientation. For example: - A 1920x1080 video will have ORIENTATION_LANDSCAPE and RESOLUTION_1080P - A 1080x1920 video will have ORIENTATION_PORTRAIT and RESOLUTION_1080P - A 1080x1080 video will have ORIENTATION_LANDSCAPE and RESOLUTION_1080P"
           enum:
             - RESOLUTION_UNKNOWN
             - RESOLUTION_ULTRA_LOW
@@ -72351,7 +73171,7 @@ components:
           type: array
       type: object
     VideoThumbnailsThumbnailScore:
-      description: "LINT.IfChange Score calculated from a thumbnail. NextID: 15"
+      description: "LINT.IfChange Score calculated from a thumbnail. NextID: 16"
       properties:
         checksum:
           description: Checksum of the thumbnail bytes used to identify which image the score belongs to. Only filled when thumbnail version is 0.
@@ -72370,6 +73190,9 @@ components:
         denseGeneralExtraFeatures:
           $ref: "#/components/schemas/DrishtiFeatureExtra"
           description: FeatureExtra extension for dense features.
+        externalImageId:
+          description: "A unique identifier for the image that is independent of the resolution. The Image ID accompanies the image bytes through its lifecycle, from creation till vanishing. Image ID is not based on image content; it is different than checksum (e.g. two different images with the same bytes may not have the same image ID). This ID is used as a unique identifier for clients such as T&S and classifiers. For more info refer to go/thumbnail-id-ts-ab-testing Note: Image ID's are still in development and are currently not exposed externally (may be done in the future). Please contact yt-thumbnails-core@ before using it. Do not use externally or in logs before contacting yt-thumbnails-core@"
+          type: string
         isAssigned:
           description: If true, score is manually assigned.
           type: boolean
@@ -72699,12 +73522,12 @@ components:
           format: int64
           type: string
         width:
-          description: video width and height.
+          description: "The video stream's width and height. Important notes: 1) These are the coded dimensions of the video stream and DO NOT take into account any rotation metadata that may be present in the video container. Prefer to use the MediaOverview::resolution and MediaOverview::orientation when possible. 2) In the case you want detailed displayed width/height information, you can use the MediaOverview::orientation to determine the displayed dimensions. E.g., in the case of PORTRAIT orientation: displayed_width = min(width, height) displayed_height = max(width, height) And for LANDSCAPE orientation: displayed_width = max(width, height) displayed_height = min(width, height)"
           format: int32
           type: integer
       type: object
     VideoVideoStreamInfo:
-      description: "Note that when a VSI is from a user video, the information reflects the info in that source. Fields like lengths, fps, etc. are not guaranteed to be the same as those of transcodes. If the relevant info in source is too broken, the corresponding fields (e.g., lengths) could be unset or with the default value, meaning VSI cannot compute them from the given info. Next id: 82"
+      description: "Note that when a VSI is from a user video, the information reflects the info in that source. Fields like lengths, fps, etc. are not guaranteed to be the same as those of transcodes. If the relevant info in source is too broken, the corresponding fields (e.g., lengths) could be unset or with the default value, meaning VSI cannot compute them from the given info. Next id: 83"
       properties:
         audioBitrate:
           description: audio bitrate in bits/s
@@ -73211,8 +74034,8 @@ components:
           type: string
         avDistance:
           description: Audio-Video interleaving distance between packets (in bytes)
-          format: int32
-          type: integer
+          format: int64
+          type: string
         avLength:
           description: Audio and video length in seconds. It's the max of the audio and video length. Note that when the VSI is from users videos, it is not guaranteed to be the same as transcode lengths and it could be 0 when the full VSI cannot compute the length from the source header and timestamps (for example when header and timestamps are too broken).
           format: double
@@ -73555,6 +74378,9 @@ components:
           description: High-level file type guessed by looking at the file headers and libmagic.
           format: int32
           type: integer
+        googleVideoClipInfo:
+          $ref: "#/components/schemas/VideoGoogleVideoClipInfo"
+          description: YT app created video information,
         imageStream:
           items:
             $ref: "#/components/schemas/VideoVideoStreamInfoVideoStream"
@@ -77303,7 +78129,7 @@ components:
           type: string
       type: object
     WWWResultInfoSubImageDocInfo:
-      description: "The following message contains info of sub image docs, it is populated in query_state and consumed in web image boost twiddler: (go/WebImageBoostTwiddler)."
+      description: "The following message contains info of sub image docs, it is populated in query_state and consumed in web image boost twiddler: (go/WebImageBoostTwiddler). NextID: 25"
       properties:
         additionalSafesearchSignals:
           items:
@@ -77365,6 +78191,10 @@ components:
           description: Deepcrop thumbnail cropping hints.
           format: byte
           type: string
+        dimeScore:
+          description: "EQ* v3: Deep Image Engagingness(DImE) go/deep-image-engagingness-slides"
+          format: float
+          type: number
         docid:
           format: uint64
           type: string
@@ -78528,6 +79358,7 @@ components:
             - GEO_LEGOS_TEST_SET_V2_TRAVEL_DESTINATIONS
             - GEO_LEGOS_TEST_SET_V2_DINING
             - GEO_LEGOS_TEST_SET_V2_HOTEL
+            - TRAVEL_INTEREST
           type: string
       type: object
     YoutubeDiscoveryLegosLegosTaxonomicRelationship:

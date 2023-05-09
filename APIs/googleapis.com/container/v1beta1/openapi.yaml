@@ -2987,6 +2987,15 @@ components:
           format: int64
           type: string
       type: object
+    AdditionalPodRangesConfig:
+      description: AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+      properties:
+        podRangeNames:
+          description: Name for pod secondary ipv4 range which has the actual range defined ahead.
+          items:
+            type: string
+          type: array
+      type: object
     AddonsConfig:
       description: Configuration for the addons that can be automatically spun up in the cluster, enabling additional functionality.
       properties:
@@ -3005,6 +3014,9 @@ components:
         gcpFilestoreCsiDriverConfig:
           $ref: "#/components/schemas/GcpFilestoreCsiDriverConfig"
           description: Configuration for the GCP Filestore CSI driver.
+        gcsFuseCsiDriverConfig:
+          $ref: "#/components/schemas/GcsFuseCsiDriverConfig"
+          description: Configuration for the Cloud Storage Fuse CSI driver.
         gkeBackupAgentConfig:
           $ref: "#/components/schemas/GkeBackupAgentConfig"
           description: Configuration for the Backup for GKE agent addon.
@@ -3507,6 +3519,9 @@ components:
     ClusterUpdate:
       description: ClusterUpdate describes an update to the cluster. Exactly one update can be applied to a cluster with each request, so at most one field can be provided.
       properties:
+        additionalPodRangesConfig:
+          $ref: "#/components/schemas/AdditionalPodRangesConfig"
+          description: The additional pod ranges to be added to the cluster. These pod ranges can be used by node pools to allocate pod IPs.
         desiredAddonsConfig:
           $ref: "#/components/schemas/AddonsConfig"
           description: Configurations for the various addons available to run in the cluster.
@@ -3544,6 +3559,9 @@ components:
         desiredEnablePrivateEndpoint:
           description: Enable/Disable private endpoint for the cluster's master.
           type: boolean
+        desiredFleet:
+          $ref: "#/components/schemas/Fleet"
+          description: The desired fleet configuration for the cluster.
         desiredGatewayApiConfig:
           $ref: "#/components/schemas/GatewayAPIConfig"
           description: The desired config of Gateway API on this cluster.
@@ -3663,6 +3681,9 @@ components:
         etag:
           description: The current etag of the cluster. If an etag is provided and does not match the current etag of the cluster, update will be blocked and an ABORTED error will be returned.
           type: string
+        removedAdditionalPodRangesConfig:
+          $ref: "#/components/schemas/AdditionalPodRangesConfig"
+          description: The additional pod ranges that are to be removed from the cluster. The pod ranges specified here must have been specified earlier in the 'additional_pod_ranges_config' argument.
       type: object
     CompleteIPRotationRequest:
       description: CompleteIPRotationRequest moves the cluster master back into single-IP mode.
@@ -3785,7 +3806,7 @@ components:
           description: Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
           type: string
         state:
-          description: Denotes the state of etcd encryption.
+          description: The desired state of etcd encryption.
           enum:
             - UNKNOWN
             - ENCRYPTED
@@ -3923,6 +3944,13 @@ components:
           description: Whether the GCP Filestore CSI driver is enabled for this cluster.
           type: boolean
       type: object
+    GcsFuseCsiDriverConfig:
+      description: Configuration for the Cloud Storage Fuse CSI driver.
+      properties:
+        enabled:
+          description: Whether the Cloud Storage Fuse CSI driver is enabled for this cluster.
+          type: boolean
+      type: object
     GetJSONWebKeysResponse:
       description: GetJSONWebKeysResponse is a valid JSON Web Key Set as specififed in rfc 7517
       properties:
@@ -4018,6 +4046,10 @@ components:
     IPAllocationPolicy:
       description: Configuration for controlling how IPs are allocated in the cluster.
       properties:
+        additionalPodRangesConfig:
+          $ref: "#/components/schemas/AdditionalPodRangesConfig"
+          description: Output only. [Output only] The additional pod ranges that are added to the cluster. These pod ranges can be used by new node pools to allocate pod IPs automatically. Once the range is removed it will not show up in IPAllocationPolicy.
+          readOnly: true
         allowRouteOverlap:
           description: "If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified."
           type: boolean
@@ -4046,6 +4078,9 @@ components:
         nodeIpv4CidrBlock:
           description: The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
           type: string
+        podCidrOverprovisionConfig:
+          $ref: "#/components/schemas/PodCIDROverprovisionConfig"
+          description: "[PRIVATE FIELD] Pod CIDR size overprovisioning config for the cluster. Pod CIDR size per node depends on max_pods_per_node. By default, the value of max_pods_per_node is doubled and then rounded off to next power of 2 to get the size of pod CIDR block per node. Example: max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32 IPs (/27) when overprovisioning is disabled."
         servicesIpv4Cidr:
           description: This field is deprecated, use services_ipv4_cidr_block.
           type: string
@@ -4711,6 +4746,9 @@ components:
         networkPerformanceConfig:
           $ref: "#/components/schemas/NetworkPerformanceConfig"
           description: Network bandwidth tier configuration.
+        podCidrOverprovisionConfig:
+          $ref: "#/components/schemas/PodCIDROverprovisionConfig"
+          description: "[PRIVATE FIELD] Pod CIDR size overprovisioning config for the nodepool. Pod CIDR size per node depends on max_pods_per_node. By default, the value of max_pods_per_node is rounded off to next power of 2 and we then double that to get the size of pod CIDR block per node. Example: max_pods_per_node of 30 would result in 64 IPs (/26). This config can disable the doubling of IPs (we still round off to next power of 2) Example: max_pods_per_node of 30 will result in 32 IPs (/27) when overprovisioning is disabled."
         podIpv4CidrBlock:
           description: The IP address range for pod IPs in this node pool. Only applicable if `create_pod_range` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) to pick a specific range to use. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.
           type: string
@@ -4932,13 +4970,14 @@ components:
             - SET_NODE_POOL_SIZE
             - SET_NETWORK_POLICY
             - SET_MAINTENANCE_POLICY
+            - RESIZE_CLUSTER
           type: string
         progress:
           $ref: "#/components/schemas/OperationProgress"
           description: Output only. [Output only] Progress information for an operation.
           readOnly: true
         selfLink:
-          description: Server-defined URL for the resource.
+          description: "Server-defined URI for the operation. Example: `https://container.googleapis.com/v1alpha1/projects/123/locations/us-central1/operations/operation-123`."
           type: string
         startTime:
           description: "[Output only] The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format."
@@ -4957,7 +4996,7 @@ components:
           readOnly: true
           type: string
         targetLink:
-          description: Server-defined URL for the target of the operation.
+          description: "Server-defined URI for the target of the operation. The format of this is a URI to the resource being modified (such as a cluster, node pool, or node). For node pool repairs, there may be multiple nodes being repaired, but only one will be the target. Examples: - `https://container.googleapis.com/v1beta1/projects/123/locations/us-central1/clusters/my-cluster` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np` - `https://container.googleapis.com/v1beta1/projects/123/zones/us-central1-c/clusters/my-cluster/nodePools/my-np/node/my-node`"
           type: string
         zone:
           description: The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the operation is taking place. This field is deprecated, use location instead.
@@ -4998,6 +5037,13 @@ components:
             - TYPE_UNSPECIFIED
             - COMPACT
           type: string
+      type: object
+    PodCIDROverprovisionConfig:
+      description: "[PRIVATE FIELD] Config for pod CIDR size overprovisioning."
+      properties:
+        disable:
+          description: "Whether Pod CIDR overprovisioning is disabled. Note: Pod CIDR overprovisioning is enabled by default."
+          type: boolean
       type: object
     PodSecurityPolicyConfig:
       description: Configuration for the PodSecurityPolicy feature.

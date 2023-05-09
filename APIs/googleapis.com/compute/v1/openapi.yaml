@@ -88,6 +88,7 @@ tags:
   - name: regionInstanceGroupManagers
   - name: regionInstanceGroups
   - name: regionInstances
+  - name: regionInstanceTemplates
   - name: regionNetworkEndpointGroups
   - name: regionNetworkFirewallPolicies
   - name: regionNotificationEndpoints
@@ -4954,6 +4955,64 @@ paths:
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
       - $ref: "#/components/parameters/userIp"
+  "/projects/{project}/global/addresses/{address}/move":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Moves the specified address resource from one project to another project.
+      operationId: compute.globalAddresses.move
+      parameters:
+        - description: Source project ID which the Address is moved from.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the address resource to move.
+          in: path
+          name: address
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GlobalAddressesMoveRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - globalAddresses
   "/projects/{project}/global/addresses/{resource}/setLabels":
     parameters:
       - $ref: "#/components/parameters/_.xgafv"
@@ -17272,6 +17331,70 @@ paths:
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
       - $ref: "#/components/parameters/userIp"
+  "/projects/{project}/regions/{region}/addresses/{address}/move":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Moves the specified address resource.
+      operationId: compute.addresses.move
+      parameters:
+        - description: Source project ID which the Address is moved from.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the address resource to move.
+          in: path
+          name: address
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegionAddressesMoveRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - addresses
   "/projects/{project}/regions/{region}/addresses/{resource}/setLabels":
     parameters:
       - $ref: "#/components/parameters/_.xgafv"
@@ -22908,6 +23031,231 @@ paths:
             - https://www.googleapis.com/auth/compute
       tags:
         - regionInstanceGroups
+  "/projects/{project}/regions/{region}/instanceTemplates":
+    get:
+      description: Retrieves a list of instance templates that are contained within the specified project and region.
+      operationId: compute.regionInstanceTemplates.list
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the regions for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: "A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:` operator can be used with string fields to match substrings. For non-string fields it is equivalent to the `=` operator. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = \"Intel Skylake\") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = \"Intel Skylake\") OR (cpuPlatform = \"Intel Broadwell\") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq \"double quoted literal\"` `(fieldname1 eq literal) (fieldname2 ne \"literal\")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name \"instance\", you would use `name ne .*instance`."
+          in: query
+          name: filter
+          schema:
+            type: string
+        - description: "The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)"
+          in: query
+          name: maxResults
+          schema:
+            minimum: 0
+            type: integer
+        - description: Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+          in: query
+          name: orderBy
+          schema:
+            type: string
+        - description: Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
+          in: query
+          name: pageToken
+          schema:
+            type: string
+        - description: Opt-in for partial success behavior which provides partial results in case of failure. The default value is false.
+          in: query
+          name: returnPartialSuccess
+          schema:
+            type: boolean
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InstanceTemplateList"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute.readonly
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute.readonly
+      tags:
+        - regionInstanceTemplates
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
+      operationId: compute.regionInstanceTemplates.insert
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InstanceTemplate"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionInstanceTemplates
+  "/projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}":
+    delete:
+      description: Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
+      operationId: compute.regionInstanceTemplates.delete
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: The name of the instance template to delete.
+          in: path
+          name: instanceTemplate
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionInstanceTemplates
+    get:
+      description: Returns the specified instance template.
+      operationId: compute.regionInstanceTemplates.get
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: The name of the instance template.
+          in: path
+          name: instanceTemplate
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InstanceTemplate"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute.readonly
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute.readonly
+      tags:
+        - regionInstanceTemplates
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
   "/projects/{project}/regions/{region}/instances/bulkInsert":
     parameters:
       - $ref: "#/components/parameters/_.xgafv"
@@ -26421,6 +26769,11 @@ paths:
           schema:
             minimum: 0
             type: integer
+        - description: Name of the nat service to filter the Nat Mapping information. If it is omitted, all nats for this router will be returned. Name should conform to RFC1035.
+          in: query
+          name: natName
+          schema:
+            type: string
         - description: Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
           in: query
           name: orderBy
@@ -37138,6 +37491,11 @@ paths:
           required: true
           schema:
             type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
       responses:
         "200":
           content:
@@ -40915,6 +41273,15 @@ components:
           default: compute#address
           description: "[Output Only] Type of the resource. Always compute#address for addresses."
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this Address, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an Address.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         name:
           description: Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
@@ -41394,6 +41761,15 @@ components:
           description: Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
           format: int64
           type: string
+        provisionedThroughput:
+          description: Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124.
+          format: int64
+          type: string
+        replicaZones:
+          description: Required for each regional disk associated with the instance. Specify the URLs of the zones where the disk should be replicated to. You must provide exactly two replica zones, and one zone must be the same as the instance zone. You can't use this option with boot disks.
+          items:
+            type: string
+          type: array
         resourceManagerTags:
           additionalProperties:
             type: string
@@ -43079,7 +43455,7 @@ components:
           description: "[Output Only] Server-defined URL for the resource."
           type: string
         splitSourceCommitment:
-          description: Source commitment to be splitted into a new commitment.
+          description: Source commitment to be split into a new commitment.
           type: string
         startTimestamp:
           description: "[Output Only] Commitment start time in RFC3339 text format."
@@ -43108,6 +43484,7 @@ components:
             - GENERAL_PURPOSE_N2
             - GENERAL_PURPOSE_N2D
             - GENERAL_PURPOSE_T2D
+            - GRAPHICS_OPTIMIZED
             - MEMORY_OPTIMIZED
             - MEMORY_OPTIMIZED_M3
             - TYPE_UNSPECIFIED
@@ -43505,6 +43882,14 @@ components:
             - ARM64
             - X86_64
           type: string
+        asyncPrimaryDisk:
+          $ref: "#/components/schemas/DiskAsyncReplication"
+          description: Disk asynchronously replicated into this disk.
+        asyncSecondaryDisks:
+          additionalProperties:
+            $ref: "#/components/schemas/DiskAsyncReplicationList"
+          description: "[Output Only] A list of disks this disk is asynchronously replicated to."
+          type: object
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
           type: string
@@ -43574,6 +43959,10 @@ components:
           description: Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
           format: int64
           type: string
+        provisionedThroughput:
+          description: Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124.
+          format: int64
+          type: string
         region:
           description: "[Output Only] URL of the region where the disk resides. Only applicable for regional resources. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body."
           type: string
@@ -43587,6 +43976,9 @@ components:
           items:
             type: string
           type: array
+        resourceStatus:
+          $ref: "#/components/schemas/DiskResourceStatus"
+          description: "[Output Only] Status information for the disk resource."
         satisfiesPzs:
           description: "[Output Only] Reserved for future use."
           type: boolean
@@ -43596,6 +43988,12 @@ components:
         sizeGb:
           description: Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk. If you specify this field along with a source, the value of sizeGb must not be less than the size of the source. Acceptable values are 1 to 65536, inclusive.
           format: int64
+          type: string
+        sourceConsistencyGroupPolicy:
+          description: "[Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group."
+          type: string
+        sourceConsistencyGroupPolicyId:
+          description: "[Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group."
           type: string
         sourceDisk:
           description: "The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk "
@@ -43722,6 +44120,26 @@ components:
               type: string
           type: object
       type: object
+    DiskAsyncReplication:
+      properties:
+        consistencyGroupPolicy:
+          description: "[Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group."
+          type: string
+        consistencyGroupPolicyId:
+          description: "[Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group."
+          type: string
+        disk:
+          description: "The other disk asynchronously replicated to or from the current disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk "
+          type: string
+        diskId:
+          description: "[Output Only] The unique ID of the other disk asynchronously replicated to or from the current disk. This value identifies the exact disk that was used to create this replication. For example, if you started replicating the persistent disk from a disk that was later deleted and recreated under the same name, the disk ID would identify the exact version of the disk that was used."
+          type: string
+      type: object
+    DiskAsyncReplicationList:
+      properties:
+        asyncReplicationDisk:
+          $ref: "#/components/schemas/DiskAsyncReplication"
+      type: object
     DiskInstantiationConfig:
       description: A specification of the desired way to instantiate a disk in the instance template when its created from a source instance.
       properties:
@@ -43835,6 +44253,28 @@ components:
             type: string
           description: Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
           type: object
+      type: object
+    DiskResourceStatus:
+      properties:
+        asyncPrimaryDisk:
+          $ref: "#/components/schemas/DiskResourceStatusAsyncReplicationStatus"
+        asyncSecondaryDisks:
+          additionalProperties:
+            $ref: "#/components/schemas/DiskResourceStatusAsyncReplicationStatus"
+          description: "Key: disk, value: AsyncReplicationStatus message"
+          type: object
+      type: object
+    DiskResourceStatusAsyncReplicationStatus:
+      properties:
+        state:
+          enum:
+            - ACTIVE
+            - CREATED
+            - STARTING
+            - STATE_UNSPECIFIED
+            - STOPPED
+            - STOPPING
+          type: string
       type: object
     DiskType:
       description: "Represents a Disk Type resource. Google Compute Engine has two Disk Type resources: * [Regional](/compute/docs/reference/rest/v1/regionDiskTypes) * [Zonal](/compute/docs/reference/rest/v1/diskTypes) You can choose from a variety of disk types based on your needs. For more information, read Storage options. The diskTypes resource represents disk types for a zonal persistent disk. For more information, read Zonal persistent disks. The regionDiskTypes resource represents disk types for a regional persistent disk. For more information, read Regional persistent disks."
@@ -45001,6 +45441,9 @@ components:
         allowGlobalAccess:
           description: This field is used along with the backend_service field for internal load balancing or with the target field for internal TargetInstance. If the field is set to TRUE, clients can access ILB from all regions. Otherwise only allows access from clients in the same region as the internal load balancer.
           type: boolean
+        allowPscGlobalAccess:
+          description: This is used in PSC consumer ForwardingRule to control whether the PSC endpoint can be accessed from another region.
+          type: boolean
         backendService:
           description: Identifies the backend service to which the forwarding rule sends traffic. Required for Internal TCP/UDP Load Balancing and Network Load Balancing; must be omitted for all other load balancer types.
           type: string
@@ -45064,7 +45507,7 @@ components:
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
           type: string
         network:
-          description: This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
+          description: This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither subnetwork nor this field is specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
           type: string
         networkTier:
           description: "This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address."
@@ -45373,6 +45816,15 @@ components:
             - USE_SERVING_PORT
           type: string
       type: object
+    GlobalAddressesMoveRequest:
+      properties:
+        description:
+          description: An optional destination address description if intended to be different from the source.
+          type: string
+        destinationAddress:
+          description: "The URL of the destination address to move to. This can be a full or partial URL. For example, the following are all valid URLs to a address: - https://www.googleapis.com/compute/v1/projects/project /global/addresses/address - projects/project/global/addresses/address Note that destination project must be different from the source project. So /global/addresses/address is not valid partial url."
+          type: string
+      type: object
     GlobalNetworkEndpointGroupsAttachEndpointsRequest:
       properties:
         networkEndpoints:
@@ -45590,7 +46042,7 @@ components:
           type: string
       type: object
     HealthCheck:
-      description: "Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/v1/healthChecks) * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.HealthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.HealthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview."
+      description: "Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/v1/healthChecks) * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.healthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.healthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.healthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview."
       properties:
         checkIntervalSec:
           description: How often (in seconds) to send a health check. The default value is 5 seconds.
@@ -48924,6 +49376,15 @@ components:
           default: compute#interconnect
           description: "[Output Only] Type of the resource. Always compute#interconnect for interconnects."
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this Interconnect, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an Interconnect.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         linkType:
           description: "Type of link requested, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G Ethernet with LR optics. Note that this field indicates the speed of each of the links in the bundle, not the speed of the entire bundle."
           enum:
@@ -49062,6 +49523,15 @@ components:
           default: compute#interconnectAttachment
           description: "[Output Only] Type of the resource. Always compute#interconnectAttachment for interconnect attachments."
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this InterconnectAttachment, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InterconnectAttachment.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         mtu:
           description: Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
           format: int32
@@ -50774,7 +51244,7 @@ components:
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
           type: string
         network:
-          description: "[Output Only] The URL of the network which the Network Attachment belongs to."
+          description: "[Output Only] The URL of the network which the Network Attachment belongs to. Practically it is inferred by fetching the network of the first subnetwork associated. Because it is required that all the subnetworks must be from the same network, it is assured that the Network Attachment belongs to the same network as all the subnetworks."
           type: string
         producerAcceptLists:
           description: Projects that are allowed to connect to this network attachment. The project can be specified using its id or number.
@@ -50883,7 +51353,7 @@ components:
           description: The project id or number of the interface to which the IP was assigned.
           type: string
         secondaryIpCidrRanges:
-          description: Alias IP ranges from the same subnetwork
+          description: Alias IP ranges from the same subnetwork.
           items:
             type: string
           type: array
@@ -54556,6 +55026,7 @@ components:
             - COMMITTED_NVIDIA_A100_80GB_GPUS
             - COMMITTED_NVIDIA_A100_GPUS
             - COMMITTED_NVIDIA_K80_GPUS
+            - COMMITTED_NVIDIA_L4_GPUS
             - COMMITTED_NVIDIA_P100_GPUS
             - COMMITTED_NVIDIA_P4_GPUS
             - COMMITTED_NVIDIA_T4_GPUS
@@ -54607,11 +55078,15 @@ components:
             - NETWORK_ATTACHMENTS
             - NETWORK_ENDPOINT_GROUPS
             - NETWORK_FIREWALL_POLICIES
+            - NET_LB_SECURITY_POLICIES_PER_REGION
+            - NET_LB_SECURITY_POLICY_RULES_PER_REGION
+            - NET_LB_SECURITY_POLICY_RULE_ATTRIBUTES_PER_REGION
             - NODE_GROUPS
             - NODE_TEMPLATES
             - NVIDIA_A100_80GB_GPUS
             - NVIDIA_A100_GPUS
             - NVIDIA_K80_GPUS
+            - NVIDIA_L4_GPUS
             - NVIDIA_P100_GPUS
             - NVIDIA_P100_VWS_GPUS
             - NVIDIA_P4_GPUS
@@ -54626,6 +55101,7 @@ components:
             - PREEMPTIBLE_NVIDIA_A100_80GB_GPUS
             - PREEMPTIBLE_NVIDIA_A100_GPUS
             - PREEMPTIBLE_NVIDIA_K80_GPUS
+            - PREEMPTIBLE_NVIDIA_L4_GPUS
             - PREEMPTIBLE_NVIDIA_P100_GPUS
             - PREEMPTIBLE_NVIDIA_P100_VWS_GPUS
             - PREEMPTIBLE_NVIDIA_P4_GPUS
@@ -54649,6 +55125,7 @@ components:
             - ROUTES
             - SECURITY_POLICIES
             - SECURITY_POLICIES_PER_REGION
+            - SECURITY_POLICY_ADVANCED_RULES_PER_REGION
             - SECURITY_POLICY_CEVAL_RULES
             - SECURITY_POLICY_RULES
             - SECURITY_POLICY_RULES_PER_REGION
@@ -54763,6 +55240,15 @@ components:
           items:
             type: string
           type: array
+      type: object
+    RegionAddressesMoveRequest:
+      properties:
+        description:
+          description: An optional destination address description if intended to be different from the source.
+          type: string
+        destinationAddress:
+          description: "The URL of the destination address to move to. This can be a full or partial URL. For example, the following are all valid URLs to a address: - https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address - projects/project/regions/region/addresses/address Note that destination project must be different from the source project. So /regions/region/addresses/address is not valid partial url."
+          type: string
       type: object
     RegionAutoscalerList:
       description: Contains a list of autoscalers.
@@ -57695,6 +58181,15 @@ components:
           default: compute#securityPolicy
           description: "[Output only] Type of the resource. Always compute#securityPolicyfor security policies"
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this security policy, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels. To see the latest fingerprint, make get() request to the security policy.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         name:
           description: Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
@@ -57728,13 +58223,13 @@ components:
           description: If set to true, enables Cloud Armor Machine Learning.
       type: object
     SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig:
-      description: Configuration options for L7 DDoS detection.
+      description: Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
       properties:
         enable:
-          description: If set to true, enables CAAP for L7 DDoS detection.
+          description: If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: boolean
         ruleVisibility:
-          description: "Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules."
+          description: "Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules. This field is only supported in Global Security Policies of type CLOUD_ARMOR."
           enum:
             - PREMIUM
             - STANDARD
@@ -57843,7 +58338,7 @@ components:
     SecurityPolicyRecaptchaOptionsConfig:
       properties:
         redirectSiteKey:
-          description: An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
+          description: An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: string
       type: object
     SecurityPolicyReference:
@@ -57855,14 +58350,14 @@ components:
       description: Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
       properties:
         action:
-          description: "The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. "
+          description: "The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. This action is only supported in Global Security Policies of type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. "
           type: string
         description:
           description: An optional description of this resource. Provide this property when you create the resource.
           type: string
         headerAction:
           $ref: "#/components/schemas/SecurityPolicyRuleHttpHeaderAction"
-          description: Optional, additional actions that are performed on headers.
+          description: Optional, additional actions that are performed on headers. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
         kind:
           default: compute#securityPolicyRule
           description: "[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules"
@@ -57885,7 +58380,7 @@ components:
           description: Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
         redirectOptions:
           $ref: "#/components/schemas/SecurityPolicyRuleRedirectOptions"
-          description: Parameters defining the redirect action. Cannot be specified for any other actions.
+          description: Parameters defining the redirect action. Cannot be specified for any other actions. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
       type: object
     SecurityPolicyRuleHttpHeaderAction:
       properties:
@@ -57912,7 +58407,7 @@ components:
           description: The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
         expr:
           $ref: "#/components/schemas/Expr"
-          description: User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+          description: User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header. Expressions containing `evaluateThreatIntelligence` require Cloud Armor Managed Protection Plus tier and are not supported in Edge Policies nor in Regional Policies. Expressions containing `evaluatePreconfiguredExpr('sourceiplist-*')` require Cloud Armor Managed Protection Plus tier and are only supported in Global Security Policies.
         versionedExpr:
           description: "Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config."
           enum:
@@ -58005,18 +58500,41 @@ components:
             - SNI
             - XFF_IP
           type: string
+        enforceOnKeyConfigs:
+          description: If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which ratelimit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must not be specified.
+          items:
+            $ref: "#/components/schemas/SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig"
+          type: array
         enforceOnKeyName:
           description: "Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value."
           type: string
         exceedAction:
-          description: Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below.
+          description: Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: string
         exceedRedirectOptions:
           $ref: "#/components/schemas/SecurityPolicyRuleRedirectOptions"
-          description: Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
+          description: Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
         rateLimitThreshold:
           $ref: "#/components/schemas/SecurityPolicyRuleRateLimitOptionsThreshold"
           description: Threshold at which to begin ratelimiting.
+      type: object
+    SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig:
+      properties:
+        enforceOnKeyName:
+          description: "Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value."
+          type: string
+        enforceOnKeyType:
+          description: 'Determines the key to enforce the rate_limit_threshold on. Possible values are: - ALL: A single rate limit threshold is applied to all the requests matching this rule. This is the default value if "enforceOnKeyConfigs" is not configured. - IP: The source IP address of the request is the key. Each IP has this limit enforced separately. - HTTP_HEADER: The value of the HTTP header whose name is configured under "enforceOnKeyName". The key value is truncated to the first 128 bytes of the header value. If no such header is present in the request, the key type defaults to ALL. - XFF_IP: The first IP address (i.e. the originating client IP address) specified in the list of IPs under X-Forwarded-For HTTP header. If no such header is present or the value is not a valid IP, the key defaults to the source IP address of the request i.e. key type IP. - HTTP_COOKIE: The value of the HTTP cookie whose name is configured under "enforceOnKeyName". The key value is truncated to the first 128 bytes of the cookie value. If no such cookie is present in the request, the key type defaults to ALL. - HTTP_PATH: The URL path of the HTTP request. The key value is truncated to the first 128 bytes. - SNI: Server name indication in the TLS session of the HTTPS request. The key value is truncated to the first 128 bytes. The key type defaults to ALL on a HTTP session. - REGION_CODE: The country/region from which the request originates. '
+          enum:
+            - ALL
+            - HTTP_COOKIE
+            - HTTP_HEADER
+            - HTTP_PATH
+            - IP
+            - REGION_CODE
+            - SNI
+            - XFF_IP
+          type: string
       type: object
     SecurityPolicyRuleRateLimitOptionsThreshold:
       properties:
@@ -58162,6 +58680,9 @@ components:
         pscServiceAttachmentId:
           $ref: "#/components/schemas/Uint128"
           description: "[Output Only] An 128-bit global unique ID of the PSC service attachment."
+        reconcileConnections:
+          description: This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . - If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list. For newly created service attachment, this boolean defaults to true.
+          type: boolean
         region:
           description: "[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body."
           type: string
@@ -60208,7 +60729,7 @@ components:
     TargetHttpsProxiesSetCertificateMapRequest:
       properties:
         certificateMap:
-          description: URL of the Certificate Map to associate with this TargetHttpsProxy.
+          description: URL of the Certificate Map to associate with this TargetHttpsProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
       type: object
     TargetHttpsProxiesSetQuicOverrideRequest:
@@ -60236,7 +60757,7 @@ components:
           description: "Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact."
           type: string
         certificateMap:
-          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
@@ -61007,7 +61528,7 @@ components:
     TargetSslProxiesSetCertificateMapRequest:
       properties:
         certificateMap:
-          description: URL of the Certificate Map to associate with this TargetSslProxy.
+          description: URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
       type: object
     TargetSslProxiesSetProxyHeaderRequest:
@@ -61031,7 +61552,7 @@ components:
       description: Represents a Target SSL Proxy resource. A target SSL proxy is a component of a SSL Proxy load balancer. Global forwarding rules reference a target SSL proxy, and the target proxy then references an external backend service. For more information, read Using Target Proxies.
       properties:
         certificateMap:
-          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
@@ -61428,6 +61949,15 @@ components:
           default: compute#targetVpnGateway
           description: "[Output Only] Type of resource. Always compute#targetVpnGateway for target VPN gateways."
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this TargetVpnGateway, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a TargetVpnGateway.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         name:
           description: Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
@@ -62593,7 +63123,7 @@ components:
           format: uint32
           type: integer
         peerGatewayInterface:
-          description: The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an external VPN gateway or GCP VPN gateway.
+          description: The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
           format: uint32
           type: integer
         tunnelUrl:
@@ -62601,7 +63131,7 @@ components:
           type: string
       type: object
     VpnGatewayStatusVpnConnection:
-      description: A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer gateway. The peer gateway could either be a external VPN gateway or GCP VPN gateway.
+      description: A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer gateway. The peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
       properties:
         peerExternalGateway:
           description: URL reference to the peer external VPN gateways to which the VPN tunnels in this VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
@@ -62719,6 +63249,15 @@ components:
           default: compute#vpnTunnel
           description: "[Output Only] Type of resource. Always compute#vpnTunnel for VPN tunnels."
           type: string
+        labelFingerprint:
+          description: A fingerprint for the labels being applied to this VpnTunnel, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a VpnTunnel.
+          format: byte
+          type: string
+        labels:
+          additionalProperties:
+            type: string
+          description: Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
+          type: object
         localTrafficSelector:
           description: "Local traffic selector to use when establishing the VPN tunnel with the peer VPN gateway. The value should be a CIDR formatted string, for example: 192.168.0.0/16. The ranges must be disjoint. Only IPv4 is supported."
           items:

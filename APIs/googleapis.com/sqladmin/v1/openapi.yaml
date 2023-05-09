@@ -768,7 +768,7 @@ paths:
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
     post:
-      description: Inserts a resource containing information about a database inside a Cloud SQL instance.
+      description: Inserts a resource containing information about a database inside a Cloud SQL instance. **Note:** You can't modify the default character set and collation.
       operationId: sql.databases.insert
       parameters:
         - description: Project ID of the project that contains the instance.
@@ -2639,6 +2639,14 @@ components:
           description: The allowlisted value for the access control list.
           type: string
       type: object
+    AdvancedMachineFeatures:
+      description: Specifies options for controlling advanced machine features.
+      properties:
+        threadsPerCore:
+          description: The number of threads per physical core.
+          format: int32
+          type: integer
+      type: object
     ApiWarning:
       description: An Admin API warning message.
       properties:
@@ -2849,6 +2857,9 @@ components:
           description: Timestamp, if specified, identifies the time to which the source instance is cloned.
           format: google-datetime
           type: string
+        preferredZone:
+          description: (Point-in-time recovery for PostgreSQL only) Clone to an instance in the specified zone. If no zone is specified, clone to the same zone as the source instance.
+          type: string
       type: object
     ConnectSettings:
       description: Connect settings retrieval response.
@@ -2879,6 +2890,7 @@ components:
             - POSTGRES_12
             - POSTGRES_13
             - POSTGRES_14
+            - POSTGRES_15
             - MYSQL_8_0
             - MYSQL_8_0_18
             - MYSQL_8_0_26
@@ -2888,6 +2900,10 @@ components:
             - MYSQL_8_0_30
             - MYSQL_8_0_31
             - MYSQL_8_0_32
+            - MYSQL_8_0_33
+            - MYSQL_8_0_34
+            - MYSQL_8_0_35
+            - MYSQL_8_0_36
             - SQLSERVER_2019_STANDARD
             - SQLSERVER_2019_ENTERPRISE
             - SQLSERVER_2019_EXPRESS
@@ -2952,9 +2968,10 @@ components:
       description: A Cloud SQL instance resource.
       properties:
         availableMaintenanceVersions:
-          description: List all maintenance versions applicable on the instance
+          description: Output only. List all maintenance versions applicable on the instance
           items:
             type: string
+          readOnly: true
           type: array
         backendType:
           description: "The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type."
@@ -2998,6 +3015,7 @@ components:
             - POSTGRES_12
             - POSTGRES_13
             - POSTGRES_14
+            - POSTGRES_15
             - MYSQL_8_0
             - MYSQL_8_0_18
             - MYSQL_8_0_26
@@ -3007,6 +3025,10 @@ components:
             - MYSQL_8_0_30
             - MYSQL_8_0_31
             - MYSQL_8_0_32
+            - MYSQL_8_0_33
+            - MYSQL_8_0_34
+            - MYSQL_8_0_35
+            - MYSQL_8_0_36
             - SQLSERVER_2019_STANDARD
             - SQLSERVER_2019_ENTERPRISE
             - SQLSERVER_2019_EXPRESS
@@ -3350,6 +3372,7 @@ components:
               - POSTGRES_12
               - POSTGRES_13
               - POSTGRES_14
+              - POSTGRES_15
               - MYSQL_8_0
               - MYSQL_8_0_18
               - MYSQL_8_0_26
@@ -3359,6 +3382,10 @@ components:
               - MYSQL_8_0_30
               - MYSQL_8_0_31
               - MYSQL_8_0_32
+              - MYSQL_8_0_33
+              - MYSQL_8_0_34
+              - MYSQL_8_0_35
+              - MYSQL_8_0_36
               - SQLSERVER_2019_STANDARD
               - SQLSERVER_2019_ENTERPRISE
               - SQLSERVER_2019_EXPRESS
@@ -4075,6 +4102,9 @@ components:
         activeDirectoryConfig:
           $ref: "#/components/schemas/SqlActiveDirectoryConfig"
           description: Active Directory configuration, relevant only for Cloud SQL for SQL Server.
+        advancedMachineFeatures:
+          $ref: "#/components/schemas/AdvancedMachineFeatures"
+          description: Specifies advance machine configuration for the instance relevant only for SQL Server.
         authorizedGaeApplications:
           description: The App Engine app IDs that can access this instance. (Deprecated) Applied to First Generation instances only.
           items:
@@ -4247,6 +4277,9 @@ components:
       properties:
         kind:
           description: This is always `sql#getDiskShrinkConfig`.
+          type: string
+        message:
+          description: Additional message to customers.
           type: string
         minimalTargetSizeGb:
           description: The minimum size to which a disk can be shrunk in GigaBytes.

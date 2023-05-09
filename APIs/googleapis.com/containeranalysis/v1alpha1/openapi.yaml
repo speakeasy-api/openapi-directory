@@ -410,6 +410,7 @@ paths:
               - SPDX_RELATIONSHIP
               - DSSE_ATTESTATION
               - VULNERABILITY_ASSESSMENT
+              - SBOM_REFERENCE
             type: string
         - description: 'The name field contains the project Id. For example: "projects/{project_id} @Deprecated'
           in: query
@@ -1369,6 +1370,11 @@ components:
           items:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact"
           type: array
+        npmPackages:
+          description: A list of npm packages to be uploaded to Artifact Registry upon successful completion of all build steps. Npm packages in the specified paths will be uploaded to the specified Artifact Registry repository using the builder service account's credentials. If any packages fail to be pushed, the build is marked FAILURE.
+          items:
+            $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage"
+          type: array
         objects:
           $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects"
           description: A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.
@@ -1411,6 +1417,16 @@ components:
           type: string
         version:
           description: Maven `version` value used when uploading the artifact to Artifact Registry.
+          type: string
+      type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage:
+      description: Npm package to upload to Artifact Registry upon successful completion of all build steps.
+      properties:
+        packagePath:
+          description: Path to the package.json. e.g. workspace/path/to/package
+          type: string
+        repository:
+          description: Artifact Registry repository, in the form "https://$REGION-npm.pkg.dev/$PROJECT/$REPOSITORY" Npm package in the workspace specified by path will be zipped and uploaded to Artifact Registry with this location as a prefix.
           type: string
       type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage:
@@ -1670,6 +1686,7 @@ components:
               - NONE
               - SHA256
               - MD5
+              - SHA512
             type: string
           type: array
         substitutionOption:
@@ -1817,6 +1834,19 @@ components:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1Hash"
           type: array
       type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource:
+      description: Location of the source in any accessible Git repository.
+      properties:
+        dir:
+          description: Directory, relative to the source root, in which to run the build. This must be a relative path. If a step's `dir` is specified and is an absolute path, this value is ignored for that step's execution.
+          type: string
+        revision:
+          description: The revision to fetch from the Git repository such as a branch, a tag, a commit SHA, or any Git ref. Cloud Build uses `git fetch` to fetch the revision from the Git repository; therefore make sure that the string you provide for `revision` is parsable by the command. For information on string values accepted by `git fetch`, see https://git-scm.com/docs/gitrevisions#_specifying_revisions. For information on `git fetch`, see https://git-scm.com/docs/git-fetch.
+          type: string
+        url:
+          description: Location of the Git repo to build. This will be used as a `git remote`, see https://git-scm.com/docs/git-remote.
+          type: string
+      type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1Hash:
       description: Container message for hash values.
       properties:
@@ -1826,6 +1856,7 @@ components:
             - NONE
             - SHA256
             - MD5
+            - SHA512
           type: string
         value:
           description: The hash value.
@@ -1905,6 +1936,11 @@ components:
           items:
             $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact"
           type: array
+        npmPackages:
+          description: Npm packages uploaded to Artifact Registry at the end of the build.
+          items:
+            $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage"
+          type: array
         numArtifacts:
           description: Number of non-container artifacts uploaded to Cloud Storage. Only populated when artifacts are uploaded to Cloud Storage.
           format: int64
@@ -1955,6 +1991,9 @@ components:
     ContaineranalysisGoogleDevtoolsCloudbuildV1Source:
       description: Location of the source in a supported storage service.
       properties:
+        gitSource:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource"
+          description: If provided, get the source from this Git repository.
         repoSource:
           $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource"
           description: If provided, get the source from this location in a Cloud Source Repository.
@@ -2036,6 +2075,20 @@ components:
           readOnly: true
         uri:
           description: URI of the uploaded artifact.
+          type: string
+      type: object
+    ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage:
+      description: An npm package uploaded to Artifact Registry using the NpmPackage directive.
+      properties:
+        fileHashes:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes"
+          description: Hash types and values of the npm package.
+        pushTiming:
+          $ref: "#/components/schemas/ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan"
+          description: Output only. Stores timing information for pushing the specified artifact.
+          readOnly: true
+        uri:
+          description: URI of the uploaded npm package.
           type: string
       type: object
     ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage:
@@ -2274,6 +2327,7 @@ components:
             - SPDX_RELATIONSHIP
             - DSSE_ATTESTATION
             - VULNERABILITY_ASSESSMENT
+            - SBOM_REFERENCE
           type: string
       type: object
     Distribution:
@@ -3040,6 +3094,7 @@ components:
             - SPDX_RELATIONSHIP
             - DSSE_ATTESTATION
             - VULNERABILITY_ASSESSMENT
+            - SBOM_REFERENCE
           type: string
         longDescription:
           description: A detailed description of this `Note`.
@@ -3058,6 +3113,9 @@ components:
         sbom:
           $ref: "#/components/schemas/DocumentNote"
           description: A note describing a software bill of materials.
+        sbomReference:
+          $ref: "#/components/schemas/SBOMReferenceNote"
+          description: A note describing a reference to an SBOM.
         shortDescription:
           description: A one sentence description of this `Note`.
           type: string
@@ -3137,6 +3195,7 @@ components:
             - SPDX_RELATIONSHIP
             - DSSE_ATTESTATION
             - VULNERABILITY_ASSESSMENT
+            - SBOM_REFERENCE
           type: string
         name:
           description: Output only. The name of the `Occurrence` in the form "projects/{project_id}/occurrences/{OCCURRENCE_ID}"
@@ -3156,6 +3215,9 @@ components:
         sbom:
           $ref: "#/components/schemas/DocumentOccurrence"
           description: Describes a specific software bill of materials document.
+        sbomReference:
+          $ref: "#/components/schemas/SBOMReferenceOccurrence"
+          description: This represents an SBOM reference occurrence
         spdxFile:
           $ref: "#/components/schemas/FileOccurrence"
           description: Describes a specific SPDX File.
@@ -3629,6 +3691,67 @@ components:
           type: string
         uri:
           description: The unique URI of the resource. E.g., "https://gcr.io/project/image@sha256:foo" for a Docker image.
+          type: string
+      type: object
+    SBOMReferenceNote:
+      description: The note representing an SBOM reference.
+      properties:
+        format:
+          description: The format that SBOM takes. E.g. may be spdx, cyclonedx, etc...
+          type: string
+        version:
+          description: The version of the format that the SBOM takes. E.g. if the format is spdx, the version may be 2.3.
+          type: string
+      type: object
+    SBOMReferenceOccurrence:
+      description: The occurrence representing an SBOM reference as applied to a specific resource. The occurrence follows the DSSE specification. See https://github.com/secure-systems-lab/dsse/blob/master/envelope.md for more details.
+      properties:
+        payload:
+          $ref: "#/components/schemas/SbomReferenceIntotoPayload"
+          description: The actual payload that contains the SBOM reference data.
+        payloadType:
+          description: The kind of payload that SbomReferenceIntotoPayload takes. Since it's in the intoto format, this value is expected to be 'application/vnd.in-toto+json'.
+          type: string
+        signatures:
+          description: The signatures over the payload.
+          items:
+            $ref: "#/components/schemas/EnvelopeSignature"
+          type: array
+      type: object
+    SbomReferenceIntotoPayload:
+      description: The actual payload that contains the SBOM Reference data. The payload follows the intoto statement specification. See https://github.com/in-toto/attestation/blob/main/spec/v1.0/statement.md for more details.
+      properties:
+        _type:
+          description: Identifier for the schema of the Statement.
+          type: string
+        predicate:
+          $ref: "#/components/schemas/SbomReferenceIntotoPredicate"
+          description: Additional parameters of the Predicate. Includes the actual data about the SBOM.
+        predicateType:
+          description: URI identifying the type of the Predicate.
+          type: string
+        subject:
+          description: Set of software artifacts that the attestation applies to. Each element represents a single software artifact.
+          items:
+            $ref: "#/components/schemas/Subject"
+          type: array
+      type: object
+    SbomReferenceIntotoPredicate:
+      description: A predicate which describes the SBOM being referenced.
+      properties:
+        digest:
+          additionalProperties:
+            type: string
+          description: A map of algorithm to digest of the contents of the SBOM.
+          type: object
+        location:
+          description: The location of the SBOM.
+          type: string
+        mimeType:
+          description: The mime type of the SBOM.
+          type: string
+        referrerId:
+          description: The person or system referring this predicate to the consumer.
           type: string
       type: object
     ScanConfig:

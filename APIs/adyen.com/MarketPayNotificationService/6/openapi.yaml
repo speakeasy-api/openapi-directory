@@ -27,14 +27,13 @@ info:
   x-providerName: adyen.com
   x-publicVersion: true
   x-serviceName: MarketPayNotificationService
-  x-timestamp: 2023-02-20T18:23:39Z
+  x-timestamp: 2023-04-03T19:29:08Z
 tags: []
 components:
   examples:
     WebhookAck:
       summary: Acknowledge Webhook
-      value:
-        notificationResponse: "[accepted]"
+      value: "[accepted]"
     post-ACCOUNT_CLOSED-accountClosed:
       summary: ACCOUNT_CLOSED example
       value:
@@ -3057,7 +3056,12 @@ components:
             - HOLD
             - MONTHLY
             - WEEKLY
+            - WEEKLY_MON_TO_FRI_AU
+            - WEEKLY_MON_TO_FRI_EU
+            - WEEKLY_MON_TO_FRI_US
             - WEEKLY_ON_TUE_FRI_MIDNIGHT
+            - WEEKLY_SUN_TO_THU_AU
+            - WEEKLY_SUN_TO_THU_US
           type: string
       type: object
     PersonalDocumentData:

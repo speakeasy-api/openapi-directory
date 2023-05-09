@@ -1442,7 +1442,7 @@ paths:
   "/v1/{resource}:getIamPolicy":
     get:
       description: Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-      operationId: datamigration.projects.locations.migrationJobs.getIamPolicy
+      operationId: datamigration.projects.locations.privateConnections.getIamPolicy
       parameters:
         - description: "REQUIRED: The resource for which the policy is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field."
           in: path
@@ -1496,7 +1496,7 @@ paths:
       - $ref: "#/components/parameters/uploadType"
     post:
       description: Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-      operationId: datamigration.projects.locations.migrationJobs.setIamPolicy
+      operationId: datamigration.projects.locations.privateConnections.setIamPolicy
       parameters:
         - description: "REQUIRED: The resource for which the policy is being specified. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field."
           in: path
@@ -1538,7 +1538,7 @@ paths:
       - $ref: "#/components/parameters/uploadType"
     post:
       description: 'Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.'
-      operationId: datamigration.projects.locations.migrationJobs.testIamPermissions
+      operationId: datamigration.projects.locations.privateConnections.testIamPermissions
       parameters:
         - description: "REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field."
           in: path
@@ -1654,6 +1654,9 @@ components:
     AlloyDbSettings:
       description: Settings for creating an AlloyDB cluster.
       properties:
+        encryptionConfig:
+          $ref: "#/components/schemas/EncryptionConfig"
+          description: Optional. The encryption config can be specified to encrypt the data disks and other persistent data resources of a cluster with a customer-managed encryption key (CMEK). When this field is not specified, the cluster will then use default encryption scheme to protect the user data.
         initialUser:
           $ref: "#/components/schemas/UserPassword"
           description: Required. Input only. Initial user to setup during cluster creation. Required.
@@ -2179,7 +2182,7 @@ components:
             - DATABASE_ENTITY_TYPE_SYNONYM
             - DATABASE_ENTITY_TYPE_DATABASE_PACKAGE
             - DATABASE_ENTITY_TYPE_UDT
-            - DATABASE_ENTITY_TYPE_MATERIAL_VIEW
+            - DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW
             - DATABASE_ENTITY_TYPE_DATABASE
           type: string
         mappings:
@@ -2285,11 +2288,38 @@ components:
       description: "A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A typical example is to use it as the request or the response type of an API method. For instance: service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }"
       properties: {}
       type: object
+    EncryptionConfig:
+      description: EncryptionConfig describes the encryption config of a cluster that is encrypted with a CMEK (customer-managed encryption key).
+      properties:
+        kmsKeyName:
+          description: "The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]"
+          type: string
+      type: object
     EntityMapping:
       description: Details of the mappings of a database entity.
       properties:
         draftEntity:
           description: Target entity full name. The draft entity can also include a column, index or constraint using the same naming notation schema.table.column.
+          type: string
+        draftType:
+          description: Type of draft entity.
+          enum:
+            - DATABASE_ENTITY_TYPE_UNSPECIFIED
+            - DATABASE_ENTITY_TYPE_SCHEMA
+            - DATABASE_ENTITY_TYPE_TABLE
+            - DATABASE_ENTITY_TYPE_COLUMN
+            - DATABASE_ENTITY_TYPE_CONSTRAINT
+            - DATABASE_ENTITY_TYPE_INDEX
+            - DATABASE_ENTITY_TYPE_TRIGGER
+            - DATABASE_ENTITY_TYPE_VIEW
+            - DATABASE_ENTITY_TYPE_SEQUENCE
+            - DATABASE_ENTITY_TYPE_STORED_PROCEDURE
+            - DATABASE_ENTITY_TYPE_FUNCTION
+            - DATABASE_ENTITY_TYPE_SYNONYM
+            - DATABASE_ENTITY_TYPE_DATABASE_PACKAGE
+            - DATABASE_ENTITY_TYPE_UDT
+            - DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW
+            - DATABASE_ENTITY_TYPE_DATABASE
           type: string
         mappingLog:
           description: Entity mapping log entries. Multiple rules can be effective and contribute changes to a converted entity, such as a rule can handle the entity name, another rule can handle an entity type. In addition, rules which did not change the entity are also logged along with the reason preventing them to do so.
@@ -2298,6 +2328,26 @@ components:
           type: array
         sourceEntity:
           description: Source entity full name. The source entity can also be a column, index or constraint using the same naming notation schema.table.column.
+          type: string
+        sourceType:
+          description: Type of source entity.
+          enum:
+            - DATABASE_ENTITY_TYPE_UNSPECIFIED
+            - DATABASE_ENTITY_TYPE_SCHEMA
+            - DATABASE_ENTITY_TYPE_TABLE
+            - DATABASE_ENTITY_TYPE_COLUMN
+            - DATABASE_ENTITY_TYPE_CONSTRAINT
+            - DATABASE_ENTITY_TYPE_INDEX
+            - DATABASE_ENTITY_TYPE_TRIGGER
+            - DATABASE_ENTITY_TYPE_VIEW
+            - DATABASE_ENTITY_TYPE_SEQUENCE
+            - DATABASE_ENTITY_TYPE_STORED_PROCEDURE
+            - DATABASE_ENTITY_TYPE_FUNCTION
+            - DATABASE_ENTITY_TYPE_SYNONYM
+            - DATABASE_ENTITY_TYPE_DATABASE_PACKAGE
+            - DATABASE_ENTITY_TYPE_UDT
+            - DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW
+            - DATABASE_ENTITY_TYPE_DATABASE
           type: string
       type: object
     EntityMappingLogEntry:
@@ -2575,7 +2625,7 @@ components:
           type: array
       type: object
     Location:
-      description: A resource that represents Google Cloud Platform location.
+      description: A resource that represents a Google Cloud location.
       properties:
         displayName:
           description: The friendly name for this location, typically a nearby city name. For example, "Tokyo".
@@ -2742,6 +2792,10 @@ components:
             - UNSUPPORTED_DEFINER
             - CANT_RESTART_RUNNING_MIGRATION
             - TABLES_WITH_LIMITED_SUPPORT
+            - UNSUPPORTED_DATABASE_LOCALE
+            - UNSUPPORTED_DATABASE_FDW_CONFIG
+            - ERROR_RDBMS
+            - SOURCE_SIZE_EXCEEDS_THRESHOLD
           readOnly: true
           type: string
         errorDetailMessage:
@@ -3141,6 +3195,9 @@ components:
     SqlIpConfig:
       description: IP Management configuration.
       properties:
+        allocatedIpRange:
+          description: Optional. The name of the allocated IP address range for the private IP Cloud SQL instance. This name refers to an already allocated IP range address. If set, the instance IP address will be created in the allocated range. Note that this IP address range can't be modified after the instance is created. If you change the VPC when configuring connectivity settings for the migration job, this field is not relevant.
+          type: string
         authorizedNetworks:
           description: The list of external networks that are allowed to connect to the instance using the IP. See https://en.wikipedia.org/wiki/CIDR_notation#CIDR_notation, also known as 'slash' notation (e.g. `192.168.100.0/24`).
           items:
@@ -3258,7 +3315,7 @@ components:
             - DATABASE_ENTITY_TYPE_SYNONYM
             - DATABASE_ENTITY_TYPE_DATABASE_PACKAGE
             - DATABASE_ENTITY_TYPE_UDT
-            - DATABASE_ENTITY_TYPE_MATERIAL_VIEW
+            - DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW
             - DATABASE_ENTITY_TYPE_DATABASE
           type: string
       type: object

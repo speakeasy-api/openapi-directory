@@ -2485,7 +2485,7 @@ components:
           description: The number of bids that were permitted to compete in the auction.
         billedImpressions:
           $ref: "#/components/schemas/MetricValue"
-          description: The number of bids for which the buyer was billed.
+          description: The number of bids for which the buyer was billed. Also called valid impressions as invalid impressions are not billed.
         impressionsWon:
           $ref: "#/components/schemas/MetricValue"
           description: The number of bids that won the auction.
@@ -3523,7 +3523,7 @@ components:
           format: int64
           type: string
         guaranteedLooks:
-          description: Count of guaranteed looks. Required for deal, optional for product.
+          description: Count of guaranteed looks. Required for deal, optional for product. For CPD deals, buyer changes to guaranteed_looks will be ignored.
           format: int64
           type: string
         impressionCap:
@@ -3531,7 +3531,7 @@ components:
           format: int64
           type: string
         minimumDailyLooks:
-          description: Daily minimum looks for CPD deal types.
+          description: Daily minimum looks for CPD deal types. For CPD deals, buyer should negotiate on this field instead of guaranteed_looks.
           format: int64
           type: string
         percentShareOfVoice:

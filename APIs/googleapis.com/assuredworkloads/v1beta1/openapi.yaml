@@ -652,13 +652,13 @@ components:
       properties: {}
       type: object
     GoogleCloudAssuredworkloadsV1beta1Violation:
-      description: "Workload monitoring Violation. Next Id: 22"
+      description: "Workload monitoring Violation. Next Id: 27"
       properties:
         acknowledged:
           description: A boolean that indicates if the violation is acknowledged
           type: boolean
         acknowledgementTime:
-          description: Optional. Timestamp when this violation was acknowledged last. This will be absent when acknowledged field is marked as false.
+          description: Optional. Timestamp when this violation was acknowledged first. Check exception_contexts to find the last time the violation was acknowledged when there are more than one violations. This field will be absent when acknowledged field is marked as false.
           format: google-datetime
           type: string
         auditLogLink:
@@ -827,6 +827,10 @@ components:
             type: string
           readOnly: true
           type: array
+        controls:
+          $ref: "#/components/schemas/GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls"
+          description: Output only. Controls associated with the customer workload
+          readOnly: true
         createTime:
           description: Output only. Immutable. The Workload creation timestamp.
           format: google-datetime
@@ -878,6 +882,8 @@ components:
             - PARTNER_UNSPECIFIED
             - LOCAL_CONTROLS_BY_S3NS
             - SOVEREIGN_CONTROLS_BY_T_SYSTEMS
+            - SOVEREIGN_CONTROLS_BY_SIA_MINSAIT
+            - SOVEREIGN_CONTROLS_BY_PSN
           type: string
         provisionedResourcesParent:
           description: "Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}"
@@ -897,6 +903,9 @@ components:
           $ref: "#/components/schemas/GoogleCloudAssuredworkloadsV1beta1WorkloadSaaEnrollmentResponse"
           description: Output only. Represents the SAA enrollment response of the given workload. SAA enrollment response is queried during GetWorkload call. In failure cases, user friendly error message is shown in SAA details page.
           readOnly: true
+        violationNotificationsEnabled:
+          description: Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored. This will always be true while creating the workload.
+          type: boolean
       type: object
     GoogleCloudAssuredworkloadsV1beta1WorkloadCJISSettings:
       description: Settings specific to resources needed for CJIS.
@@ -904,6 +913,29 @@ components:
         kmsSettings:
           $ref: "#/components/schemas/GoogleCloudAssuredworkloadsV1beta1WorkloadKMSSettings"
           description: Input only. Immutable. Settings used to create a CMEK crypto key.
+      type: object
+    GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControls:
+      description: Controls enabled to the user associated with this workload
+      properties:
+        appliedOrgPolicies:
+          description: Output only. Org policies currently applied by this Assured Workload
+          items:
+            $ref: "#/components/schemas/GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControlsOrgPolicyControl"
+          readOnly: true
+          type: array
+      type: object
+    GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceControlsOrgPolicyControl:
+      description: An org policy control applied by Assured Workloads
+      properties:
+        constraint:
+          description: "Output only. Constraint name of the org policy control Example: constraints/gcp.resourcelocations"
+          readOnly: true
+          type: string
+        version:
+          description: Output only. Org policy version
+          format: int32
+          readOnly: true
+          type: integer
       type: object
     GoogleCloudAssuredworkloadsV1beta1WorkloadComplianceStatus:
       description: Represents the Compliance Status of this workload
@@ -930,8 +962,13 @@ components:
             - EXTERNAL_PARTNER_ERROR
             - TIMEOUT_ERROR
           type: string
-        ekmProvisioningErrorMessage:
+        ekmProvisioningErrorMapping:
           description: Detailed error message if Ekm provisioning fails
+          enum:
+            - EKM_PROVISIONING_ERROR_MAPPING_UNSPECIFIED
+            - INVALID_SERVICE_ACCOUNT
+            - MISSING_METRICS_SCOPE_ADMIN_PERMISSION
+            - MISSING_EKM_CONNECTION_ADMIN_PERMISSION
           type: string
         ekmProvisioningState:
           description: Indicates Ekm enrollment Provisioning of a given workload.

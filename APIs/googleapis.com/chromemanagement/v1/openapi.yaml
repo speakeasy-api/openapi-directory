@@ -393,130 +393,6 @@ paths:
       - $ref: "#/components/parameters/quotaUser"
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
-  "/v1/{customer}/reports:countPrintJobsByPrinter":
-    get:
-      description: Get a summary of printing done by each printer.
-      operationId: chromemanagement.customers.reports.countPrintJobsByPrinter
-      parameters:
-        - description: Required. Customer ID prefixed with "customers/" or "customers/my_customer" to use the customer associated to the account making the request.
-          in: path
-          name: customer
-          required: true
-          schema:
-            type: string
-        - description: "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Note: Only >= and <= comparators are supported in this filter. Supported filter fields: * complete_time"
-          in: query
-          name: filter
-          schema:
-            type: string
-        - description: "Field used to order results. If omitted, results will be ordered in ascending order of the 'printer' field. Supported order_by fields: * printer * job_count * device_count * user_count"
-          in: query
-          name: orderBy
-          schema:
-            type: string
-        - description: Maximum number of results to return. Maximum and default are 100.
-          in: query
-          name: pageSize
-          schema:
-            type: integer
-        - description: Token to specify the page of the response to be returned.
-          in: query
-          name: pageToken
-          schema:
-            type: string
-        - description: The ID of the organizational unit for printers. If specified, only data for printers from the specified organizational unit will be returned. If omitted, data for printers from all organizational units will be returned.
-          in: query
-          name: printerOrgUnitId
-          schema:
-            type: string
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/GoogleChromeManagementV1CountPrintJobsByPrinterResponse"
-          description: Successful response
-      security:
-        - Oauth2:
-            - https://www.googleapis.com/auth/chrome.management.reports.readonly
-          Oauth2c:
-            - https://www.googleapis.com/auth/chrome.management.reports.readonly
-      tags:
-        - customers
-    parameters:
-      - $ref: "#/components/parameters/_.xgafv"
-      - $ref: "#/components/parameters/access_token"
-      - $ref: "#/components/parameters/alt"
-      - $ref: "#/components/parameters/callback"
-      - $ref: "#/components/parameters/fields"
-      - $ref: "#/components/parameters/key"
-      - $ref: "#/components/parameters/oauth_token"
-      - $ref: "#/components/parameters/prettyPrint"
-      - $ref: "#/components/parameters/quotaUser"
-      - $ref: "#/components/parameters/upload_protocol"
-      - $ref: "#/components/parameters/uploadType"
-  "/v1/{customer}/reports:countPrintJobsByUser":
-    get:
-      description: Get a summary of printing done by each user.
-      operationId: chromemanagement.customers.reports.countPrintJobsByUser
-      parameters:
-        - description: Required. Customer ID prefixed with "customers/" or "customers/my_customer" to use the customer associated to the account making the request.
-          in: path
-          name: customer
-          required: true
-          schema:
-            type: string
-        - description: "Query string to filter results, AND-separated fields in EBNF syntax. Note: OR operations are not supported in this filter. Note: Only >= and <= comparators are supported in this filter. Supported filter fields: * complete_time"
-          in: query
-          name: filter
-          schema:
-            type: string
-        - description: "Field used to order results. If omitted, results will be ordered in ascending order of the 'user_email' field. Supported order_by fields: * user_email * job_count * printer_count * device_count"
-          in: query
-          name: orderBy
-          schema:
-            type: string
-        - description: Maximum number of results to return. Maximum and default are 100.
-          in: query
-          name: pageSize
-          schema:
-            type: integer
-        - description: Token to specify the page of the response to be returned.
-          in: query
-          name: pageToken
-          schema:
-            type: string
-        - description: The ID of the organizational unit for printers. If specified, only print jobs initiated with printers from the specified organizational unit will be counted. If omitted, all print jobs will be counted.
-          in: query
-          name: printerOrgUnitId
-          schema:
-            type: string
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/GoogleChromeManagementV1CountPrintJobsByUserResponse"
-          description: Successful response
-      security:
-        - Oauth2:
-            - https://www.googleapis.com/auth/chrome.management.reports.readonly
-          Oauth2c:
-            - https://www.googleapis.com/auth/chrome.management.reports.readonly
-      tags:
-        - customers
-    parameters:
-      - $ref: "#/components/parameters/_.xgafv"
-      - $ref: "#/components/parameters/access_token"
-      - $ref: "#/components/parameters/alt"
-      - $ref: "#/components/parameters/callback"
-      - $ref: "#/components/parameters/fields"
-      - $ref: "#/components/parameters/key"
-      - $ref: "#/components/parameters/oauth_token"
-      - $ref: "#/components/parameters/prettyPrint"
-      - $ref: "#/components/parameters/quotaUser"
-      - $ref: "#/components/parameters/upload_protocol"
-      - $ref: "#/components/parameters/uploadType"
   "/v1/{customer}/reports:findInstalledAppDevices":
     get:
       description: Generate report of managed Chrome browser devices that have a specified app installed.
@@ -993,7 +869,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1AudioStatusReport:
-      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceAudioStatus](https://chromeenterprise.google/policies/#ReportDeviceAudioStatus) * Data Collection Frequency: 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceAudioStatus](https://chromeenterprise.google/policies/#ReportDeviceAudioStatus) * Data Collection Frequency: 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_AUDIO_REPORT"
       properties:
         inputDevice:
           description: Output only. Active input device's name.
@@ -1028,7 +904,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1BatteryInfo:
-      description: "Information about the battery. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Information about the battery. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_BATTERY_INFO"
       properties:
         designCapacity:
           description: Output only. Design capacity (mAmpere-hours).
@@ -1101,7 +977,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1BatteryStatusReport:
-      description: "Status data for battery. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Status data for battery. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_BATTERY_REPORT"
       properties:
         batteryHealth:
           description: Output only. Battery health.
@@ -1139,7 +1015,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1BootPerformanceReport:
-      description: "Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A"
+      description: "Boot performance report of a device. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceBootMode](https://chromeenterprise.google/policies/#ReportDeviceBootMode) * Data Collection Frequency: On every boot up event * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_OS_REPORT"
       properties:
         bootUpDuration:
           description: Total time to boot up.
@@ -1447,40 +1323,8 @@ components:
           format: int32
           type: integer
       type: object
-    GoogleChromeManagementV1CountPrintJobsByPrinterResponse:
-      description: Response containing a summary printing report for each printer from the specified organizational unit for the requested time interval.
-      properties:
-        nextPageToken:
-          description: Pagination token for requesting the next page.
-          type: string
-        printerReports:
-          description: List of PrinterReports matching request.
-          items:
-            $ref: "#/components/schemas/GoogleChromeManagementV1PrinterReport"
-          type: array
-        totalSize:
-          description: Total number of printers matching request.
-          format: int64
-          type: string
-      type: object
-    GoogleChromeManagementV1CountPrintJobsByUserResponse:
-      description: Response containing a summary printing report for each user that has initiated a print job with a printer from the specified organizational unit during the requested time interval.
-      properties:
-        nextPageToken:
-          description: Pagination token for requesting the next page.
-          type: string
-        totalSize:
-          description: Total number of users matching request.
-          format: int64
-          type: string
-        userPrintReports:
-          description: List of UserPrintReports matching request.
-          items:
-            $ref: "#/components/schemas/GoogleChromeManagementV1UserPrintReport"
-          type: array
-      type: object
     GoogleChromeManagementV1CpuInfo:
-      description: "CPU specifications for the device * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "CPU specifications for the device * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_CPU_INFO"
       properties:
         architecture:
           description: "Output only. Architecture type for the CPU. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
@@ -1508,7 +1352,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1CpuStatusReport:
-      description: "Provides information about the status of the CPU. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Every 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Provides information about the status of the CPU. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceCpuInfo](https://chromeenterprise.google/policies/#ReportDeviceCpuInfo) * Data Collection Frequency: Every 10 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_CPU_REPORT"
       properties:
         cpuTemperatureInfo:
           description: Output only. CPU temperature sample info per CPU core in Celsius
@@ -1770,7 +1614,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1GraphicsInfo:
-      description: "Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_GRAPHICS_INFO"
       properties:
         adapterInfo:
           $ref: "#/components/schemas/GoogleChromeManagementV1GraphicsAdapterInfo"
@@ -1792,7 +1636,7 @@ components:
           readOnly: true
       type: object
     GoogleChromeManagementV1GraphicsStatusReport:
-      description: "Information of the graphics subsystem. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceGraphicsInfo](https://chromeenterprise.google/policies/#ReportDeviceGraphicsInfo) * Data Collection Frequency: 3 hours. * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Information of the graphics subsystem. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceGraphicsInfo](https://chromeenterprise.google/policies/#ReportDeviceGraphicsInfo) * Data Collection Frequency: 3 hours. * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_GRAPHICS_REPORT"
       properties:
         displays:
           description: Output only. Information about the displays for the device.
@@ -1932,7 +1776,7 @@ components:
           type: array
       type: object
     GoogleChromeManagementV1MemoryInfo:
-      description: "Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A"
+      description: "Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_INFO"
       properties:
         availableRamBytes:
           description: Output only. Amount of available RAM in bytes.
@@ -1950,7 +1794,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1MemoryStatusReport:
-      description: "Contains samples of memory status reports. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: Only at upload, SystemRamFreeByes is collected every 10 minutes * Default Data Reporting Frequency: Every 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Contains samples of memory status reports. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: Only at upload, SystemRamFreeByes is collected every 10 minutes * Default Data Reporting Frequency: Every 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_REPORT"
       properties:
         pageFaults:
           description: Output only. Number of page faults during this collection
@@ -2007,7 +1851,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1NetworkDiagnosticsReport:
-      description: Network testing results to determine the health of the device's network connection, for example whether the HTTPS latency is high or normal.
+      description: "Network testing results to determine the health of the device's network connection, for example whether the HTTPS latency is high or normal. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT"
       properties:
         httpsLatencyData:
           $ref: "#/components/schemas/GoogleChromeManagementV1HttpsLatencyRoutineData"
@@ -2020,7 +1864,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1NetworkInfo:
-      description: "Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A"
+      description: "Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_NETWORK_INFO"
       properties:
         networkDevices:
           description: Output only. List of network devices.
@@ -2030,7 +1874,7 @@ components:
           type: array
       type: object
     GoogleChromeManagementV1NetworkStatusReport:
-      description: "State of visible/configured networks. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportNetworkStatus](https://chromeenterprise.google/policies/#ReportNetworkStatus) * Data Collection Frequency: 60 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: Yes"
+      description: "State of visible/configured networks. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportNetworkStatus](https://chromeenterprise.google/policies/#ReportNetworkStatus) * Data Collection Frequency: 60 minutes * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: Yes * Granular permission needed: TELEMETRY_API_NETWORK_REPORT"
       properties:
         connectionState:
           description: Output only. Current connection state of the network.
@@ -2111,7 +1955,7 @@ components:
           type: boolean
       type: object
     GoogleChromeManagementV1OsUpdateStatus:
-      description: "Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_OS_REPORT"
       properties:
         lastRebootTime:
           description: Output only. Timestamp of the last reboot.
@@ -2147,7 +1991,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1PeripheralsReport:
-      description: Peripherals report.
+      description: "Peripherals report. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT"
       properties:
         reportTime:
           description: Output only. Timestamp of when the report was collected.
@@ -2160,33 +2004,8 @@ components:
             $ref: "#/components/schemas/GoogleChromeManagementV1UsbPeripheralReport"
           type: array
       type: object
-    GoogleChromeManagementV1PrinterReport:
-      description: Report for CountPrintJobsByPrinter, contains statistics on printer usage. Contains the total number of print jobs initiated with this printer, the number of users and the number of devices that have initiated at least one print job with this printer.
-      properties:
-        deviceCount:
-          description: Number of chrome devices that have been used to send print jobs to the specified printer.
-          format: int64
-          type: string
-        jobCount:
-          description: Number of print jobs sent to the printer.
-          format: int64
-          type: string
-        printer:
-          description: Printer name.
-          type: string
-        printerId:
-          description: Printer API ID.
-          type: string
-        printerModel:
-          description: Printer model.
-          type: string
-        userCount:
-          description: Number of users that have sent print jobs to the printer.
-          format: int64
-          type: string
-      type: object
     GoogleChromeManagementV1StorageInfo:
-      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_STORAGE_INFO"
       properties:
         availableDiskBytes:
           description: The available space for user data storage in the device in bytes.
@@ -2218,7 +2037,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1StorageStatusReport:
-      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A"
+      description: "Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_STORAGE_REPORT"
       properties:
         disk:
           description: Output only. Reports on disk.
@@ -2233,11 +2052,11 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1TelemetryAudioSevereUnderrunEvent:
-      description: "`TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds."
+      description: "`TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds. * Granular permission needed: TELEMETRY_API_AUDIO_REPORT"
       properties: {}
       type: object
     GoogleChromeManagementV1TelemetryDevice:
-      description: Telemetry data collected from a managed device.
+      description: "Telemetry data collected from a managed device. * Granular permission needed: TELEMETRY_API_DEVICE"
       properties:
         audioStatusReport:
           description: Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
@@ -2361,7 +2180,7 @@ components:
           type: array
       type: object
     GoogleChromeManagementV1TelemetryDeviceInfo:
-      description: Information about a device associated with telemetry data.
+      description: "Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE"
       properties:
         deviceId:
           description: Output only. The unique Directory API ID of the device. This value is the same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
@@ -2414,7 +2233,7 @@ components:
           readOnly: true
       type: object
     GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent:
-      description: Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+      description: "Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT"
       properties:
         httpsLatencyRoutineData:
           $ref: "#/components/schemas/GoogleChromeManagementV1HttpsLatencyRoutineData"
@@ -2428,7 +2247,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1TelemetryUsbPeripheralsEvent:
-      description: "`TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed."
+      description: "`TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT"
       properties:
         usbPeripheralReport:
           description: List of usb devices that were either added or removed.
@@ -2437,7 +2256,7 @@ components:
           type: array
       type: object
     GoogleChromeManagementV1TelemetryUser:
-      description: Telemetry data collected from a managed user.
+      description: "Telemetry data collected from a managed user. * Granular permission needed: TELEMETRY_API_USER"
       properties:
         customer:
           description: G Suite Customer whose enterprise enrolled the device.
@@ -2461,7 +2280,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1TelemetryUserDevice:
-      description: Telemetry data collected for a managed user and device.
+      description: "Telemetry data collected for a managed user and device. * Granular permission needed: TELEMETRY_API_DEVICE"
       properties:
         audioStatusReport:
           description: Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
@@ -2480,7 +2299,7 @@ components:
           type: array
       type: object
     GoogleChromeManagementV1TelemetryUserInfo:
-      description: Information about a user associated with telemetry data.
+      description: "Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER"
       properties:
         email:
           description: Output only. User's email.
@@ -2492,7 +2311,7 @@ components:
           type: string
       type: object
     GoogleChromeManagementV1ThunderboltInfo:
-      description: "Thunderbolt bus info. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceSecurityStatus](https://chromeenterprise.google/policies/#ReportDeviceSecurityStatus) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: No * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A"
+      description: "Thunderbolt bus info. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceSecurityStatus](https://chromeenterprise.google/policies/#ReportDeviceSecurityStatus) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: No * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_BUS_DEVICE_INFO"
       properties:
         securityLevel:
           description: Security level of the Thunderbolt bus.
@@ -2607,28 +2426,6 @@ components:
           format: int32
           readOnly: true
           type: integer
-      type: object
-    GoogleChromeManagementV1UserPrintReport:
-      description: Report for CountPrintJobsByUser, contains printing statistics for a user. Contains the number of printers, the number of devices used to initiate print jobs, and the number of print jobs initiated.
-      properties:
-        deviceCount:
-          description: Number of chrome devices that have been used to initiate print jobs by the user.
-          format: int64
-          type: string
-        jobCount:
-          description: Number of print jobs initiated by the user.
-          format: int64
-          type: string
-        printerCount:
-          description: Number of printers used by the user.
-          format: int64
-          type: string
-        userEmail:
-          description: The primary e-mail address of the user.
-          type: string
-        userId:
-          description: The unique Directory API ID of the user.
-          type: string
       type: object
     GoogleRpcStatus:
       description: "The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors)."

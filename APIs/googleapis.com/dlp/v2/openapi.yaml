@@ -1756,6 +1756,9 @@ components:
         regex:
           $ref: "#/components/schemas/GooglePrivacyDlpV2Regex"
           description: Regular expression based CustomInfoType.
+        sensitivityScore:
+          $ref: "#/components/schemas/GooglePrivacyDlpV2SensitivityScore"
+          description: Sensitivity for this CustomInfoType. If this CustomInfoType extends an existing InfoType, the sensitivity here will take precedent over that of the original InfoType. If unset for a CustomInfoType, it will default to HIGH. This only applies to data profiling.
         storedType:
           $ref: "#/components/schemas/GooglePrivacyDlpV2StoredType"
           description: Load an existing `StoredInfoType` resource for use in `InspectDataSource`. Not currently supported in `InspectContent`.
@@ -2367,11 +2370,11 @@ components:
             $ref: "#/components/schemas/GooglePrivacyDlpV2InfoTypeLimit"
           type: array
         maxFindingsPerItem:
-          description: Max number of findings that will be returned for each item scanned. When set within `InspectJobConfig`, the maximum returned is 2000 regardless if this is set higher. When set within `InspectContentRequest`, this field is ignored.
+          description: Max number of findings that are returned for each item scanned. When set within an InspectContentRequest, this field is ignored. This value isn't a hard limit. If the number of findings for an item reaches this limit, the inspection of that item ends gradually, not abruptly. Therefore, the actual number of findings that Cloud DLP returns for the item can be multiple times higher than this value.
           format: int32
           type: integer
         maxFindingsPerRequest:
-          description: Max number of findings that will be returned per request/job. When set within `InspectContentRequest`, the maximum returned is 2000 regardless if this is set higher.
+          description: Max number of findings that are returned per request or job. If you set this field in an InspectContentRequest, the resulting maximum value is the value that you set or 3,000, whichever is lower. This value isn't a hard limit. If an inspection reaches this limit, the inspection ends gradually, not abruptly. Therefore, the actual number of findings that Cloud DLP returns can be multiple times higher than this value.
           format: int32
           type: integer
       type: object
@@ -2545,6 +2548,9 @@ components:
         name:
           description: Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at https://cloud.google.com/dlp/docs/infotypes-reference when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$_-]{1,64}`.
           type: string
+        sensitivityScore:
+          $ref: "#/components/schemas/GooglePrivacyDlpV2SensitivityScore"
+          description: Optional custom sensitivity for this InfoType. This only applies to data profiling.
         version:
           description: Optional version name for this InfoType.
           type: string
@@ -2739,7 +2745,7 @@ components:
           type: array
         limits:
           $ref: "#/components/schemas/GooglePrivacyDlpV2FindingLimits"
-          description: Configuration to control the number of findings returned. This is not used for data profiling. When redacting sensitive data from images, finding limits don't apply. They can cause unexpected or inconsistent results, where only some data is redacted. Don't include finding limits in RedactImage requests. Otherwise, Cloud DLP returns an error. When set within `InspectJobConfig`, the specified maximum values aren't hard limits. If an inspection job reaches these limits, the job ends gradually, not abruptly. Therefore, the actual number of findings that Cloud DLP returns can be multiple times higher than these maximum values.
+          description: Configuration to control the number of findings returned. This is not used for data profiling. When redacting sensitive data from images, finding limits don't apply. They can cause unexpected or inconsistent results, where only some data is redacted. Don't include finding limits in RedactImage requests. Otherwise, Cloud DLP returns an error. When set within an InspectJobConfig, the specified maximum values aren't hard limits. If an inspection job reaches these limits, the job ends gradually, not abruptly. Therefore, the actual number of findings that Cloud DLP returns can be multiple times higher than these maximum values.
         minLikelihood:
           description: Only returns findings equal or above this threshold. The default is POSSIBLE. See https://cloud.google.com/dlp/docs/likelihood to learn more.
           enum:

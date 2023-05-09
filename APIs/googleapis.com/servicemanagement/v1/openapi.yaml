@@ -1522,6 +1522,9 @@ components:
         description:
           description: Description of the selected proto element (e.g. a message, a method, a 'service' definition, or a field). Defaults to leading & trailing comments taken from the proto source definition of the proto element.
           type: string
+        disableReplacementWords:
+          description: String of comma or space separated case-sensitive words for which method/field name replacement will be disabled by go/api-docgen.
+          type: string
         selector:
           description: The selector is a comma-separated list of patterns for any element such as a method, a field, an enum value. Each pattern is a qualified name of the element which may end in "*", indicating a wildcard. Wildcards are only allowed at the end and for a whole component of the qualified name, i.e. "foo.*" is ok, but not "foo.b*" or "foo.*.bar". A wildcard will match one or more components. To specify a default for all applicable elements, the whole pattern "*" is used.
           type: string
@@ -1532,6 +1535,31 @@ components:
         common:
           $ref: "#/components/schemas/CommonLanguageSettings"
           description: Some settings.
+        forcedNamespaceAliases:
+          description: Namespaces which must be aliased in snippets due to a known (but non-generator-predictable) naming collision
+          items:
+            type: string
+          type: array
+        handwrittenSignatures:
+          description: Method signatures (in the form "service.method(signature)") which are provided separately, so shouldn't be generated. Snippets *calling* these methods are still generated, however.
+          items:
+            type: string
+          type: array
+        ignoredResources:
+          description: 'List of full resource types to ignore during generation. This is typically used for API-specific Location resources, which should be handled by the generator as if they were actually the common Location resources. Example entry: "documentai.googleapis.com/Location"'
+          items:
+            type: string
+          type: array
+        renamedResources:
+          additionalProperties:
+            type: string
+          description: 'Map from full resource types to the effective short name for the resource. This is used when otherwise resource named from different services would cause naming collisions. Example entry: "datalabeling.googleapis.com/Dataset": "DataLabelingDataset"'
+          type: object
+        renamedServices:
+          additionalProperties:
+            type: string
+          description: "Map from original service names to renamed versions. This is used when the default generated types would cause a naming conflict. (Neither name is fully-qualified.) Example: Subscriber to SubscriberServiceApi."
+          type: object
       type: object
     EnableServiceResponse:
       description: Operation payload for EnableService method.
@@ -2330,7 +2358,7 @@ components:
             $ref: "#/components/schemas/MethodSettings"
           type: array
         newIssueUri:
-          description: "Link to a place that API users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&template=1161103"
+          description: "Link to a *public* URI where users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&template=1161103"
           type: string
         organization:
           description: For whom the client library is being published.
@@ -2340,6 +2368,9 @@ components:
             - ADS
             - PHOTOS
             - STREET_VIEW
+            - SHOPPING
+            - GEO
+            - GENERATIVE_AI
           type: string
         protoReferenceDocumentationUri:
           description: "Optional link to proto reference documentation. Example: https://cloud.google.com/pubsub/lite/docs/reference/rpc"

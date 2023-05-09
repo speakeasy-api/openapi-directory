@@ -594,6 +594,7 @@ paths:
               - DEEP_ARCHIVE
               - OUTPOSTS
               - GLACIER_IR
+              - SNOW
         - name: x-amz-website-redirect-location
           in: header
           required: false
@@ -1091,6 +1092,7 @@ paths:
               - DEEP_ARCHIVE
               - OUTPOSTS
               - GLACIER_IR
+              - SNOW
         - name: x-amz-website-redirect-location
           in: header
           required: false
@@ -3269,6 +3271,7 @@ paths:
               - DEEP_ARCHIVE
               - OUTPOSTS
               - GLACIER_IR
+              - SNOW
         - name: x-amz-website-redirect-location
           in: header
           required: false
@@ -6723,6 +6726,7 @@ paths:
               - DEEP_ARCHIVE
               - OUTPOSTS
               - GLACIER_IR
+              - SNOW
         - name: x-amz-fwd-header-x-amz-tagging-count
           in: header
           required: false
@@ -7207,12 +7211,12 @@ components:
       type: object
       example:
         AcceptRanges: bytes
-        ContentLength: '3191'
-        ContentType: image/jpeg
-        ETag: '"6805f2cfc46c0f04559748bb039d69ae"'
-        LastModified: 'Thu, 15 Dec 2016 01:19:41 GMT'
+        ContentLength: '10'
+        ContentRange: bytes 0-9/43
+        ContentType: text/plain
+        ETag: '"0d94420ffd0bc68cd3d152506b97a9cc"'
+        LastModified: 'Thu, 09 Oct 2014 22:57:28 GMT'
         Metadata: {}
-        TagCount: 2
         VersionId: 'null'
       properties:
         Body:
@@ -8192,7 +8196,7 @@ components:
       type: object
       example:
         ETag: '"6805f2cfc46c0f04559748bb039d69ae"'
-        VersionId: Kirh.unyZwjQ69YxcQLA8z4F5j3kJJKr
+        VersionId: Bvq0EDKxOcXLJXNo_Lkz37eM3R4pfzyQ
       properties: {}
     PutObjectAclOutput:
       type: object
@@ -9074,6 +9078,7 @@ components:
         - DEEP_ARCHIVE
         - OUTPOSTS
         - GLACIER_IR
+        - SNOW
     WebsiteRedirectLocation:
       type: string
     CopySourceSSECustomerAlgorithm:
@@ -10611,6 +10616,7 @@ components:
         - DEEP_ARCHIVE
         - OUTPOSTS
         - GLACIER_IR
+        - SNOW
     Object:
       type: object
       properties:

@@ -55,7 +55,7 @@ info:
   x-providerName: adyen.com
   x-publicVersion: true
   x-serviceName: TransferService
-  x-timestamp: 2023-02-22T12:23:54Z
+  x-timestamp: 2023-04-18T17:29:01Z
 tags:
   - name: Transactions
   - name: Transfers
@@ -303,7 +303,7 @@ components:
         bookingDate: 2022-03-14T12:01:00+01:00
         category: bank
         counterparty:
-          balanceAccountId: NL29ADYX0000000001
+          balanceAccountId: BA00000000000000000000001
         createdAt: 2022-03-14T12:01:00+01:00
         description: YOUR_DESCRIPTION
         id: IZK7C25U7DYVX03Y
@@ -332,6 +332,8 @@ components:
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-11T11:21:24+01:00
             category: internal
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-11T11:21:24+01:00
             id: 1VVF0D5U66PIUIVP
             instructedAmount:
@@ -350,6 +352,8 @@ components:
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-12T14:22:52+01:00
             category: internal
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-12T14:22:52+01:00
             id: 1WEPGD5U6MS1CFK3
             instructedAmount:
@@ -367,12 +371,15 @@ components:
             balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-14T21:00:48+01:00
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-14T15:00:00+01:00
             description: YOUR_DESCRIPTION_2
             id: 2QP32A5U7IWC5WKG
             instructedAmount:
               currency: EUR
               value: -8
+            reference: REFERENCE_46e8c40e
             status: booked
             valueDate: 2022-03-14T21:00:48+01:00
     post-transfers-payout-local-transfer-sepa:
@@ -909,6 +916,7 @@ components:
         balanceAccountId:
           description: The unique identifier of the source [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id).
           type: string
+          x-addedInVersion: "2"
         bank:
           $ref: "#/components/schemas/Bank"
           description: Contains settings for bank transfers. If you are transferring funds to bank accounts and you don't provide this object, Adyen applies default settings.
@@ -917,7 +925,12 @@ components:
           $ref: "#/components/schemas/Counterparty"
           description: The other party in the transfer.
         description:
-          description: A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+          description: |-
+            Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+
+            Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+
+            Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
           type: string
           x-addedInVersion: "1"
         direction:
@@ -934,12 +947,13 @@ components:
           description: The ID of the resource.
           type: string
         paymentInstrumentId:
-          description: The unique identifier of the source [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments__resParam_id).
+          description: The unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id) used in the transfer.
           type: string
+          x-addedInVersion: "2"
         reason:
           description: Additional information about the status of the transfer.
           enum:
-            - amountLimitExceded
+            - amountLimitExceeded
             - approved
             - counterpartyAccountBlocked
             - counterpartyAccountClosed
@@ -973,6 +987,7 @@ components:
 
              For example, **authorised**, **refused**, or **error**.
           enum:
+            - approvalPending
             - atmWithdrawal
             - atmWithdrawalReversalPending
             - atmWithdrawalReversed
@@ -1057,7 +1072,12 @@ components:
           $ref: "#/components/schemas/CounterpartyInfo"
           description: The recipient of the funds transfer. A bank account, a balance account, or a transfer instrument is required.
         description:
-          description: A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+          description: |-
+            Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+
+            Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+
+            Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
           type: string
           x-addedInVersion: "1"
         id:

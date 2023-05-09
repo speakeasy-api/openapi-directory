@@ -55,6 +55,7 @@ tags:
   - name: promotions
   - name: pubsubnotificationsettings
   - name: quotas
+  - name: recommendations
   - name: regionalinventory
   - name: regions
   - name: reports
@@ -5893,6 +5894,95 @@ paths:
       - $ref: "#/components/parameters/quotaUser"
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
+  "/{merchantId}/recommendations/generate":
+    get:
+      description: Generates recommendations for a merchant.
+      operationId: content.recommendations.generate
+      parameters:
+        - description: Required. The ID of the account to fetch recommendations for.
+          in: path
+          name: merchantId
+          required: true
+          schema:
+            type: string
+        - description: "Optional. List of allowed tags. Tags are a set of predefined strings that describe the category that individual recommendation types. User can specify zero or more tags in this field to indicate what group of recommendations they want to receive. Current list of supported tags: - TREND"
+          explode: true
+          in: query
+          name: allowedTag
+          schema:
+            items:
+              type: string
+            type: array
+          style: form
+        - description: 'Optional. Language code of the client. If not set, the result will be in default language (English). This language code affects all fields prefixed with "localized". This should be set to ISO 639-1 country code. List of currently verified supported language code: en, fr, cs, da, de, es, it, nl, no, pl, pt, pt, fi, sv, vi, tr, th, ko, zh-CN, zh-TW, ja, id, hi'
+          in: query
+          name: languageCode
+          schema:
+            type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenerateRecommendationsResponse"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/content
+          Oauth2c:
+            - https://www.googleapis.com/auth/content
+      tags:
+        - recommendations
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+  "/{merchantId}/recommendations/reportInteraction":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+    post:
+      description: Reports an interaction on a recommendation for a merchant.
+      operationId: content.recommendations.reportInteraction
+      parameters:
+        - description: Required. The ID of the account that wants to report an interaction.
+          in: path
+          name: merchantId
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReportInteractionRequest"
+      responses:
+        "200":
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/content
+          Oauth2c:
+            - https://www.googleapis.com/auth/content
+      tags:
+        - recommendations
   "/{merchantId}/regions":
     get:
       description: Lists the regions in your Merchant Center account.
@@ -9290,7 +9380,7 @@ components:
       properties:
         cutoffTime:
           $ref: "#/components/schemas/CutoffTime"
-          description: Business days cutoff time definition. If not configured the cutoff time will be defaulted to 8AM PST.
+          description: Business days cutoff time definition. If not configured the cutoff time will be defaulted to 8AM PST. If local delivery, use Service.StoreConfig.CutoffConfig.
         handlingBusinessDayConfig:
           $ref: "#/components/schemas/BusinessDayConfig"
           description: The business days during which orders can be handled. If not provided, Monday to Friday business days will be assumed.
@@ -9326,6 +9416,17 @@ components:
           items:
             $ref: "#/components/schemas/WarehouseBasedDeliveryTime"
           type: array
+      type: object
+    Distance:
+      description: Distance represented by an integer and unit.
+      properties:
+        unit:
+          description: The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
+          type: string
+        value:
+          description: The distance represented as a number.
+          format: int64
+          type: string
       type: object
     ECommercePlatformLinkInfo:
       description: Additional information required for E_COMMERCE_PLATFORM link type.
@@ -9445,6 +9546,19 @@ components:
         cooldownTime:
           description: This timestamp represents end of cooldown period for review ineligbility reason `IN_COOLDOWN_PERIOD`.
           format: google-datetime
+          type: string
+      type: object
+    GenerateRecommendationsResponse:
+      description: Response containing generated recommendations.
+      properties:
+        recommendations:
+          description: Recommendations generated for a request.
+          items:
+            $ref: "#/components/schemas/Recommendation"
+          type: array
+        responseToken:
+          description: Output only. Response token is a string created for each `GenerateRecommendationsResponse`. This token doesn't expire, and is globally unique. This token must be used when reporting interactions for recommendations.
+          readOnly: true
           type: string
       type: object
     GmbAccounts:
@@ -10219,7 +10333,7 @@ components:
           type: string
       type: object
     MethodQuota:
-      description: The quota information per method in the Content API. Includes only methods with current usage greater than zero for your account.
+      description: The quota information per method in the Content API.
       properties:
         method:
           description: The method name, for example `products.list`. Method name does not contain version because quota can be shared between different API versions of the same method.
@@ -12413,6 +12527,9 @@ components:
         description:
           description: Description of the item.
           type: string
+        disclosureDate:
+          description: The date time when an offer becomes visible in search results across Google’s YouTube surfaces, in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format. See [Disclosure date]( https://support.google.com/merchants/answer/13034208) for more information.
+          type: string
         displayAdsId:
           description: An identifier for an item for dynamic remarketing campaigns.
           type: string
@@ -12899,7 +13016,7 @@ components:
             type: string
           type: array
         status:
-          description: Destination approval status in `targetCountry` of the offer.
+          description: Deprecated. Destination approval status in `targetCountry` of the offer.
           type: string
       type: object
     ProductStatusItemLevelIssue:
@@ -13147,6 +13264,9 @@ components:
       properties:
         canonicalAttribute:
           description: Canonical attribute name for attribute-specific issues.
+          type: string
+        code:
+          description: Error code of the issue.
           type: string
       type: object
     ProductWeight:
@@ -13592,6 +13712,99 @@ components:
             $ref: "#/components/schemas/Table"
           type: array
       type: object
+    Recommendation:
+      description: Recommendations are suggested ways to improve your merchant account's performance. For example, to engage with a feature, or start using a new Google product.
+      properties:
+        additionalCallToAction:
+          description: Output only. CTAs of this recommendation. Repeated.
+          items:
+            $ref: "#/components/schemas/RecommendationCallToAction"
+          readOnly: true
+          type: array
+        additionalDescriptions:
+          description: Output only. List of additional localized descriptions for a recommendation. Localication uses the `languageCode` field in `GenerateRecommendations` requests. Not all description types are guaranteed to be present and we recommend to rely on default description.
+          items:
+            $ref: "#/components/schemas/RecommendationDescription"
+          readOnly: true
+          type: array
+        creative:
+          description: Output only. Any creatives attached to the recommendation. Repeated.
+          items:
+            $ref: "#/components/schemas/RecommendationCreative"
+          readOnly: true
+          type: array
+        defaultCallToAction:
+          $ref: "#/components/schemas/RecommendationCallToAction"
+          description: Optional. Default CTA of the recommendation.
+        defaultDescription:
+          description: Optional. Localized recommendation description. The localization the {@link `GenerateRecommendationsRequest.language_code`} field in {@link `GenerateRecommendationsRequest`} requests.
+          type: string
+        numericalImpact:
+          description: Optional. A numerical score of the impact from the recommendation's description. For example, a recommendation might suggest an upward trend in sales for a certain product. Higher number means larger impact.
+          format: int32
+          type: integer
+        paid:
+          description: Optional. Indicates whether a user needs to pay when they complete the user journey suggested by the recommendation.
+          type: boolean
+        recommendationName:
+          description: Optional. Localized recommendation name. The localization uses the {@link `GenerateRecommendationsRequest.language_code`} field in {@link `GenerateRecommendationsRequest`} requests.
+          type: string
+        subType:
+          description: Optional. Subtype of the recommendations. Only applicable when multiple recommendations can be generated per type, and is used as an identifier of recommendation under the same recommendation type.
+          type: string
+        title:
+          description: Optional. Localized Recommendation Title. Localization uses the {@link `GenerateRecommendationsRequest.language_code`} field in {@link `GenerateRecommendationsRequest`} requests.
+          type: string
+        type:
+          description: "Output only. Type of the recommendation. List of currently available recommendation types: - OPPORTUNITY_CREATE_NEW_COLLECTION - OPPORTUNITY_CREATE_EMAIL_CAMPAIGN"
+          readOnly: true
+          type: string
+      type: object
+    RecommendationCallToAction:
+      description: Call to action (CTA) that explains how a merchant can implement this recommendation
+      properties:
+        intent:
+          description: "Output only. Intent of the action. This value describes the intent (for example, `OPEN_CREATE_EMAIL_CAMPAIGN_FLOW`) and can vary from recommendation to recommendation. This value can change over time for the same recommendation. Currently available intent values: - OPEN_CREATE_EMAIL_CAMPAIGN_FLOW: Opens a user journey where they can create a marketing email campaign. (No default URL) - OPEN_CREATE_COLLECTION_TAB: Opens a user journey where they can [create a collection](https://support.google.com/merchants/answer/9703228) for their Merchant account. (No default URL)"
+          readOnly: true
+          type: string
+        localizedText:
+          description: Output only. Localized text of the CTA. Optional.
+          readOnly: true
+          type: string
+        uri:
+          description: Optional. URL of the CTA. This field will only be set for some recommendations where there is a suggested landing URL. Otherwise it will be set to an empty string. We recommend developers to use their own custom landing page according to the description of the intent field above when this uri field is empty.
+          type: string
+      type: object
+    RecommendationCreative:
+      description: Creative is a multimedia attachment to recommendation that can be used on the frontend.
+      properties:
+        type:
+          description: Type of the creative.
+          enum:
+            - CREATIVE_TYPE_UNSPECIFIED
+            - VIDEO
+            - PHOTO
+          type: string
+        uri:
+          description: URL of the creative.
+          type: string
+      type: object
+    RecommendationDescription:
+      description: Google-provided description for the recommendation.
+      properties:
+        text:
+          description: Output only. Text of the description.
+          readOnly: true
+          type: string
+        type:
+          description: Output only. Type of the description.
+          enum:
+            - DESCRIPTION_TYPE_UNSPECIFIED
+            - SHORT
+            - LONG
+          readOnly: true
+          type: string
+      type: object
     RefundReason:
       properties:
         description:
@@ -13746,6 +13959,25 @@ components:
         regionalInventory:
           $ref: "#/components/schemas/RegionalInventory"
           description: Price and availability of the product.
+      type: object
+    ReportInteractionRequest:
+      description: Request to report interactions on a recommendation.
+      properties:
+        interactionType:
+          description: Required. Type of the interaction that is reported, for example INTERACTION_CLICK.
+          enum:
+            - INTERACTION_TYPE_UNSPECIFIED
+            - INTERACTION_CLICK
+          type: string
+        responseToken:
+          description: Required. Token of the response when recommendation was returned.
+          type: string
+        subtype:
+          description: Optional. Subtype of the recommendations this interaction happened on. This field must be set only to the value that is returned by {@link `RecommendationsService.GenerateRecommendations`} call.
+          type: string
+        type:
+          description: Required. Type of the recommendations on which this interaction happened. This field must be set only to the value that is returned by {@link `GenerateRecommendationsResponse`} call.
+          type: string
       type: object
     ReportRow:
       description: Result row returned from the search query.
@@ -14632,7 +14864,51 @@ components:
             $ref: "#/components/schemas/RateGroup"
           type: array
         shipmentType:
-          description: 'Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`" '
+          description: 'Type of locations this service ships orders to. Acceptable values are: - "`delivery`" - "`pickup`" - "`local_delivery`" '
+          type: string
+        storeConfig:
+          $ref: "#/components/schemas/ServiceStoreConfig"
+          description: A list of stores your products are delivered from. This is only available for the local delivery shipment type.
+      type: object
+    ServiceStoreConfig:
+      description: Stores that provide local delivery. Only valid with local delivery fulfillment.
+      properties:
+        cutoffConfig:
+          $ref: "#/components/schemas/ServiceStoreConfigCutoffConfig"
+          description: Time local delivery ends for the day. This can be either `local_cutoff_time` or `store_close_offset_hours`, if both are provided an error is thrown.
+        serviceRadius:
+          $ref: "#/components/schemas/Distance"
+          description: Maximum delivery radius. Only needed for local delivery fulfillment type.
+        storeCodes:
+          description: A list of store codes that provide local delivery. If empty, then `store_service_type` must be `all_stores`, or an error is thrown. If not empty, then `store_service_type` must be `selected_stores`, or an error is thrown.
+          items:
+            type: string
+          type: array
+        storeServiceType:
+          description: Indicates whether all stores listed by this merchant provide local delivery or not. Acceptable values are `all stores` and `selected stores`
+          type: string
+      type: object
+    ServiceStoreConfigCutoffConfig:
+      description: Time local delivery ends for the day based on the local timezone of the store. `local_cutoff_time` and `store_close_offset_hours` are mutually exclusive.
+      properties:
+        localCutoffTime:
+          $ref: "#/components/schemas/ServiceStoreConfigCutoffConfigLocalCutoffTime"
+          description: Time in hours and minutes in the local timezone when local delivery ends.
+        storeCloseOffsetHours:
+          description: Represents cutoff time as the number of hours before store closing. Mutually exclusive with other fields (hour and minute).
+          format: int64
+          type: string
+      type: object
+    ServiceStoreConfigCutoffConfigLocalCutoffTime:
+      description: Time in hours and minutes in the local timezone when local delivery ends.
+      properties:
+        hour:
+          description: Hour local delivery orders must be placed by to process the same day.
+          format: int64
+          type: string
+        minute:
+          description: Minute local delivery orders must be placed by to process the same day.
+          format: int64
           type: string
       type: object
     SettlementReport:

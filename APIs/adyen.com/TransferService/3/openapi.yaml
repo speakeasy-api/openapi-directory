@@ -55,7 +55,7 @@ info:
   x-providerName: adyen.com
   x-publicVersion: true
   x-serviceName: TransferService
-  x-timestamp: 2023-02-22T12:23:54Z
+  x-timestamp: 2023-04-26T16:27:03Z
 tags:
   - name: Transactions
   - name: Transfers
@@ -311,7 +311,7 @@ components:
         bookingDate: 2022-03-14T12:01:00+01:00
         category: bank
         counterparty:
-          balanceAccountId: NL29ADYX0000000001
+          balanceAccountId: BA00000000000000000000001
         createdAt: 2022-03-14T12:01:00+01:00
         description: YOUR_DESCRIPTION
         id: IZK7C25U7DYVX03Y
@@ -340,6 +340,8 @@ components:
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-11T11:21:24+01:00
             category: internal
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-11T11:21:24+01:00
             id: 1VVF0D5U66PIUIVP
             instructedAmount:
@@ -358,6 +360,8 @@ components:
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-12T14:22:52+01:00
             category: internal
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-12T14:22:52+01:00
             id: 1WEPGD5U6MS1CFK3
             instructedAmount:
@@ -375,45 +379,20 @@ components:
             balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
             balancePlatform: YOUR_BALANCE_PLATFORM
             bookingDate: 2022-03-14T21:00:48+01:00
+            counterparty:
+              balanceAccountId: BA00000000000000000000001
             createdAt: 2022-03-14T15:00:00+01:00
             description: YOUR_DESCRIPTION_2
             id: 2QP32A5U7IWC5WKG
             instructedAmount:
               currency: EUR
               value: -8
+            reference: REFERENCE_46e8c40e
             status: booked
             valueDate: 2022-03-14T21:00:48+01:00
     post-transfers-payout-cross-border:
-      description: Example request to make a cross border transfer
-      summary: Make a cross border transfer
-      value:
-        amount:
-          currency: EUR
-          value: 110000
-        balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
-        category: bank
-        counterparty:
-          accountIdentification:
-            accountNumber: "123456789"
-            bic: BOFAUS3NXXX
-            type: numberAndBic
-          bankAccount:
-            accountHolder:
-              address:
-                city: San Francisco
-                country: US
-                postalCode: "94678"
-                stateOrProvince: CA
-                street: Brannan Street
-                street2: "274"
-              fullName: A. Klaassen
-        description: Your description for the transfer
-        priority: wire
-        reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
-    post-transfers-payout-cross-border-200:
-      description: Example response for a transfers request
-      summary: Response code - 200 OK
+      description: Example request to make a cross-border transfer
+      summary: Make a cross-border transfer
       value:
         amount:
           currency: EUR
@@ -435,14 +414,55 @@ components:
               accountNumber: "123456789"
               bic: BOFAUS3NXXX
               type: numberAndBic
-          description: Your description for the transfer
-          direction: outgoing
-          priority: wire
-          reason: approved
-          reference: Your internal reference for the transfer
-          referenceForBeneficiary: Your reference sent to the beneficiary
-          status: authorised
+        description: Your description for the transfer
+        priority: crossBorder
+        reference: Your internal reference for the transfer
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
+    post-transfers-payout-cross-border-200:
+      description: Example response for a transfers request
+      summary: Response code - 200 OK
+      value:
+        accountHolder:
+          description: Your account holder description
+          id: AH3227C223222C5GXQXF658WB
+          reference: Your account holder reference
+        amount:
+          currency: EUR
+          value: 110000
+        balanceAccount:
+          description: Your balance account description
+          id: BAB8B2C3D4E5F6G7H8D9J6GD4
+          reference: Your balance account reference
+        balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
+        category: bank
+        counterparty:
+          bankAccount:
+            accountHolder:
+              address:
+                city: San Francisco
+                country: US
+                postalCode: "94678"
+                stateOrProvince: CA
+                street: Brannan Street
+                street2: "274"
+              fullName: A. Klaassen
+            accountIdentification:
+              accountNumber: "123456789"
+              bic: BOFAUS3NXXX
+              type: numberAndBic
+        description: Your description for the transfer
+        direction: outgoing
         id: 1W1UG35U8A9J5ZLG
+        paymentInstrument:
+          description: Your payment instrument description
+          id: PI3222G223222G59347DAA265
+          reference: Your payment instrument reference
+        paymentInstrumentId: PI3222G223222G59347DAA265
+        priority: crossBorder
+        reason: approved
+        reference: Your internal reference for the transfer
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
+        status: authorised
     post-transfers-payout-local-transfer-sepa:
       description: Example request to make a SEPA funds transfer
       summary: Make a SEPA funds transfer
@@ -462,14 +482,22 @@ components:
         description: Your description for the transfer
         priority: regular
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
     post-transfers-payout-local-transfer-sepa-200:
       description: Example response for a transfers request
       summary: Response code - 200 OK
       value:
+        accountHolder:
+          description: Your account holder description
+          id: AH3227C223222C5GXQXF658WB
+          reference: Your account holder reference
         amount:
           currency: EUR
           value: 110000
+        balanceAccount:
+          description: Your balance account description
+          id: BAB8B2C3D4E5F6G7H8D9J6GD4
+          reference: Your balance account reference
         balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
         category: bank
         counterparty:
@@ -482,10 +510,15 @@ components:
         description: Your description for the transfer
         direction: outgoing
         id: 1W1UG35U8A9J5ZLG
+        paymentInstrument:
+          description: Your payment instrument description
+          id: PI3222G223222G59347DAA265
+          reference: Your payment instrument reference
+        paymentInstrumentId: PI3222G223222G59347DAA265
         priority: regular
         reason: approved
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
         status: authorised
     post-transfers-payout-local-transfer-us:
       description: Example request to make a US local funds transfer
@@ -507,14 +540,22 @@ components:
         description: Your description for the transfer
         priority: regular
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
     post-transfers-payout-local-transfer-us-200:
       description: Example response for a transfers request
       summary: Response code - 200 OK
       value:
+        accountHolder:
+          description: Your account holder description
+          id: AH3227C223222C5GXQXF658WB
+          reference: Your account holder reference
         amount:
           currency: USD
           value: 110000
+        balanceAccount:
+          description: Your balance account description
+          id: BAB8B2C3D4E5F6G7H8D9J6GD4
+          reference: Your balance account reference
         balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
         category: bank
         counterparty:
@@ -528,10 +569,15 @@ components:
         description: Your description for the transfer
         direction: outgoing
         id: 1W1UG35U8A9J5ZLG
+        paymentInstrument:
+          description: Your payment instrument description
+          id: PI3222G223222G59347DAA265
+          reference: Your payment instrument reference
+        paymentInstrumentId: PI3222G223222G59347DAA265
         priority: regular
         reason: approved
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
         status: authorised
     post-transfers-payout-to-balance-account:
       description: Example request to transfer funds to another balance account
@@ -546,14 +592,22 @@ components:
           balanceAccountId: BA32272223222B5LPRFDW7J9G
         description: Your description for the transfer
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
     post-transfers-payout-to-balance-account-200:
       description: Example response for a transfers request
       summary: Response code - 200 OK
       value:
+        accountHolder:
+          description: Your account holder description
+          id: AH3227C223222C5GXQXF658WB
+          reference: Your account holder reference
         amount:
           currency: EUR
           value: 10000
+        balanceAccount:
+          description: Your balance account description
+          id: BAB8B2C3D4E5F6G7H8D9J6GD4
+          reference: Your balance account reference
         balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
         category: internal
         counterparty:
@@ -563,7 +617,7 @@ components:
         id: 1W1UG35U8A9J5ZLG
         reason: approved
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
         status: authorised
     post-transfers-payout-to-transfer-instrument:
       description: Example request to pay out to a transfer instrument
@@ -579,14 +633,22 @@ components:
         description: Your description for the transfer
         priority: regular
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
     post-transfers-payout-to-transfer-instrument-200:
       description: Example response for a transfers request
       summary: Response code - 200 OK
       value:
+        accountHolder:
+          description: Your account holder description
+          id: AH3227C223222C5GXQXF658WB
+          reference: Your account holder reference
         amount:
           currency: EUR
           value: 80000
+        balanceAccount:
+          description: Your balance account description
+          id: BAB8B2C3D4E5F6G7H8D9J6GD4
+          reference: Your balance account reference
         balanceAccountId: BAB8B2C3D4E5F6G7H8D9J6GD4
         category: bank
         counterparty:
@@ -594,10 +656,15 @@ components:
         description: Your description for the transfer
         direction: outgoing
         id: 1W1UG35U8A9J5ZLG
+        paymentInstrument:
+          description: Your payment instrument description
+          id: PI3222G223222G59347DAA265
+          reference: Your payment instrument reference
+        paymentInstrumentId: PI3222G223222G59347DAA265
         priority: regular
         reason: approved
         reference: Your internal reference for the transfer
-        referenceForBeneficiary: Your reference sent to the beneficiary
+        referenceForBeneficiary: Your-reference-sent-to-the-beneficiary
         status: authorised
   schemas:
     AULocalAccountIdentification:
@@ -648,9 +715,7 @@ components:
           description: The name of the city.
           type: string
         country:
-          description: |-
-            The two-character ISO 3166-1 alpha-2 country code. For example, **US**.
-            >If you don't know the country or are not collecting the country from the shopper, provide `country` as `ZZ`.
+          description: The two-character ISO 3166-1 alpha-2 country code. For example, **US**, **NL**, or **GB**.
           type: string
         line1:
           description: First line of the street address.
@@ -751,6 +816,16 @@ components:
           description: The 5- to 12-digit bank account number, without separators or whitespace.
           maxLength: 12
           minLength: 5
+          type: string
+        accountType:
+          default: checking
+          description: |-
+            The bank account type.
+
+            Possible values: **checking** or **savings**. Defaults to **checking**.
+          enum:
+            - checking
+            - savings
           type: string
         institutionNumber:
           description: The 3-digit institution number, without separators or whitespace.
@@ -1047,14 +1122,30 @@ components:
         address:
           $ref: "#/components/schemas/Address-2"
           description: Address of the bank account owner.
+        dateOfBirth:
+          description: |-
+            The date of birth of the individual in [ISO-8601](https://www.w3.org/TR/NOTE-datetime) format. For example, **YYYY-MM-DD**.
+
+            Allowed only when `type` is **individual**.
+          format: date
+          type: string
         firstName:
-          description: First name of the individual. Required when `type` is **individual**.
+          description: |-
+            First name of the individual.
+
+            Allowed only when `type` is **individual**.
           type: string
         fullName:
           description: The name of the entity.
           type: string
         lastName:
-          description: Last name of the individual. Required when `type` is **individual**.
+          description: |-
+            Last name of the individual.
+
+            Allowed only when `type` is **individual**.
+          type: string
+        reference:
+          description: Your unique reference of the party. This should be consistent for all transfers initiated to/from the same party/counterparty. e.g Your client's unique wallet or payee ID
           type: string
         type:
           default: unknown
@@ -1069,6 +1160,34 @@ components:
           type: string
       required:
         - fullName
+      type: object
+    PaymentInstrument:
+      properties:
+        description:
+          description: The description of the resource.
+          type: string
+        id:
+          description: The unique identifier of the resource.
+          type: string
+        reference:
+          description: The reference for the resource.
+          type: string
+        tokenType:
+          description: The type of wallet the network token is associated with.
+          type: string
+          x-addedInVersion: "3"
+      type: object
+    ResourceReference:
+      properties:
+        description:
+          description: The description of the resource.
+          type: string
+        id:
+          description: The unique identifier of the resource.
+          type: string
+        reference:
+          description: The reference for the resource.
+          type: string
       type: object
     RestServiceError:
       properties:
@@ -1323,13 +1442,25 @@ components:
       type: object
     Transfer:
       properties:
+        accountHolder:
+          $ref: "#/components/schemas/ResourceReference"
+          description: The account holder associated with the balance account used in the transfer.
+          x-addedInVersion: "3"
         amount:
           $ref: "#/components/schemas/Amount"
           description: The amount of the transfer.
           x-addedInVersion: "1"
+        balanceAccount:
+          $ref: "#/components/schemas/ResourceReference"
+          description: Contains information about the balance account involved in the transfer.
+          x-addedInVersion: "3"
         balanceAccountId:
+          deprecated: true
           description: The unique identifier of the source [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id).
           type: string
+          x-addedInVersion: "2"
+          x-deprecatedInVersion: "3"
+          x-deprecatedMessage: Use the ID in the [`balanceAccount`](https://docs.adyen.com/api-explorer/transfer-webhooks/latest/post/balancePlatform.transfer.created#request-data-balanceAccount-id) object instead.
         category:
           description: |-
             The type of transfer.
@@ -1355,7 +1486,12 @@ components:
           description: The other party in the transfer.
           x-addedInVersion: "3"
         description:
-          description: A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+          description: |-
+            Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+
+            Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+
+            Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
           type: string
           x-addedInVersion: "1"
         direction:
@@ -1371,9 +1507,17 @@ components:
         id:
           description: The ID of the resource.
           type: string
+        paymentInstrument:
+          $ref: "#/components/schemas/PaymentInstrument"
+          description: Contains information about the payment instrument used in the transfer.
+          x-addedInVersion: "3"
         paymentInstrumentId:
-          description: The unique identifier of the source [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments__resParam_id).
+          deprecated: true
+          description: The unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id) used in the transfer.
           type: string
+          x-addedInVersion: "2"
+          x-deprecatedInVersion: "3"
+          x-deprecatedMessage: Use the ID in the [`paymentInstrument`](https://docs.adyen.com/api-explorer/transfer-webhooks/latest/post/balancePlatform.transfer.created#request-data-paymentInstrument-id) object instead.
         priority:
           description: |-
             The priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers with `category` **bank**.
@@ -1404,7 +1548,7 @@ components:
         reason:
           description: Additional information about the status of the transfer.
           enum:
-            - amountLimitExceded
+            - amountLimitExceeded
             - approved
             - counterpartyAccountBlocked
             - counterpartyAccountClosed
@@ -1442,6 +1586,7 @@ components:
 
              For example, **authorised**, **refused**, or **error**.
           enum:
+            - approvalPending
             - atmWithdrawal
             - atmWithdrawalReversalPending
             - atmWithdrawalReversed
@@ -1544,7 +1689,12 @@ components:
           description: The recipient of the funds transfer. A bank account, a balance account, or a transfer instrument is required.
           x-addedInVersion: "3"
         description:
-          description: A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+          description: |-
+            Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+
+            Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+
+            Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
           type: string
           x-addedInVersion: "1"
         id:
@@ -1597,6 +1747,10 @@ components:
           maxLength: 80
           type: string
           x-addedInVersion: "2"
+        ultimateParty:
+          $ref: "#/components/schemas/UltimatePartyIdentification"
+          description: The ultimate sender of the funds of the transfer (ultimate debtor).
+          x-addedInVersion: "3"
       required:
         - category
         - amount
@@ -1659,6 +1813,50 @@ components:
         - type
         - accountNumber
         - routingNumber
+      type: object
+    UltimatePartyIdentification:
+      properties:
+        address:
+          $ref: "#/components/schemas/Address-2"
+          description: Address of the bank account owner.
+        dateOfBirth:
+          description: |-
+            The date of birth of the individual in [ISO-8601](https://www.w3.org/TR/NOTE-datetime) format. For example, **YYYY-MM-DD**.
+
+            Allowed only when `type` is **individual**.
+          format: date
+          type: string
+        firstName:
+          description: |-
+            First name of the individual.
+
+            Allowed only when `type` is **individual**.
+          type: string
+        fullName:
+          description: The name of the entity.
+          type: string
+        lastName:
+          description: |-
+            Last name of the individual.
+
+            Allowed only when `type` is **individual**.
+          type: string
+        reference:
+          description: Your unique reference of the party. This should be consistent for all transfers initiated to/from the same party/counterparty. e.g Your client's unique wallet or payee ID
+          type: string
+        type:
+          default: unknown
+          description: |-
+            The type of entity that owns the bank account.
+
+             Possible values: **individual**, **organization**, or **unknown**.
+          enum:
+            - individual
+            - organization
+            - unknown
+          type: string
+      required:
+        - fullName
       type: object
   securitySchemes:
     ApiKeyAuth:

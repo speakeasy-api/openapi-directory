@@ -30524,6 +30524,261 @@ paths:
             - https://www.googleapis.com/auth/compute
       tags:
         - regionSecurityPolicies
+  "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/addRule":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Inserts a rule into a security policy.
+      operationId: compute.regionSecurityPolicies.addRule
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region scoping this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the security policy to update.
+          in: path
+          name: securityPolicy
+          required: true
+          schema:
+            type: string
+        - description: If true, the request will not be committed.
+          in: query
+          name: validateOnly
+          schema:
+            type: boolean
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecurityPolicyRule"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionSecurityPolicies
+  "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/getRule":
+    get:
+      description: Gets a rule at the specified priority.
+      operationId: compute.regionSecurityPolicies.getRule
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region scoping this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the security policy to which the queried rule belongs.
+          in: path
+          name: securityPolicy
+          required: true
+          schema:
+            type: string
+        - description: The priority of the rule to get from the security policy.
+          in: query
+          name: priority
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecurityPolicyRule"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute.readonly
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute.readonly
+      tags:
+        - regionSecurityPolicies
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+  "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/patchRule":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
+      operationId: compute.regionSecurityPolicies.patchRule
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region scoping this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the security policy to update.
+          in: path
+          name: securityPolicy
+          required: true
+          schema:
+            type: string
+        - description: The priority of the rule to patch.
+          in: query
+          name: priority
+          schema:
+            type: integer
+        - description: If true, the request will not be committed.
+          in: query
+          name: validateOnly
+          schema:
+            type: boolean
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecurityPolicyRule"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionSecurityPolicies
+  "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/removeRule":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Deletes a rule at the specified priority.
+      operationId: compute.regionSecurityPolicies.removeRule
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region scoping this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the security policy to update.
+          in: path
+          name: securityPolicy
+          required: true
+          schema:
+            type: string
+        - description: The priority of the rule to remove from the security policy.
+          in: query
+          name: priority
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionSecurityPolicies
   "/projects/{project}/regions/{region}/serviceAttachments":
     get:
       description: Lists the ServiceAttachments for a project in the given scope.
@@ -42154,6 +42409,11 @@ paths:
           required: true
           schema:
             type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
       responses:
         "200":
           content:
@@ -46591,6 +46851,11 @@ components:
           description: Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must be between 1 and 7,124.
           format: int64
           type: string
+        replicaZones:
+          description: Required for each regional disk associated with the instance. Specify the URLs of the zones where the disk should be replicated to. You must provide exactly two replica zones, and one zone must be the same as the instance zone. You can't use this option with boot disks.
+          items:
+            type: string
+          type: array
         resourceManagerTags:
           additionalProperties:
             type: string
@@ -48339,6 +48604,7 @@ components:
             - GENERAL_PURPOSE_N2
             - GENERAL_PURPOSE_N2D
             - GENERAL_PURPOSE_T2D
+            - GRAPHICS_OPTIMIZED
             - MEMORY_OPTIMIZED
             - MEMORY_OPTIMIZED_M3
             - TYPE_UNSPECIFIED
@@ -49034,6 +49300,12 @@ components:
       type: object
     DiskAsyncReplication:
       properties:
+        consistencyGroupPolicy:
+          description: "[Output Only] URL of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group."
+          type: string
+        consistencyGroupPolicyId:
+          description: "[Output Only] ID of the DiskConsistencyGroupPolicy if replication was started on the disk as a member of a group."
+          type: string
         disk:
           description: "The other disk asynchronously replicated to or from the current disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk "
           type: string
@@ -49746,6 +50018,9 @@ components:
         ipAddress:
           description: IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.
           type: string
+        ipv6Address:
+          description: IPv6 address of the interface in the external VPN gateway. This IPv6 address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine. Must specify an IPv6 address (not IPV4-mapped) using any format described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+          type: string
       type: object
     ExternalVpnGatewayList:
       description: Response to the list request, and contains a list of externalVpnGateways.
@@ -50430,7 +50705,7 @@ components:
           pattern: "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?"
           type: string
         network:
-          description: This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If this field is not specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
+          description: This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither subnetwork nor this field is specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.
           type: string
         networkTier:
           description: "This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address."
@@ -50965,7 +51240,7 @@ components:
           type: string
       type: object
     HealthCheck:
-      description: "Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/beta/healthChecks) * [Regional](/compute/docs/reference/rest/beta/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.HealthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.HealthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.HealthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview."
+      description: "Represents a Health Check resource. Google Compute Engine has two Health Check resources: * [Global](/compute/docs/reference/rest/beta/healthChecks) * [Regional](/compute/docs/reference/rest/beta/regionHealthChecks) Internal HTTP(S) load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Traffic Director must use global health checks (`compute.v1.healthChecks`). Internal TCP/UDP load balancers can use either regional or global health checks (`compute.v1.regionHealthChecks` or `compute.v1.healthChecks`). External HTTP(S), TCP proxy, and SSL proxy load balancers as well as managed instance group auto-healing must use global health checks (`compute.v1.healthChecks`). Backend service-based network load balancers must use regional health checks (`compute.v1.regionHealthChecks`). Target pool-based network load balancers must use legacy HTTP health checks (`compute.v1.httpHealthChecks`). For more information, see Health checks overview."
       properties:
         checkIntervalSec:
           description: How often (in seconds) to send a health check. The default value is 5 seconds.
@@ -56461,7 +56736,7 @@ components:
           description: The project id or number of the interface to which the IP was assigned.
           type: string
         secondaryIpCidrRanges:
-          description: Alias IP ranges from the same subnetwork
+          description: Alias IP ranges from the same subnetwork.
           items:
             type: string
           type: array
@@ -60250,6 +60525,7 @@ components:
             - COMMITTED_NVIDIA_A100_80GB_GPUS
             - COMMITTED_NVIDIA_A100_GPUS
             - COMMITTED_NVIDIA_K80_GPUS
+            - COMMITTED_NVIDIA_L4_GPUS
             - COMMITTED_NVIDIA_P100_GPUS
             - COMMITTED_NVIDIA_P4_GPUS
             - COMMITTED_NVIDIA_T4_GPUS
@@ -60301,11 +60577,15 @@ components:
             - NETWORK_ATTACHMENTS
             - NETWORK_ENDPOINT_GROUPS
             - NETWORK_FIREWALL_POLICIES
+            - NET_LB_SECURITY_POLICIES_PER_REGION
+            - NET_LB_SECURITY_POLICY_RULES_PER_REGION
+            - NET_LB_SECURITY_POLICY_RULE_ATTRIBUTES_PER_REGION
             - NODE_GROUPS
             - NODE_TEMPLATES
             - NVIDIA_A100_80GB_GPUS
             - NVIDIA_A100_GPUS
             - NVIDIA_K80_GPUS
+            - NVIDIA_L4_GPUS
             - NVIDIA_P100_GPUS
             - NVIDIA_P100_VWS_GPUS
             - NVIDIA_P4_GPUS
@@ -60320,6 +60600,7 @@ components:
             - PREEMPTIBLE_NVIDIA_A100_80GB_GPUS
             - PREEMPTIBLE_NVIDIA_A100_GPUS
             - PREEMPTIBLE_NVIDIA_K80_GPUS
+            - PREEMPTIBLE_NVIDIA_L4_GPUS
             - PREEMPTIBLE_NVIDIA_P100_GPUS
             - PREEMPTIBLE_NVIDIA_P100_VWS_GPUS
             - PREEMPTIBLE_NVIDIA_P4_GPUS
@@ -60344,6 +60625,7 @@ components:
             - ROUTES
             - SECURITY_POLICIES
             - SECURITY_POLICIES_PER_REGION
+            - SECURITY_POLICY_ADVANCED_RULES_PER_REGION
             - SECURITY_POLICY_CEVAL_RULES
             - SECURITY_POLICY_RULES
             - SECURITY_POLICY_RULES_PER_REGION
@@ -62472,6 +62754,15 @@ components:
         bfd:
           $ref: "#/components/schemas/RouterBgpPeerBfd"
           description: BFD configuration for the BGP peering.
+        customLearnedIpRanges:
+          description: A list of user-defined custom learned route IP address ranges for a BGP session.
+          items:
+            $ref: "#/components/schemas/RouterBgpPeerCustomLearnedIpRange"
+          type: array
+        customLearnedRoutePriority:
+          description: The user-defined custom learned route priority for a BGP session. This value is applied to all custom learned route ranges for the session. You can choose a value from `0` to `65335`. If you don't provide a value, Google Cloud assigns a priority of `100` to the ranges.
+          format: int32
+          type: integer
         enable:
           description: The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
           enum:
@@ -62537,6 +62828,12 @@ components:
             - ACTIVE
             - DISABLED
             - PASSIVE
+          type: string
+      type: object
+    RouterBgpPeerCustomLearnedIpRange:
+      properties:
+        range:
+          description: The custom learned route IP address range. Must be a valid CIDR-formatted prefix. If an IP address is provided without a subnet mask, it is interpreted as, for IPv4, a `/32` singular IP address range, and, for IPv6, `/128`.
           type: string
       type: object
     RouterInterface:
@@ -62655,6 +62952,14 @@ components:
     RouterNat:
       description: Represents a Nat resource. It enables the VMs within the specified subnetworks to access Internet without external IP addresses. It specifies a list of subnetworks (and the ranges within) that want to use NAT. Customers can also provide the external IPs that would be used for NAT. GCP would auto-allocate ephemeral IPs if no external IPs are provided.
       properties:
+        autoNetworkTier:
+          description: "The network tier to use when automatically reserving IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, PREMIUM tier will be used."
+          enum:
+            - FIXED_STANDARD
+            - PREMIUM
+            - STANDARD
+            - STANDARD_OVERRIDES_FIXED_STANDARD
+          type: string
         drainNatIps:
           description: A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
           items:
@@ -63564,13 +63869,13 @@ components:
           type: number
       type: object
     SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig:
-      description: Configuration options for L7 DDoS detection.
+      description: Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
       properties:
         enable:
-          description: If set to true, enables CAAP for L7 DDoS detection.
+          description: If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: boolean
         ruleVisibility:
-          description: "Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules."
+          description: "Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules. This field is only supported in Global Security Policies of type CLOUD_ARMOR."
           enum:
             - PREMIUM
             - STANDARD
@@ -63700,7 +64005,7 @@ components:
     SecurityPolicyRecaptchaOptionsConfig:
       properties:
         redirectSiteKey:
-          description: An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used.
+          description: An optional field to supply a reCAPTCHA site key to be used for all the rules using the redirect action with the type of GOOGLE_RECAPTCHA under the security policy. The specified site key needs to be created from the reCAPTCHA API. The user is responsible for the validity of the specified site key. If not specified, a Google-managed site key is used. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: string
       type: object
     SecurityPolicyReference:
@@ -63712,7 +64017,7 @@ components:
       description: Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
       properties:
         action:
-          description: "The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. "
+          description: "The Action to perform when the rule is matched. The following are the valid actions: - allow: allow access to target. - deny(STATUS): deny access to target, returns the HTTP response code specified. Valid values for `STATUS` are 403, 404, and 502. - rate_based_ban: limit client traffic to the configured threshold and ban the client if the traffic exceeds the threshold. Configure parameters for this action in RateLimitOptions. Requires rate_limit_options to be set. - redirect: redirect to a different target. This can either be an internal reCAPTCHA redirect, or an external URL-based redirect via a 302 response. Parameters for this action can be configured via redirectOptions. This action is only supported in Global Security Policies of type CLOUD_ARMOR. - throttle: limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rate_limit_options to be set for this. "
           type: string
         description:
           description: An optional description of this resource. Provide this property when you create the resource.
@@ -63728,7 +64033,7 @@ components:
           type: boolean
         headerAction:
           $ref: "#/components/schemas/SecurityPolicyRuleHttpHeaderAction"
-          description: Optional, additional actions that are performed on headers.
+          description: Optional, additional actions that are performed on headers. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
         kind:
           default: compute#securityPolicyRule
           description: "[Output only] Type of the resource. Always compute#securityPolicyRule for security policy rules"
@@ -63751,7 +64056,7 @@ components:
           description: Must be specified if the action is "rate_based_ban" or "throttle". Cannot be specified for any other actions.
         redirectOptions:
           $ref: "#/components/schemas/SecurityPolicyRuleRedirectOptions"
-          description: Parameters defining the redirect action. Cannot be specified for any other actions.
+          description: Parameters defining the redirect action. Cannot be specified for any other actions. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
         ruleNumber:
           description: Identifier for the rule. This is only unique within the given security policy. This can only be set during rule creation, if rule number is not specified it will be generated by the server.
           format: int64
@@ -63796,7 +64101,7 @@ components:
           description: The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
         expr:
           $ref: "#/components/schemas/Expr"
-          description: User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
+          description: User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header. Expressions containing `evaluateThreatIntelligence` require Cloud Armor Managed Protection Plus tier and are not supported in Edge Policies nor in Regional Policies. Expressions containing `evaluatePreconfiguredExpr('sourceiplist-*')` require Cloud Armor Managed Protection Plus tier and are only supported in Global Security Policies.
         versionedExpr:
           description: "Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config."
           enum:
@@ -63921,11 +64226,11 @@ components:
           description: "Rate limit key name applicable only for the following key types: HTTP_HEADER -- Name of the HTTP header whose value is taken as the key value. HTTP_COOKIE -- Name of the HTTP cookie whose value is taken as the key value."
           type: string
         exceedAction:
-          description: Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below.
+          description: Action to take for requests that are above the configured rate limit threshold, to either deny with a specified HTTP response code, or redirect to a different endpoint. Valid options are `deny(STATUS)`, where valid values for `STATUS` are 403, 404, 429, and 502, and `redirect`, where the redirect parameters come from `exceedRedirectOptions` below. The `redirect` action is only supported in Global Security Policies of type CLOUD_ARMOR.
           type: string
         exceedRedirectOptions:
           $ref: "#/components/schemas/SecurityPolicyRuleRedirectOptions"
-          description: Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect.
+          description: Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
         rateLimitThreshold:
           $ref: "#/components/schemas/SecurityPolicyRuleRateLimitOptionsThreshold"
           description: Threshold at which to begin ratelimiting.
@@ -64099,6 +64404,9 @@ components:
         pscServiceAttachmentId:
           $ref: "#/components/schemas/Uint128"
           description: "[Output Only] An 128-bit global unique ID of the PSC service attachment."
+        reconcileConnections:
+          description: This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. - If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . - If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list. For newly created service attachment, this boolean defaults to true.
+          type: boolean
         region:
           description: "[Output Only] URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body."
           type: string
@@ -66296,7 +66604,7 @@ components:
     TargetHttpsProxiesSetCertificateMapRequest:
       properties:
         certificateMap:
-          description: URL of the Certificate Map to associate with this TargetHttpsProxy.
+          description: URL of the Certificate Map to associate with this TargetHttpsProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
       type: object
     TargetHttpsProxiesSetQuicOverrideRequest:
@@ -66330,7 +66638,7 @@ components:
           description: "Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact."
           type: string
         certificateMap:
-          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
@@ -67106,7 +67414,7 @@ components:
     TargetSslProxiesSetCertificateMapRequest:
       properties:
         certificateMap:
-          description: URL of the Certificate Map to associate with this TargetSslProxy.
+          description: URL of the Certificate Map to associate with this TargetSslProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
       type: object
     TargetSslProxiesSetProxyHeaderRequest:
@@ -67130,7 +67438,7 @@ components:
       description: Represents a Target SSL Proxy resource. A target SSL proxy is a component of a SSL Proxy load balancer. Global forwarding rules reference a target SSL proxy, and the target proxy then references an external backend service. For more information, read Using Target Proxies.
       properties:
         certificateMap:
-          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored.
+          description: URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
           type: string
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
@@ -68485,6 +68793,12 @@ components:
         description:
           description: An optional description of this resource. Provide this property when you create the resource.
           type: string
+        gatewayIpVersion:
+          description: The IP family of the gateway IPs for the HA-VPN gateway interfaces. If not specified, IPV4 will be used.
+          enum:
+            - IPV4
+            - IPV6
+          type: string
         id:
           description: "[Output Only] The unique identifier for the resource. This identifier is defined by the server."
           format: uint64
@@ -68744,6 +69058,9 @@ components:
           type: string
         ipAddress:
           description: "[Output Only] IP address for this VPN interface associated with the VPN gateway. The IP address could be either a regional external IP address or a regional internal IP address. The two IP addresses for a VPN gateway must be all regional external or regional internal IP addresses. There cannot be a mix of regional external IP addresses and regional internal IP addresses. For HA VPN over Cloud Interconnect, the IP addresses for both interfaces could either be regional internal IP addresses or regional external IP addresses. For regular (non HA VPN over Cloud Interconnect) HA VPN tunnels, the IP address must be a regional external IP address."
+          type: string
+        ipv6Address:
+          description: "[Output Only] IPv6 address for this VPN interface associated with the VPN gateway. The IPv6 address must be a regional external IPv6 address. The format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0)."
           type: string
       type: object
     VpnGatewaysGetStatusResponse:

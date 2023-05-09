@@ -2287,10 +2287,10 @@ components:
       properties:
         invoiceEndDate:
           $ref: "#/components/schemas/GoogleTypeDate"
-          description: The latest invoice date (exclusive). If your product uses monthly invoices, and this value is not the beginning of a month, this will adjust the date to the first day of the following month.
+          description: The latest invoice date (inclusive). If this value is not the last day of a month, this will move it forward to the last day of the given month.
         invoiceStartDate:
           $ref: "#/components/schemas/GoogleTypeDate"
-          description: The earliest invoice date (inclusive). If your product uses monthly invoices, and this value is not the beginning of a month, this will adjust the date to the first day of the given month.
+          description: The earliest invoice date (inclusive). If this value is not the first day of a month, this will move it back to the first day of the given month.
         usageEndDateTime:
           $ref: "#/components/schemas/GoogleTypeDateTime"
           description: The latest usage date time (exclusive). If you use time groupings (daily, weekly, etc), each group uses midnight to midnight (Pacific time). The usage end date is rounded down to include all usage from the specified date. We recommend that clients pass `usage_start_date_time` in Pacific time.
@@ -2330,6 +2330,9 @@ components:
         associationInfo:
           $ref: "#/components/schemas/GoogleCloudChannelV1AssociationInfo"
           description: Association information to other entitlements.
+        billingAccount:
+          description: Optional. The billing account resource name that is used to pay for this entitlement.
+          type: string
         commitmentSettings:
           $ref: "#/components/schemas/GoogleCloudChannelV1CommitmentSettings"
           description: Commitment settings for a commitment-based Offer. Required for commitment based offers.
@@ -2346,7 +2349,7 @@ components:
           description: "Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}."
           type: string
         parameters:
-          description: "Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount."
+          description: "Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount."
           items:
             $ref: "#/components/schemas/GoogleCloudChannelV1Parameter"
           type: array
@@ -2505,6 +2508,11 @@ components:
         pageToken:
           description: Optional. A token that specifies a page of results beyond the first page. Obtained through FetchReportResultsResponse.next_page_token of the previous CloudChannelReportsService.FetchReportResults call.
           type: string
+        partitionKeys:
+          description: Optional. List of keys specifying which report partitions to return. If empty, returns all partitions.
+          items:
+            type: string
+          type: array
       type: object
     GoogleCloudChannelV1FetchReportResultsResponse:
       description: Response message for CloudChannelReportsService.FetchReportResults. Contains a tabular representation of the report results.
@@ -2932,7 +2940,7 @@ components:
       description: The payment plan for the Offer. Describes how to make a payment.
       properties:
         billingAccount:
-          description: Reseller Billing account to charge after an offer transaction. Only present for Google Cloud Platform offers.
+          description: Reseller Billing account to charge after an offer transaction. Only present for Google Cloud offers.
           type: string
         paymentCycle:
           $ref: "#/components/schemas/GoogleCloudChannelV1Period"
@@ -3073,7 +3081,7 @@ components:
           readOnly: true
           type: string
         provisioningId:
-          description: Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing subaccount."
+          description: Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud, this is the Billing Account ID of the billing subaccount."
           readOnly: true
           type: string
         skuId:
@@ -3133,7 +3141,7 @@ components:
           type: boolean
       type: object
     GoogleCloudChannelV1Report:
-      description: The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
+      description: The ID and description of a report that was used to generate report data. For example, "Google Cloud Daily Spend", "Google Workspace License Activity", etc.
       properties:
         columns:
           description: The list of columns included in the report. This defines the schema of the report results.
@@ -3277,6 +3285,9 @@ components:
     GoogleCloudChannelV1Row:
       description: A row of report values.
       properties:
+        partitionKey:
+          description: The key for the partition this row belongs to. This field is empty if the report is not partitioned.
+          type: string
         values:
           description: The list of values in the row.
           items:
@@ -3561,10 +3572,10 @@ components:
       properties:
         invoiceEndDate:
           $ref: "#/components/schemas/GoogleTypeDate"
-          description: The latest invoice date (exclusive). If your product uses monthly invoices, and this value is not the beginning of a month, this will adjust the date to the first day of the following month.
+          description: The latest invoice date (inclusive). If this value is not the last day of a month, this will move it forward to the last day of the given month.
         invoiceStartDate:
           $ref: "#/components/schemas/GoogleTypeDate"
-          description: The earliest invoice date (inclusive). If your product uses monthly invoices, and this value is not the beginning of a month, this will adjust the date to the first day of the given month.
+          description: The earliest invoice date (inclusive). If this value is not the first day of a month, this will move it back to the first day of the given month.
         usageEndDateTime:
           $ref: "#/components/schemas/GoogleTypeDateTime"
           description: The latest usage date time (exclusive). If you use time groupings (daily, weekly, etc), each group uses midnight to midnight (Pacific time). The usage end date is rounded down to include all usage from the specified date. We recommend that clients pass `usage_start_date_time` in Pacific time.
@@ -3582,6 +3593,9 @@ components:
         associationInfo:
           $ref: "#/components/schemas/GoogleCloudChannelV1alpha1AssociationInfo"
           description: Association information to other entitlements.
+        billingAccount:
+          description: Optional. The billing account resource name that is used to pay for this entitlement.
+          type: string
         channelPartnerId:
           description: "Cloud Identity ID of a channel partner who will be the direct reseller for the customer's order. This field is generally used in 2-tier ordering, where the order is placed by a top-level distributor on behalf of their channel partner or reseller. Required for distributors. Deprecated: `channel_partner_id` has been moved to the Customer."
           type: string
@@ -3609,7 +3623,7 @@ components:
           description: "Required. The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}."
           type: string
         parameters:
-          description: "Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For GCP billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount."
+          description: "Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. For Google Workspace, the following Parameters may be accepted as input: - max_units: The maximum assignable units for a flexible offer OR - num_units: The total commitment for commitment-based offers The response may additionally include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. For Google Cloud billing subaccounts, the following Parameter may be accepted as input: - display_name: The display name of the billing subaccount."
           items:
             $ref: "#/components/schemas/GoogleCloudChannelV1alpha1Parameter"
           type: array
@@ -3739,7 +3753,7 @@ components:
           readOnly: true
           type: string
         provisioningId:
-          description: Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud Platform, this is the Billing Account ID of the billing subaccount."
+          description: Output only. Provisioning ID of the entitlement. For Google Workspace, this is the underlying Subscription ID. For Google Cloud, this is the Billing Account ID of the billing subaccount."
           readOnly: true
           type: string
         skuId:
@@ -3785,7 +3799,7 @@ components:
           type: string
       type: object
     GoogleCloudChannelV1alpha1Report:
-      description: The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
+      description: The ID and description of a report that was used to generate report data. For example, "Google Cloud Daily Spend", "Google Workspace License Activity", etc.
       properties:
         columns:
           description: The list of columns included in the report. This defines the schema of the report results.
